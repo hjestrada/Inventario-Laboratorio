@@ -31,7 +31,6 @@ Partial Class PrincipalContenedor
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.IconButton8 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton6 = New FontAwesome.Sharp.IconButton()
@@ -42,18 +41,17 @@ Partial Class PrincipalContenedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
         Me.Lb_Fecha = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
         Me.IconButton10 = New FontAwesome.Sharp.IconButton()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +59,6 @@ Partial Class PrincipalContenedor
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -96,7 +93,7 @@ Partial Class PrincipalContenedor
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(32, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(268, 69)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -106,19 +103,17 @@ Partial Class PrincipalContenedor
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.IconButton10)
-        Me.Panel5.Controls.Add(Me.IconButton9)
         Me.Panel5.Controls.Add(Me.IconButton1)
         Me.Panel5.Controls.Add(Me.IconButton8)
-        Me.Panel5.Controls.Add(Me.IconButton2)
         Me.Panel5.Controls.Add(Me.IconButton7)
         Me.Panel5.Controls.Add(Me.IconButton3)
         Me.Panel5.Controls.Add(Me.IconButton6)
         Me.Panel5.Controls.Add(Me.IconButton4)
         Me.Panel5.Controls.Add(Me.IconButton5)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 389)
+        Me.Panel5.Location = New System.Drawing.Point(0, 420)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(357, 601)
+        Me.Panel5.Size = New System.Drawing.Size(357, 570)
         Me.Panel5.TabIndex = 1
         '
         'IconButton1
@@ -136,11 +131,11 @@ Partial Class PrincipalContenedor
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(24, 31)
+        Me.IconButton1.Location = New System.Drawing.Point(24, 19)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(321, 50)
         Me.IconButton1.TabIndex = 2
-        Me.IconButton1.Text = "Entrada de Reactivos"
+        Me.IconButton1.Text = "Movimientos de Reactivos"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
         '
@@ -159,36 +154,13 @@ Partial Class PrincipalContenedor
         Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton8.IconSize = 40
         Me.IconButton8.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton8.Location = New System.Drawing.Point(24, 535)
+        Me.IconButton8.Location = New System.Drawing.Point(24, 411)
         Me.IconButton8.Name = "IconButton8"
         Me.IconButton8.Size = New System.Drawing.Size(321, 50)
         Me.IconButton8.TabIndex = 9
         Me.IconButton8.Text = "Salir"
         Me.IconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton8.UseVisualStyleBackColor = False
-        '
-        'IconButton2
-        '
-        Me.IconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Minus
-        Me.IconButton2.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 40
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton2.Location = New System.Drawing.Point(24, 87)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(321, 50)
-        Me.IconButton2.TabIndex = 3
-        Me.IconButton2.Text = "Salida Reactivos"
-        Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton2.UseVisualStyleBackColor = False
         '
         'IconButton7
         '
@@ -205,7 +177,7 @@ Partial Class PrincipalContenedor
         Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton7.IconSize = 40
         Me.IconButton7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton7.Location = New System.Drawing.Point(24, 367)
+        Me.IconButton7.Location = New System.Drawing.Point(24, 243)
         Me.IconButton7.Name = "IconButton7"
         Me.IconButton7.Size = New System.Drawing.Size(321, 50)
         Me.IconButton7.TabIndex = 8
@@ -229,7 +201,7 @@ Partial Class PrincipalContenedor
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton3.IconSize = 40
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(24, 143)
+        Me.IconButton3.Location = New System.Drawing.Point(24, 299)
         Me.IconButton3.Name = "IconButton3"
         Me.IconButton3.Size = New System.Drawing.Size(321, 50)
         Me.IconButton3.TabIndex = 4
@@ -252,7 +224,7 @@ Partial Class PrincipalContenedor
         Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton6.IconSize = 40
         Me.IconButton6.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton6.Location = New System.Drawing.Point(24, 311)
+        Me.IconButton6.Location = New System.Drawing.Point(24, 187)
         Me.IconButton6.Name = "IconButton6"
         Me.IconButton6.Size = New System.Drawing.Size(321, 50)
         Me.IconButton6.TabIndex = 7
@@ -275,7 +247,7 @@ Partial Class PrincipalContenedor
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(24, 199)
+        Me.IconButton4.Location = New System.Drawing.Point(24, 355)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(321, 50)
         Me.IconButton4.TabIndex = 5
@@ -293,29 +265,29 @@ Partial Class PrincipalContenedor
         Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.PeopleCarry
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.Industry
         Me.IconButton5.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 40
         Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton5.Location = New System.Drawing.Point(24, 255)
+        Me.IconButton5.Location = New System.Drawing.Point(24, 131)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Size = New System.Drawing.Size(321, 50)
         Me.IconButton5.TabIndex = 6
-        Me.IconButton5.Text = "Proveedores"
+        Me.IconButton5.Text = "Fabricante"
         Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton5.UseVisualStyleBackColor = False
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.Lb_Fecha)
+        Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(357, 389)
+        Me.Panel3.Size = New System.Drawing.Size(357, 420)
         Me.Panel3.TabIndex = 0
         '
         'Label2
@@ -323,7 +295,7 @@ Partial Class PrincipalContenedor
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(41, 313)
+        Me.Label2.Location = New System.Drawing.Point(58, 320)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(242, 20)
         Me.Label2.TabIndex = 2
@@ -334,7 +306,7 @@ Partial Class PrincipalContenedor
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(119, 284)
+        Me.Label1.Location = New System.Drawing.Point(136, 291)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 20)
         Me.Label1.TabIndex = 1
@@ -343,7 +315,7 @@ Partial Class PrincipalContenedor
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(56, 25)
+        Me.PictureBox2.Location = New System.Drawing.Point(62, 32)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(234, 234)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -354,7 +326,7 @@ Partial Class PrincipalContenedor
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.IconPictureBox2)
+        Me.Panel2.Controls.Add(Me.Lb_Fecha)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.IconPictureBox1)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -365,32 +337,17 @@ Partial Class PrincipalContenedor
         Me.Panel2.Size = New System.Drawing.Size(1634, 94)
         Me.Panel2.TabIndex = 6
         '
-        'IconPictureBox2
-        '
-        Me.IconPictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconPictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Barcode
-        Me.IconPictureBox2.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox2.IconSize = 40
-        Me.IconPictureBox2.Location = New System.Drawing.Point(1558, 33)
-        Me.IconPictureBox2.Name = "IconPictureBox2"
-        Me.IconPictureBox2.Size = New System.Drawing.Size(32, 32)
-        Me.IconPictureBox2.TabIndex = 5
-        Me.IconPictureBox2.TabStop = False
-        '
         'Label4
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(1284, 10)
+        Me.Label4.Location = New System.Drawing.Point(1211, 8)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(253, 20)
+        Me.Label4.Size = New System.Drawing.Size(255, 20)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Búsqueda por Código de Producto"
+        Me.Label4.Text = "Búsqueda por nombre de Reactivo"
         '
         'IconPictureBox1
         '
@@ -401,7 +358,7 @@ Partial Class PrincipalContenedor
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 40
-        Me.IconPictureBox1.Location = New System.Drawing.Point(1232, 33)
+        Me.IconPictureBox1.Location = New System.Drawing.Point(1052, 34)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(32, 32)
         Me.IconPictureBox1.TabIndex = 4
@@ -412,21 +369,21 @@ Partial Class PrincipalContenedor
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(67, 32)
+        Me.Label3.Location = New System.Drawing.Point(80, 19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(641, 33)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Sistema de Gestión de Inventario de Laboratorio"
+        Me.Label3.Text = "Sistema de Gestión de Inventario en Laboratorio"
         '
         'TextBox1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1269, 34)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(1090, 34)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(282, 31)
+        Me.TextBox1.Size = New System.Drawing.Size(496, 31)
         Me.TextBox1.TabIndex = 1
         '
         'ToolStripStatusLabel1
@@ -446,35 +403,12 @@ Partial Class PrincipalContenedor
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'IconButton9
-        '
-        Me.IconButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton9.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton9.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton9.IconChar = FontAwesome.Sharp.IconChar.Flask
-        Me.IconButton9.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton9.IconSize = 40
-        Me.IconButton9.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton9.Location = New System.Drawing.Point(24, 423)
-        Me.IconButton9.Name = "IconButton9"
-        Me.IconButton9.Size = New System.Drawing.Size(321, 50)
-        Me.IconButton9.TabIndex = 10
-        Me.IconButton9.Text = "Préstamo de Reactivos"
-        Me.IconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton9.UseVisualStyleBackColor = False
-        '
         'Lb_Fecha
         '
         Me.Lb_Fecha.AutoSize = True
         Me.Lb_Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb_Fecha.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Lb_Fecha.Location = New System.Drawing.Point(74, 342)
+        Me.Lb_Fecha.Location = New System.Drawing.Point(82, 52)
         Me.Lb_Fecha.Name = "Lb_Fecha"
         Me.Lb_Fecha.Size = New System.Drawing.Size(64, 20)
         Me.Lb_Fecha.TabIndex = 3
@@ -510,13 +444,25 @@ Partial Class PrincipalContenedor
         Me.IconButton10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton10.IconSize = 40
         Me.IconButton10.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton10.Location = New System.Drawing.Point(24, 479)
+        Me.IconButton10.Location = New System.Drawing.Point(24, 75)
         Me.IconButton10.Name = "IconButton10"
         Me.IconButton10.Size = New System.Drawing.Size(321, 50)
         Me.IconButton10.TabIndex = 11
         Me.IconButton10.Text = "Reportes"
         Me.IconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton10.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.Location = New System.Drawing.Point(126, 349)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(107, 20)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Administrador"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PrincipalContenedor
         '
@@ -543,7 +489,6 @@ Partial Class PrincipalContenedor
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
@@ -566,7 +511,6 @@ Partial Class PrincipalContenedor
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel6 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
@@ -576,10 +520,9 @@ Partial Class PrincipalContenedor
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents Label4 As Label
-    Friend WithEvents IconPictureBox2 As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents IconButton9 As FontAwesome.Sharp.IconButton
     Friend WithEvents Lb_Fecha As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Panel_Central As Panel
     Friend WithEvents IconButton10 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label5 As Label
 End Class

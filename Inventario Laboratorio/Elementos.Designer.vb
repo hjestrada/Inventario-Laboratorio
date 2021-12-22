@@ -24,12 +24,20 @@ Partial Class Elementos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Elementos))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -37,8 +45,10 @@ Partial Class Elementos
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -46,31 +56,24 @@ Partial Class Elementos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -84,15 +87,45 @@ Partial Class Elementos
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(705, 903)
+        Me.Panel1.Size = New System.Drawing.Size(705, 1030)
         Me.Panel1.TabIndex = 0
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.DataGridView1)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel6.Location = New System.Drawing.Point(0, 782)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(705, 100)
+        Me.Panel6.TabIndex = 6
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DataGridView1.Size = New System.Drawing.Size(705, 100)
+        Me.DataGridView1.TabIndex = 6
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "CLASIFICACIÓN DE LA CLASE DE  PELIGRO"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "PICTOGRAMA"
+        Me.Column2.Name = "Column2"
         '
         'Panel7
         '
         Me.Panel7.Controls.Add(Me.Label10)
         Me.Panel7.Controls.Add(Me.Label9)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel7.Location = New System.Drawing.Point(0, 847)
+        Me.Panel7.Location = New System.Drawing.Point(0, 974)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(705, 56)
         Me.Panel7.TabIndex = 5
@@ -134,10 +167,32 @@ Partial Class Elementos
         Me.Panel5.Controls.Add(Me.Label13)
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 501)
+        Me.Panel5.Location = New System.Drawing.Point(0, 561)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(705, 221)
         Me.Panel5.TabIndex = 3
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label23.Location = New System.Drawing.Point(24, 193)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(19, 20)
+        Me.Label23.TabIndex = 13
+        Me.Label23.Text = "2"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label22.Location = New System.Drawing.Point(24, 173)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(38, 20)
+        Me.Label22.TabIndex = 12
+        Me.Label22.Text = "Fila"
         '
         'Label19
         '
@@ -160,6 +215,28 @@ Partial Class Elementos
         Me.Label18.Size = New System.Drawing.Size(88, 20)
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "Ubicación"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label12.Location = New System.Drawing.Point(585, 12)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(107, 20)
+        Me.Label12.TabIndex = 5
+        Me.Label12.Text = "Ficha Técnica"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(609, 52)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(57, 61)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Label17
         '
@@ -235,32 +312,58 @@ Partial Class Elementos
         Me.Panel4.Controls.Add(Me.Label24)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 204)
+        Me.Panel4.Location = New System.Drawing.Point(0, 264)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(705, 297)
         Me.Panel4.TabIndex = 2
         '
-        'Label12
+        'RichTextBox2
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(585, 12)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(107, 20)
-        Me.Label12.TabIndex = 5
-        Me.Label12.Text = "Ficha Técnica"
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox2.Location = New System.Drawing.Point(18, 26)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RichTextBox2.Size = New System.Drawing.Size(668, 81)
+        Me.RichTextBox2.TabIndex = 15
+        Me.RichTextBox2.Text = "-Provoca irritación Cutánea." & Global.Microsoft.VisualBasic.ChrW(10) & "-Provoca lesiones oculares graves" & Global.Microsoft.VisualBasic.ChrW(10) & "-Puede irritar las" &
+    " vias respiratorias." & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'PictureBox1
+        'RichTextBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.White
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(609, 52)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(57, 61)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(18, 149)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RichTextBox1.Size = New System.Drawing.Size(668, 131)
+        Me.RichTextBox1.TabIndex = 14
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(18, 203)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(674, 87)
+        Me.TextBox2.TabIndex = 8
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label24.Location = New System.Drawing.Point(14, 126)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(145, 20)
+        Me.Label24.TabIndex = 7
+        Me.Label24.Text = "Primeros Auxilios"
         '
         'Label4
         '
@@ -280,7 +383,7 @@ Partial Class Elementos
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 107)
+        Me.Panel3.Location = New System.Drawing.Point(0, 167)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(705, 97)
         Me.Panel3.TabIndex = 1
@@ -332,6 +435,7 @@ Partial Class Elementos
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Panel8)
         Me.Panel2.Controls.Add(Me.Label25)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label21)
@@ -341,15 +445,37 @@ Partial Class Elementos
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(705, 107)
+        Me.Panel2.Size = New System.Drawing.Size(705, 167)
         Me.Panel2.TabIndex = 0
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label25.Location = New System.Drawing.Point(234, 122)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(93, 20)
+        Me.Label25.TabIndex = 8
+        Me.Label25.Text = "21/02/2023 "
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label11.Location = New System.Drawing.Point(16, 122)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(212, 20)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Fecha de Ingreso al Sistema"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label21.Location = New System.Drawing.Point(600, 75)
+        Me.Label21.Location = New System.Drawing.Point(604, 122)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(89, 20)
         Me.Label21.TabIndex = 6
@@ -360,7 +486,7 @@ Partial Class Elementos
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label20.Location = New System.Drawing.Point(404, 75)
+        Me.Label20.Location = New System.Drawing.Point(408, 122)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(176, 20)
         Me.Label20.TabIndex = 5
@@ -371,7 +497,7 @@ Partial Class Elementos
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(304, 35)
+        Me.Label6.Location = New System.Drawing.Point(308, 82)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(82, 20)
         Me.Label6.TabIndex = 1
@@ -382,139 +508,42 @@ Partial Class Elementos
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(240, 15)
+        Me.Label1.Location = New System.Drawing.Point(244, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(211, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "HIDRÓXIDO DE CALCIO"
         '
-        'Label22
+        'Panel8
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label22.Location = New System.Drawing.Point(24, 173)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(38, 20)
-        Me.Label22.TabIndex = 12
-        Me.Label22.Text = "Fila"
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Button3)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel8.Location = New System.Drawing.Point(0, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(705, 37)
+        Me.Panel8.TabIndex = 13
         '
-        'Label23
+        'Button3
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(24, 193)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(19, 20)
-        Me.Label23.TabIndex = 13
-        Me.Label23.Text = "2"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label24.Location = New System.Drawing.Point(14, 126)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(145, 20)
-        Me.Label24.TabIndex = 7
-        Me.Label24.Text = "Primeros Auxilios"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(18, 203)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(674, 87)
-        Me.TextBox2.TabIndex = 8
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(18, 149)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox1.Size = New System.Drawing.Size(668, 131)
-        Me.RichTextBox1.TabIndex = 14
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(18, 26)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.ReadOnly = True
-        Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox2.Size = New System.Drawing.Size(668, 81)
-        Me.RichTextBox2.TabIndex = 15
-        Me.RichTextBox2.Text = "-Provoca irritación Cutánea." & Global.Microsoft.VisualBasic.ChrW(10) & "-Provoca lesiones oculares graves" & Global.Microsoft.VisualBasic.ChrW(10) & "-Puede irritar las" &
-    " vias respiratorias." & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.DataGridView1.Size = New System.Drawing.Size(705, 100)
-        Me.DataGridView1.TabIndex = 6
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "CLASIFICACIÓN DE LA CLASE DE  PELIGRO"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "PICTOGRAMA"
-        Me.Column2.Name = "Column2"
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.DataGridView1)
-        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(0, 722)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(705, 100)
-        Me.Panel6.TabIndex = 6
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label11.Location = New System.Drawing.Point(12, 75)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(212, 20)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Fecha de Ingreso al Sistema"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label25.Location = New System.Drawing.Point(230, 75)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(93, 20)
-        Me.Label25.TabIndex = 8
-        Me.Label25.Text = "21/02/2023 "
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(672, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(30, 30)
+        Me.Button3.TabIndex = 2
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Elementos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 903)
+        Me.ClientSize = New System.Drawing.Size(705, 1030)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -522,19 +551,20 @@ Partial Class Elementos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Elementos"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -578,4 +608,6 @@ Partial Class Elementos
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label25 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Button3 As Button
 End Class

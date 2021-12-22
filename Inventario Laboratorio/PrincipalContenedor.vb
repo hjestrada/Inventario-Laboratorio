@@ -54,4 +54,8 @@ Public Class PrincipalContenedor
 
         AbrirFormenPanel(New Elementos)
     End Sub
+
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+        AbrirFormenPanel(New Usuarios)
+    End Sub
 End Class
