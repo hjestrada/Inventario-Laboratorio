@@ -16,7 +16,9 @@ Public Class PrincipalContenedor
         InitializeComponent()
         SuspendLayout()
         FormBorderStyle = FormBorderStyle.None
-        Const CS_DROPSHADOW As Integer = &H20000
+        Const CS_DROPSHADOW As Integer = 500000
+        '----&H20000
+        '----131072
         SD = SetWindowLong(Handle, -8, GetDesktopWindow())
         SetClassLong(Handle, -26, GetClassLong(Handle, -26) Or CS_DROPSHADOW)
         ResumeLayout(False)
@@ -88,5 +90,13 @@ Public Class PrincipalContenedor
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
         AbrirFormenPanel(New Usuarios)
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        MsgBox("Desarrollado por: Hector J. Estrada Toledo")
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        AbrirFormenPanel(New Pictograma)
     End Sub
 End Class

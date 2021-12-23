@@ -22,6 +22,7 @@ Partial Class Usuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Usuarios))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -48,6 +49,8 @@ Partial Class Usuarios
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -158,7 +161,7 @@ Partial Class Usuarios
         'ComboBox1
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.ForeColor = System.Drawing.Color.Red
+        Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Profesional", "Pasante", "Administrador"})
         Me.ComboBox1.Location = New System.Drawing.Point(22, 287)
@@ -345,7 +348,7 @@ Partial Class Usuarios
         Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.Save
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.Upload
         Me.IconButton5.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 20
@@ -401,11 +404,26 @@ Partial Class Usuarios
         Me.Label8.TabIndex = 20
         Me.Label8.Text = "Contraseña"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(359, 161)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(16, 20)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "*"
+        '
+        'ToolTip1
+        '
+        '
         'Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(654, 709)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox5)
@@ -426,7 +444,7 @@ Partial Class Usuarios
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Usuarios"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Usuarios"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -463,4 +481,6 @@ Partial Class Usuarios
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

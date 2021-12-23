@@ -128,10 +128,17 @@
     <Compile Include="Elementos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulo.vb" />
     <Compile Include="Movimientos.Designer.vb">
       <DependentUpon>Movimientos.vb</DependentUpon>
     </Compile>
     <Compile Include="Movimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pictograma.Designer.vb">
+      <DependentUpon>Pictograma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pictograma.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PrincipalContenedor.vb">
@@ -170,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos.resx">
       <DependentUpon>Movimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pictograma.resx">
+      <DependentUpon>Pictograma.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalContenedor.resx">
       <DependentUpon>PrincipalContenedor.vb</DependentUpon>

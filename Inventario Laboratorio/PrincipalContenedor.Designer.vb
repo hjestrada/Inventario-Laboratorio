@@ -449,9 +449,9 @@ Partial Class PrincipalContenedor
         '
         Me.Panel_Central.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel_Central.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel_Central.Location = New System.Drawing.Point(192, 36)
+        Me.Panel_Central.Location = New System.Drawing.Point(86, 36)
         Me.Panel_Central.Name = "Panel_Central"
-        Me.Panel_Central.Size = New System.Drawing.Size(1262, 861)
+        Me.Panel_Central.Size = New System.Drawing.Size(1489, 861)
         Me.Panel_Central.TabIndex = 7
         '
         'Panel4
