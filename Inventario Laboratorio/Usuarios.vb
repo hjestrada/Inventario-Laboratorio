@@ -4,4 +4,10 @@
 
 
     End Sub
+
+    Private Sub Usuarios_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ComboBox1.SelectedIndex = 0
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+
+    End Sub
 End Class

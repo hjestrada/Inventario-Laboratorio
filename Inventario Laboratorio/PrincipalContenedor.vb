@@ -1,7 +1,35 @@
-﻿
+﻿Imports System.Runtime.InteropServices
 
 
 Public Class PrincipalContenedor
+
+
+    'Necesarios para redondear formulario
+    Public SD As Integer
+    Public Declare Function GetClassLong Lib "user32" Alias "GetClassLongA" (Dt As IntPtr, UI As Integer) As Integer
+    Public Declare Function GetDesktopWindow Lib "user32" () As Integer
+    Public Declare Function SetClassLong Lib "user32" Alias "SetClassLongA" (Dt As IntPtr, IDF As Integer, IGT As Integer) As Integer
+    Public Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (Wo As IntPtr, Ni As Integer, NK As Integer) As Integer
+
+
+    Public Sub New()
+        InitializeComponent()
+        SuspendLayout()
+        FormBorderStyle = FormBorderStyle.None
+        Const CS_DROPSHADOW As Integer = &H20000
+        SD = SetWindowLong(Handle, -8, GetDesktopWindow())
+        SetClassLong(Handle, -26, GetClassLong(Handle, -26) Or CS_DROPSHADOW)
+        ResumeLayout(False)
+
+    End Sub
+    '----------------------------------------------------
+
+
+    <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
+    Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
+
+    End Function
+
 
     Private Sub AbrirFormenPanel(ByVal FormHijo As Object)
         If Me.Panel_Central.Controls.Count > 0 Then
@@ -36,6 +64,8 @@ Public Class PrincipalContenedor
     Private Sub PrincipalContenedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Focus()
         Lb_Fecha.Text = Now
+        'Necesario para redondear formulario
+        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
     End Sub
 
 
@@ -52,7 +82,8 @@ Public Class PrincipalContenedor
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
 
-        AbrirFormenPanel(New Elementos)
+        AbrirFormenPanel(New Movimientos)
+
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
