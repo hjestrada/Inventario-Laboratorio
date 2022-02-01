@@ -43,6 +43,8 @@ Partial Class PrincipalContenedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Lb_Fecha = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
@@ -52,8 +54,6 @@ Partial Class PrincipalContenedor
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,9 +61,9 @@ Partial Class PrincipalContenedor
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -374,6 +374,31 @@ Partial Class PrincipalContenedor
         Me.Panel2.Size = New System.Drawing.Size(1640, 111)
         Me.Panel2.TabIndex = 6
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Button3)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel8.Location = New System.Drawing.Point(0, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(1640, 37)
+        Me.Panel8.TabIndex = 14
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(1607, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(30, 30)
+        Me.Button3.TabIndex = 2
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Lb_Fecha
         '
         Me.Lb_Fecha.AutoSize = True
@@ -467,31 +492,6 @@ Partial Class PrincipalContenedor
         Me.Panel4.Size = New System.Drawing.Size(1640, 967)
         Me.Panel4.TabIndex = 8
         '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.Button3)
-        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(0, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1640, 37)
-        Me.Panel8.TabIndex = 14
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(1607, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(30, 30)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'PrincipalContenedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -516,9 +516,9 @@ Partial Class PrincipalContenedor
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
-        Me.Panel8.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

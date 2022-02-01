@@ -103,4 +103,8 @@ Public Class PrincipalContenedor
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
     End Sub
+
+    Private Sub Panel_Central_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Central.Paint
+
+    End Sub
 End Class

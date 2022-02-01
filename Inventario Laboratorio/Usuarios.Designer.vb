@@ -36,7 +36,6 @@ Partial Class Usuarios
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -51,6 +50,7 @@ Partial Class Usuarios
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,17 +190,6 @@ Partial Class Usuarios
         Me.Label5.Size = New System.Drawing.Size(79, 20)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Teléfono"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(22, 351)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(331, 31)
-        Me.TextBox3.TabIndex = 12
         '
         'Label6
         '
@@ -418,11 +407,21 @@ Partial Class Usuarios
         'ToolTip1
         '
         '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(22, 356)
+        Me.MaskedTextBox1.Mask = "000-000-0000"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(331, 29)
+        Me.MaskedTextBox1.TabIndex = 23
+        '
         'Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(654, 709)
+        Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label8)
@@ -432,7 +431,6 @@ Partial Class Usuarios
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBox1)
@@ -466,7 +464,6 @@ Partial Class Usuarios
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -483,4 +480,5 @@ Partial Class Usuarios
     Friend WithEvents Button3 As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
 End Class
