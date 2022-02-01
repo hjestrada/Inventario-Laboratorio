@@ -20,43 +20,62 @@ Public Class Pictograma
 
     Private Sub Pictograma_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-
+        CargarDatos()
     End Sub
+
+    Private Sub CargarDatos()
+
+        Dim sql As String = "SELECT * FROM PICTOGRAMAS"
+
+        Using con As New SQLiteConnection(DB_Path)
+            Dim command As New SQLiteCommand(sql, con)
+            Dim da As New SQLiteDataAdapter
+            da.SelectCommand = command
+            Dim dt As New DataTable
+            da.Fill(dt)
+            DataGridView1.DataSource = dt
+
+        End Using
+    End Sub
+
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
 
-        SQLiteCon.Close()
-        Imag = Imagen_Bytes(Me.PictureBox2.Image)
+        If Trim(TextBox2.Text) = "" Then
+            MsgBox("¡Error! no se permiten campos vacios")
 
-        Try
-            SQLiteCon.Open()
-
-            SQLliteCMD = New SQLiteCommand
-
-            With SQLliteCMD
-                .CommandText = " INSERT INTO PICTOGRAMAS (`ID_PICTO`, `NOMBRE`, `IMAGEN`) VALUES (NULL, @NOMBRE,@IMAGEN)"
-                .Connection = SQLiteCon
-
-                .Parameters.AddWithValue("@NOMBRE", Me.TextBox2.Text)
-                .Parameters.AddWithValue("@IMAGEN", Imag)
-
-                .ExecuteNonQuery()
-
-            End With
-
+        Else
             SQLiteCon.Close()
-            MsgBox("Datos Registrados Exitosamente")
+            Imag = Imagen_Bytes(Me.PictureBox2.Image)
+
+            Try
+                SQLiteCon.Open()
+                SQLliteCMD = New SQLiteCommand
+
+                With SQLliteCMD
+                    .CommandText = " INSERT INTO PICTOGRAMAS (`ID_PICTO`, `NOMBRE`, `IMAGEN`) VALUES (NULL, @NOMBRE,@IMAGEN)"
+                    .Connection = SQLiteCon
+                    .Parameters.AddWithValue("@NOMBRE", Me.TextBox2.Text)
+                    .Parameters.AddWithValue("@IMAGEN", Imag)
+                    .ExecuteNonQuery()
+                End With
+
+                SQLiteCon.Close()
+                MsgBox("Datos Registrados Exitosamente")
+                Me.TextBox2.Clear()
 
 
-        Catch ex As Exception
-            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+            Catch ex As Exception
+                MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+                SQLiteCon.Close()
+                Return
+            End Try
             SQLiteCon.Close()
-            Return
-        End Try
-        SQLiteCon.Close()
 
 
 
+
+        End If
 
     End Sub
 
@@ -112,5 +131,19 @@ Public Class Pictograma
             PictureBox2.Image = Image.FromFile(file.FileName)
             PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         End If
+    End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        Dim Numero As String
+        Do
+            Numero = InputBox("Por favor digite el identificador de Pictograma:")
+        Loop Until IsNumeric(Numero)
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        Dim Numero As String
+        Do
+            Numero = InputBox("Por favor digite el identificador de Pictograma:")
+        Loop Until IsNumeric(Numero)
     End Sub
 End Class

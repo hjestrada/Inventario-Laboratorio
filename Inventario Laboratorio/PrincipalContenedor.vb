@@ -99,4 +99,8 @@ Public Class PrincipalContenedor
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
         AbrirFormenPanel(New Pictograma)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
+    End Sub
 End Class
