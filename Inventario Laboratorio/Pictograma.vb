@@ -12,6 +12,10 @@ Public Class Pictograma
     Dim SQLiteCon As New SQLiteConnection(DB_Path)
     Dim SQLliteCMD As New SQLiteCommand
     Dim Imag As Byte()
+    Dim consulta1 As String
+    Dim lista1 As Byte
+    Dim datos1 As DataSet
+    Dim MySQLDA1 As New SQLiteDataAdapter
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
@@ -19,13 +23,13 @@ Public Class Pictograma
     End Sub
 
     Private Sub Pictograma_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        MAXID()
         CargarDatos()
     End Sub
 
     Private Sub CargarDatos()
 
-        Dim sql As String = "SELECT * FROM PICTOGRAMAS"
+        Dim sql As String = "SELECT `ID_PICTO`, `NOMBRE` FROM PICTOGRAMAS"
 
         Using con As New SQLiteConnection(DB_Path)
             Dim command As New SQLiteCommand(sql, con)
@@ -63,6 +67,8 @@ Public Class Pictograma
                 SQLiteCon.Close()
                 MsgBox("Datos Registrados Exitosamente")
                 Me.TextBox2.Clear()
+                CargarDatos()
+                MAXID()
 
 
             Catch ex As Exception
@@ -134,16 +140,79 @@ Public Class Pictograma
     End Sub
 
     Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
-        Dim Numero As String
-        Do
-            Numero = InputBox("Por favor digite el identificador de Pictograma:")
-        Loop Until IsNumeric(Numero)
+        Try
+
+
+
+            Dim Numero As String
+            Do
+                Numero = InputBox("Por favor digite el identificador de Pictograma:")
+            Loop Until IsNumeric(Numero)
+
+
+            consulta1 = "SELECT * FROM `PICTOGRAMAS` WHERE `ID_PICTO`=" & Numero & ""
+            MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
+            datos1 = New DataSet
+            MySQLDA1.Fill(datos1, "PICTOGRAMAS")
+            lista1 = datos1.Tables("PICTOGRAMAS").Rows.Count
+
+            If lista1 = 0 Then
+                MsgBox("Registro no encontrado")
+
+
+            End If
+
+
+            Label3.Text = datos1.Tables("PICTOGRAMAS").Rows(0).Item("ID_PICTO")
+            TextBox2.Text = datos1.Tables("PICTOGRAMAS").Rows(0).Item("NOMBRE")
+            Dim ImgArray() As Byte = datos1.Tables("PICTOGRAMAS").Rows(0).Item("IMAGEN")
+            Dim lmgStr As New System.IO.MemoryStream(ImgArray)
+            PictureBox2.Image = Image.FromStream(lmgStr)
+            PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+            lmgStr.Close()
+
+        Catch ex As Exception
+            MsgBox("Error" & ex.Message)
+        End Try
+
+
+    End Sub
+
+    Sub MAXID()
+
+        MySQLDA1.SelectCommand = New SQLiteCommand
+        MySQLDA1.SelectCommand.Connection = SQLiteCon
+        MySQLDA1.SelectCommand.CommandText = "SELECT MAX(`ID_PICTO`)  AS id FROM PICTOGRAMAS"
+        SQLiteCon.Open()
+        Dim valorDefecto As Integer = 1
+        Dim ValorRetornado As Object = MySQLDA1.SelectCommand.ExecuteScalar()
+
+        If (ValorRetornado Is DBNull.Value) Then
+            Label3.Text = CStr(valorDefecto)
+        Else
+            Label3.Text = CStr(ValorRetornado) + 1
+        End If
+        SQLiteCon.Close()
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        SQLiteCon.Open()
         Dim Numero As String
         Do
             Numero = InputBox("Por favor digite el identificador de Pictograma:")
         Loop Until IsNumeric(Numero)
+
+        If MessageBox.Show("¿Seguro que desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            SQLliteCMD = New SQLite.SQLiteCommand("delete from PICTOGRAMAS where ID_PICTO='" & Numero & "'", SQLiteCon)
+            SQLliteCMD.ExecuteNonQuery()
+            CargarDatos()
+            SQLiteCon.Close()
+            MAXID()
+
+        End If
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
