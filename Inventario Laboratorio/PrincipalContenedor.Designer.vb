@@ -54,6 +54,8 @@ Partial Class PrincipalContenedor
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
+        Me.IconPictureBox3 = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +66,8 @@ Partial Class PrincipalContenedor
         Me.Panel8.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -306,6 +310,7 @@ Partial Class PrincipalContenedor
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.IconPictureBox2)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.PictureBox2)
@@ -362,6 +367,7 @@ Partial Class PrincipalContenedor
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.IconPictureBox3)
         Me.Panel2.Controls.Add(Me.Panel8)
         Me.Panel2.Controls.Add(Me.Lb_Fecha)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -492,6 +498,32 @@ Partial Class PrincipalContenedor
         Me.Panel4.Size = New System.Drawing.Size(1640, 967)
         Me.Panel4.TabIndex = 8
         '
+        'IconPictureBox2
+        '
+        Me.IconPictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.AngleLeft
+        Me.IconPictureBox2.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox2.Location = New System.Drawing.Point(321, 382)
+        Me.IconPictureBox2.Name = "IconPictureBox2"
+        Me.IconPictureBox2.Size = New System.Drawing.Size(32, 32)
+        Me.IconPictureBox2.TabIndex = 15
+        Me.IconPictureBox2.TabStop = False
+        '
+        'IconPictureBox3
+        '
+        Me.IconPictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconPictureBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.AngleRight
+        Me.IconPictureBox3.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox3.Location = New System.Drawing.Point(6, 42)
+        Me.IconPictureBox3.Name = "IconPictureBox3"
+        Me.IconPictureBox3.Size = New System.Drawing.Size(32, 32)
+        Me.IconPictureBox3.TabIndex = 16
+        Me.IconPictureBox3.TabStop = False
+        '
         'PrincipalContenedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -519,6 +551,8 @@ Partial Class PrincipalContenedor
         Me.Panel8.ResumeLayout(False)
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
+        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -554,4 +588,6 @@ Partial Class PrincipalContenedor
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Button3 As Button
+    Friend WithEvents IconPictureBox2 As IconPictureBox
+    Friend WithEvents IconPictureBox3 As IconPictureBox
 End Class

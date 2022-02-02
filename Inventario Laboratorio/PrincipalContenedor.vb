@@ -2,7 +2,7 @@
 
 
 Public Class PrincipalContenedor
-
+    Dim bandera As Boolean = True
 
     'Necesarios para redondear formulario
     Public SD As Integer
@@ -106,5 +106,22 @@ Public Class PrincipalContenedor
 
     Private Sub Panel_Central_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Central.Paint
 
+    End Sub
+
+    Private Sub IconPictureBox2_Click(sender As Object, e As EventArgs) Handles IconPictureBox2.Click
+
+
+
+        Panel1.Visible = False
+
+
+
+
+
+
+    End Sub
+
+    Private Sub IconPictureBox3_Click(sender As Object, e As EventArgs) Handles IconPictureBox3.Click
+        Panel1.Visible = True
     End Sub
 End Class

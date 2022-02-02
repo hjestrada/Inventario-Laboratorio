@@ -176,4 +176,16 @@ Public Class Usuarios
             e.Handled = True
         End If
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked Then
+            TextBox6.UseSystemPasswordChar = True
+
+        Else
+            TextBox6.UseSystemPasswordChar = False
+
+
+        End If
+
+    End Sub
 End Class

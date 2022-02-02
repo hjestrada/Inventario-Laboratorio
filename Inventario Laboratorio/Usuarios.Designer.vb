@@ -51,6 +51,8 @@ Partial Class Usuarios
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -381,6 +383,7 @@ Partial Class Usuarios
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(331, 31)
         Me.TextBox6.TabIndex = 21
+        Me.TextBox6.UseSystemPasswordChar = True
         '
         'Label8
         '
@@ -416,11 +419,23 @@ Partial Class Usuarios
         Me.MaskedTextBox1.Size = New System.Drawing.Size(331, 29)
         Me.MaskedTextBox1.TabIndex = 23
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(363, 545)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(74, 24)
+        Me.CheckBox1.TabIndex = 24
+        Me.CheckBox1.Text = "Visible"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(654, 709)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TextBox6)
@@ -481,4 +496,6 @@ Partial Class Usuarios
     Friend WithEvents Label9 As Label
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents PageSetupDialog1 As PageSetupDialog
 End Class
