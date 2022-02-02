@@ -126,7 +126,9 @@ Public Class PrincipalContenedor
 
 
     Private Sub IconButton8_Click(sender As Object, e As EventArgs) Handles IconButton8.Click
-        Me.Close()
+
+        End
+
 
     End Sub
 
@@ -154,7 +156,10 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Close()
+
+        End
+
+
     End Sub
 
 

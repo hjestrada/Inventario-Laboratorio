@@ -323,11 +323,11 @@ Partial Class PrincipalContenedor
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(126, 349)
+        Me.Label5.Location = New System.Drawing.Point(28, 357)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 20)
+        Me.Label5.Size = New System.Drawing.Size(49, 20)
         Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Administrador"
+        Me.Label5.Text = "--------"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'IconPictureBox2
@@ -346,20 +346,21 @@ Partial Class PrincipalContenedor
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(58, 320)
+        Me.Label2.Location = New System.Drawing.Point(28, 337)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(242, 20)
+        Me.Label2.Size = New System.Drawing.Size(115, 24)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Hector Jaime Estrada Toledo"
+        Me.Label2.Text = "---------------"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(136, 291)
+        Me.Label1.Location = New System.Drawing.Point(28, 305)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 20)
         Me.Label1.TabIndex = 1
@@ -368,7 +369,7 @@ Partial Class PrincipalContenedor
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(62, 32)
+        Me.PictureBox2.Location = New System.Drawing.Point(68, 32)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(234, 234)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
