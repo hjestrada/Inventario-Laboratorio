@@ -66,7 +66,7 @@ Public Class Usuarios
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
         PictureBox2.Image = Nothing
         Dim file As New OpenFileDialog()
-        file.Filter = ("Image File (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg ;*.png")
+        file.Filter = ("Image File (*.ico;*.jpge;*.jpg;*.bmp;*.gif;*.png)|*.jpg;*.jpeg;*.bmp;*.gif;*.png;*.ico")
         If file.ShowDialog() = DialogResult.OK Then
             PictureBox2.Image = Image.FromFile(file.FileName)
             PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
@@ -74,47 +74,54 @@ Public Class Usuarios
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        If MsgBox("Advertencia, ¿esta seguro de que la información suministrada es correcta y desea guardar el usuario?", MsgBoxStyle.Information + vbYesNo) = vbYes Then
+
+            If Trim(TextBox1.Text) = "" Or Trim(TextBox2.Text) = "" Or Trim(MaskedTextBox1.Text) = "" Or Trim(TextBox4.Text) = "" Or Trim(TextBox5.Text) = "" Or Trim(TextBox6.Text) = "" Then
+                MsgBox("¡Error! no se permiten campos vacios")
+
+            Else
+                SQLiteCon.Close()
+                Imag = Imagen_Bytes(Me.PictureBox2.Image)
+
+                Try
+                    SQLiteCon.Open()
+                    SQLliteCMD = New SQLiteCommand
 
 
-        If Trim(TextBox1.Text) = "" Or Trim(TextBox2.Text) = "" Or Trim(MaskedTextBox1.Text) = "" Or Trim(TextBox4.Text) = "" Or Trim(TextBox5.Text) = "" Or Trim(TextBox6.Text) = "" Then
-            MsgBox("¡Error! no se permiten campos vacios")
+                    With SQLliteCMD
+                        .CommandText = " INSERT INTO USUARIOS (`ID_USUARIO`, `NOMBRES`, `ROL`,`TELEFONO`,`EMAIL`,`FOTO`,`USER`,`PWD`) VALUES (@ID_USUARIO, @NOMBRES, @ROL,@TELEFONO,@EMAIL,@FOTO,@USER,@PWD)"
+                        .Connection = SQLiteCon
+                        .Parameters.AddWithValue("@ID_USUARIO", Me.TextBox1.Text)
+                        .Parameters.AddWithValue("@NOMBRES", Me.TextBox2.Text)
+                        .Parameters.AddWithValue("@ROL", Me.ComboBox1.Text)
+                        .Parameters.AddWithValue("@TELEFONO", Me.MaskedTextBox1.Text)
+                        .Parameters.AddWithValue("@EMAIL", Me.TextBox4.Text)
+                        .Parameters.AddWithValue("@FOTO", Imag)
+                        .Parameters.AddWithValue("@USER", Me.TextBox5.Text)
+                        .Parameters.AddWithValue("@PWD", Me.TextBox6.Text)
 
+                        .ExecuteNonQuery()
+                    End With
+
+                    SQLiteCon.Close()
+                    MsgBox("Datos Registrados Exitosamente")
+                    limpiarform()
+
+
+                Catch ex As Exception
+                    MsgBox("Error al momento de guardar, verifique que el numero de identificación no este repetido en el sistema. ")
+                    SQLiteCon.Close()
+                    Return
+                End Try
+                SQLiteCon.Close()
+            End If
         Else
-            SQLiteCon.Close()
-            Imag = Imagen_Bytes(Me.PictureBox2.Image)
 
-            Try
-                SQLiteCon.Open()
-                SQLliteCMD = New SQLiteCommand
+            MsgBox("Operacion de Guardado Cancelado")
 
-
-                With SQLliteCMD
-                    .CommandText = " INSERT INTO USUARIOS (`ID_USUARIO`, `NOMBRES`, `ROL`,`TELEFONO`,`EMAIL`,`FOTO`,`USER`,`PWD`) VALUES (@ID_USUARIO, @NOMBRES, @ROL,@TELEFONO,@EMAIL,@FOTO,@USER,@PWD)"
-                    .Connection = SQLiteCon
-                    .Parameters.AddWithValue("@ID_USUARIO", Me.TextBox1.Text)
-                    .Parameters.AddWithValue("@NOMBRES", Me.TextBox2.Text)
-                    .Parameters.AddWithValue("@ROL", Me.ComboBox1.Text)
-                    .Parameters.AddWithValue("@TELEFONO", Me.MaskedTextBox1.Text)
-                    .Parameters.AddWithValue("@EMAIL", Me.TextBox4.Text)
-                    .Parameters.AddWithValue("@FOTO", Imag)
-                    .Parameters.AddWithValue("@USER", Me.TextBox5.Text)
-                    .Parameters.AddWithValue("@PWD", Me.TextBox6.Text)
-
-                    .ExecuteNonQuery()
-                End With
-
-                SQLiteCon.Close()
-                MsgBox("Datos Registrados Exitosamente")
-                limpiarform()
-
-
-            Catch ex As Exception
-                MsgBox("Error al momento de guardar, verifique que el numero de identificación no este repetido en el sistema" & vbCr & ex.Message, MsgBoxStyle.Critical, "Mensaje de Error")
-                SQLiteCon.Close()
-                Return
-            End Try
-            SQLiteCon.Close()
         End If
+
+
 
     End Sub
 
@@ -123,7 +130,10 @@ Public Class Usuarios
         Me.TextBox2.Clear()
         Me.MaskedTextBox1.Clear()
         Me.TextBox4.Clear()
-        '  PictureBox2.Load()
+
+        PictureBox2.Image.Dispose()
+        PictureBox2.Image = Nothing
+
         Me.TextBox5.Clear()
         Me.TextBox6.Clear()
 
@@ -179,13 +189,66 @@ Public Class Usuarios
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked Then
-            TextBox6.UseSystemPasswordChar = True
-
-        Else
             TextBox6.UseSystemPasswordChar = False
+        Else
+            TextBox6.UseSystemPasswordChar = True
+        End If
+
+    End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        Try
+
+
+            Dim Numero As String
+            Numero = InputBox("Por favor digite la idenificación del usuario:")
+
+
+            consulta1 = "SELECT * FROM `USUARIOS` WHERE `ID_USUARIO`=" & Numero & ""
+            MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
+            datos1 = New DataSet
+            MySQLDA1.Fill(datos1, "USUARIOS")
+            lista1 = datos1.Tables("USUARIOS").Rows.Count
+
+            If lista1 = 0 Then
+                MsgBox("Registro no encontrado")
+
+            End If
+
+            TextBox1.Text = datos1.Tables("USUARIOS").Rows(0).Item("ID_USUARIO")
+            TextBox2.Text = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
+            ComboBox1.Text = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
+            MaskedTextBox1.Text = datos1.Tables("USUARIOS").Rows(0).Item("TELEFONO")
+            TextBox4.Text = datos1.Tables("USUARIOS").Rows(0).Item("EMAIL")
+            TextBox5.Text = datos1.Tables("USUARIOS").Rows(0).Item("USER")
+            TextBox6.Text = datos1.Tables("USUARIOS").Rows(0).Item("PWD")
+
+            Dim ImgArray() As Byte = datos1.Tables("USUARIOS").Rows(0).Item("FOTO")
+            Dim lmgStr As New System.IO.MemoryStream(ImgArray)
+            PictureBox2.Image = Image.FromStream(lmgStr)
+            PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+            lmgStr.Close()
+
+        Catch ex As Exception
+            MsgBox("Error" & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        SQLiteCon.Open()
+        Dim Numero As String
+
+        Numero = InputBox("Por favor digite la idenificación del usuario:")
+
+
+        If MessageBox.Show("¿Seguro que desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+            SQLliteCMD = New SQLite.SQLiteCommand("delete from USUARIOS where ID_USUARIO='" & Numero & "'", SQLiteCon)
+            SQLliteCMD.ExecuteNonQuery()
+            limpiarform()
+            SQLiteCon.Close()
 
 
         End If
-
     End Sub
 End Class

@@ -132,7 +132,7 @@ Public Class Pictograma
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
         PictureBox2.Image = Nothing
         Dim file As New OpenFileDialog()
-        file.Filter = ("Image File (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg ;*.png")
+        file.Filter = "Image File (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg ;*.png"
         If file.ShowDialog() = DialogResult.OK Then
             PictureBox2.Image = Image.FromFile(file.FileName)
             PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
@@ -145,9 +145,9 @@ Public Class Pictograma
 
 
             Dim Numero As String
-            Do
-                Numero = InputBox("Por favor digite el identificador de Pictograma:")
-            Loop Until IsNumeric(Numero)
+
+            Numero = InputBox("Por favor digite el identificador de Pictograma:")
+
 
 
             consulta1 = "SELECT * FROM `PICTOGRAMAS` WHERE `ID_PICTO`=" & Numero & ""
@@ -187,7 +187,7 @@ Public Class Pictograma
         Dim valorDefecto As Integer = 1
         Dim ValorRetornado As Object = MySQLDA1.SelectCommand.ExecuteScalar()
 
-        If (ValorRetornado Is DBNull.Value) Then
+        If ValorRetornado Is DBNull.Value Then
             Label3.Text = CStr(valorDefecto)
         Else
             Label3.Text = CStr(ValorRetornado) + 1
@@ -198,9 +198,9 @@ Public Class Pictograma
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
         SQLiteCon.Open()
         Dim Numero As String
-        Do
-            Numero = InputBox("Por favor digite el identificador de Pictograma:")
-        Loop Until IsNumeric(Numero)
+
+        Numero = InputBox("Por favor digite el identificador de Pictograma:")
+
 
         If MessageBox.Show("¿Seguro que desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
             SQLliteCMD = New SQLite.SQLiteCommand("delete from PICTOGRAMAS where ID_PICTO='" & Numero & "'", SQLiteCon)

@@ -104,20 +104,9 @@ Public Class PrincipalContenedor
         Me.Close()
     End Sub
 
-    Private Sub Panel_Central_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Central.Paint
-
-    End Sub
 
     Private Sub IconPictureBox2_Click(sender As Object, e As EventArgs) Handles IconPictureBox2.Click
-
-
-
         Panel1.Visible = False
-
-
-
-
-
 
     End Sub
 
