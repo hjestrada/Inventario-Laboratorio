@@ -1,7 +1,21 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Data.SQLite
+Imports System.Data.SqlClient
+Imports System.IO
+
 
 
 Public Class PrincipalContenedor
+
+    Dim DB_Path As String = "Data Source=" & Application.StartupPath & "\BD_Lab.s3db;"
+    Dim SQLiteCon As New SQLiteConnection(DB_Path)
+    Dim SQLliteCMD As New SQLiteCommand
+    Dim Imag As Byte()
+    Dim consulta1 As String
+    Dim lista1 As Byte
+    Dim datos1 As DataSet
+    Dim MySQLDA1 As New SQLiteDataAdapter
+
     Dim bandera As Boolean = True
 
     'Necesarios para redondear formulario
@@ -54,21 +68,60 @@ Public Class PrincipalContenedor
 
 
 
-
-
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Close()
 
     End Sub
 
     Private Sub PrincipalContenedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarInfoLogin()
         TextBox1.Focus()
         Lb_Fecha.Text = Now
         'Necesario para redondear formulario
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
     End Sub
+
+
+    Sub CargarInfoLogin()
+        Try
+
+
+            consulta1 = "SELECT * FROM `USUARIOS` WHERE `ID_USUARIO`=" & IDUSUARIO2 & ""
+            MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
+            datos1 = New DataSet
+            MySQLDA1.Fill(datos1, "USUARIOS")
+            lista1 = datos1.Tables("USUARIOS").Rows.Count
+
+            If lista1 = 0 Then
+                MsgBox("Registro no encontrado")
+
+            End If
+
+            Label2.Text = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
+            Label5.Text = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
+
+
+            Dim ImgArray() As Byte = datos1.Tables("USUARIOS").Rows(0).Item("FOTO")
+            Dim lmgStr As New System.IO.MemoryStream(ImgArray)
+            PictureBox2.Image = Image.FromStream(lmgStr)
+            PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+            lmgStr.Close()
+
+        Catch ex As Exception
+            MsgBox("Error" & ex.Message)
+        End Try
+
+
+    End Sub
+
+
+
+
+
+
+
+
+
 
 
 

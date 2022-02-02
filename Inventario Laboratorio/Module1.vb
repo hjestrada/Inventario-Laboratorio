@@ -1,0 +1,3 @@
+﻿Module Module1
+    Public USER, PWD, USERBD, ROL, PWDBD, NOMBREUSUARIO, IDUSUARIO, IDUSUARIO2 As String
+End Module

@@ -1,17 +1,26 @@
+
+
+
+Option Strict Off
+Option Explicit On
+
+Imports System.Runtime.InteropServices
+Imports System.Data.SQLite
+Imports System.Data.SqlClient
+Imports System.IO
+
+
+
 Public Class Login
+    Dim DB_Path As String = "Data Source=" & Application.StartupPath & "\BD_Lab.s3db;"
+    Dim SQLiteCon As New SQLiteConnection(DB_Path)
+    Dim SQLliteCMD As New SQLiteCommand
+    Dim Imag As Byte()
+    Dim consulta1 As String
+    Dim lista1 As Byte
+    Dim datos1 As DataSet
+    Dim MySQLDA1 As New SQLiteDataAdapter
 
-    ' TODO: inserte el código para realizar autenticación personalizada usando el nombre de usuario y la contraseña proporcionada 
-    ' (Consulte https://go.microsoft.com/fwlink/?LinkId=35339).  
-    ' El objeto principal personalizado se puede adjuntar al objeto principal del subproceso actual como se indica a continuación: 
-    '     My.User.CurrentPrincipal = CustomPrincipal
-    ' donde CustomPrincipal es la implementación de IPrincipal utilizada para realizar la autenticación. 
-    ' Posteriormente, My.User devolverá la información de identidad encapsulada en el objeto CustomPrincipal
-    ' como el nombre de usuario, nombre para mostrar, etc.
-
-
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
@@ -19,6 +28,50 @@ Public Class Login
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        USER = UsernameTextBox.Text
+        PWD = PasswordTextBox.Text
+
+
+        If USER = "" Or PWD = "" Then
+            MsgBox("Todos los campos son obligatorios")
+        Else
+
+            Dim CONSULTA As String
+            Dim LISTA As Byte
+            CONSULTA = "Select *  From USUARIOS WHERE USER ='" & USER & "' "
+            MySQLDA1 = New SQLiteDataAdapter(CONSULTA, SQLiteCon)
+            datos1 = New DataSet
+            MySQLDA1.Fill(datos1, "USUARIOS")
+            LISTA = datos1.Tables("USUARIOS").Rows.Count
+
+            If LISTA <> 0 Then
+
+                USERBD = datos1.Tables("USUARIOS").Rows(0).Item("USER")
+                PWDBD = datos1.Tables("USUARIOS").Rows(0).Item("PWD")
+                NOMBREUSUARIO = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
+                ROL = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
+                IDUSUARIO = datos1.Tables("USUARIOS").Rows(0).Item("ID_USUARIO")
+
+                SQLiteCon.Close()
+
+                If (USER = USERBD) And (PWD = PWDBD) Then
+                    Me.Hide()
+                    MsgBox("Bienvenido al Sistema, " & ROL & " " & NOMBREUSUARIO & "")
+                    IDUSUARIO2 = IDUSUARIO
+                    PrincipalContenedor.Show()
+                Else
+                    MsgBox("Error al Validar Usuario y/o Contraseña")
+                    UsernameTextBox.Clear()
+                    PasswordTextBox.Clear()
+                End If
+            Else
+                MsgBox("No se encontraron datos")
+            End If
+        End If
+    End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        Me.Close()
 
     End Sub
 End Class
