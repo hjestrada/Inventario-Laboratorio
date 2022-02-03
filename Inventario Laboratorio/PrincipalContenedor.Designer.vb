@@ -185,7 +185,7 @@ Partial Class PrincipalContenedor
         Me.IconButton8.Name = "IconButton8"
         Me.IconButton8.Size = New System.Drawing.Size(321, 50)
         Me.IconButton8.TabIndex = 9
-        Me.IconButton8.Text = "Salir"
+        Me.IconButton8.Text = "Cerrar Sesión"
         Me.IconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton8.UseVisualStyleBackColor = False
         '
@@ -323,7 +323,7 @@ Partial Class PrincipalContenedor
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(28, 357)
+        Me.Label5.Location = New System.Drawing.Point(28, 371)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 20)
         Me.Label5.TabIndex = 3

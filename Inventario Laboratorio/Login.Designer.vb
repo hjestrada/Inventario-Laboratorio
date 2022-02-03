@@ -88,7 +88,7 @@ Partial Class Login
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordTextBox.Size = New System.Drawing.Size(220, 29)
-        Me.PasswordTextBox.TabIndex = 3
+        Me.PasswordTextBox.TabIndex = 2
         '
         'Panel1
         '
@@ -133,7 +133,7 @@ Partial Class Login
         Me.IconButton2.Location = New System.Drawing.Point(228, 492)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(146, 50)
-        Me.IconButton2.TabIndex = 15
+        Me.IconButton2.TabIndex = 4
         Me.IconButton2.Text = "Salir"
         Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton2.UseVisualStyleBackColor = False
@@ -156,7 +156,7 @@ Partial Class Login
         Me.IconButton1.Location = New System.Drawing.Point(76, 492)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(146, 50)
-        Me.IconButton1.TabIndex = 14
+        Me.IconButton1.TabIndex = 3
         Me.IconButton1.Text = "Aceptar"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False

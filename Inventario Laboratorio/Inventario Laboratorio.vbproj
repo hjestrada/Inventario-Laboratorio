@@ -128,6 +128,12 @@
     <Compile Include="Elementos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Fabricante.Designer.vb">
+      <DependentUpon>Fabricante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fabricante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Elementos.resx">
       <DependentUpon>Elementos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fabricante.resx">
+      <DependentUpon>Fabricante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

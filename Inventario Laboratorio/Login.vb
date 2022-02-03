@@ -26,8 +26,7 @@ Public Class Login
         Me.Close()
 
     End Sub
-
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+    Sub login()
         USER = UsernameTextBox.Text
         PWD = PasswordTextBox.Text
 
@@ -68,10 +67,20 @@ Public Class Login
                 MsgBox("No se encontraron datos")
             End If
         End If
+
+    End Sub
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        login()
+
     End Sub
 
     Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
         Me.Close()
+
+    End Sub
+
+    Private Sub IconButton1_Enter(sender As Object, e As EventArgs) Handles IconButton1.Enter
+        login()
 
     End Sub
 End Class

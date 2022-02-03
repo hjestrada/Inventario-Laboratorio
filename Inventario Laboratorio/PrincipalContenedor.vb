@@ -17,6 +17,7 @@ Public Class PrincipalContenedor
     Dim MySQLDA1 As New SQLiteDataAdapter
 
     Dim bandera As Boolean = True
+    Dim rolprivilegio As String
 
     'Necesarios para redondear formulario
     Public SD As Integer
@@ -79,6 +80,14 @@ Public Class PrincipalContenedor
         Lb_Fecha.Text = Now
         'Necesario para redondear formulario
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
+
+
+
+
+
+
+
+
     End Sub
 
 
@@ -99,6 +108,7 @@ Public Class PrincipalContenedor
 
             Label2.Text = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
             Label5.Text = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
+            rolprivilegio = Label5.Text
 
 
             Dim ImgArray() As Byte = datos1.Tables("USUARIOS").Rows(0).Item("FOTO")
@@ -120,14 +130,17 @@ Public Class PrincipalContenedor
 
 
 
-
-
-
-
-
     Private Sub IconButton8_Click(sender As Object, e As EventArgs) Handles IconButton8.Click
+        Dim Msg As MsgBoxResult
+        Msg = MsgBox("¿Desea cerrar sesión?", vbYesNo, "Salir del Sistema")
+        If Msg = MsgBoxResult.Yes Then
+            Me.Close()
 
-        End
+            Login.Show()
+
+        Else
+            Exit Sub
+        End If
 
 
     End Sub
@@ -144,7 +157,15 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
-        AbrirFormenPanel(New Usuarios)
+
+        If rolprivilegio = "Administrador" Then
+            AbrirFormenPanel(New Usuarios)
+
+        Else
+            MsgBox("No posee privilegios suficientes para gestionar Usuarios, consulte con el administrador del sistema")
+
+        End If
+
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -156,8 +177,17 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim Msg As MsgBoxResult
+        Msg = MsgBox("¿Desea cerrar sesión?", vbYesNo, "Salir del Sistema")
+        If Msg = MsgBoxResult.Yes Then
+            Me.Close()
 
-        End
+            Login.Show()
+
+        Else
+            Exit Sub
+        End If
+
 
 
     End Sub
@@ -170,5 +200,9 @@ Public Class PrincipalContenedor
 
     Private Sub IconPictureBox3_Click(sender As Object, e As EventArgs) Handles IconPictureBox3.Click
         Panel1.Visible = True
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+        AbrirFormenPanel(New Fabricante)
     End Sub
 End Class
