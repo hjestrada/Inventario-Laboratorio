@@ -169,7 +169,7 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        MsgBox("Desarrollado por: Hector J. Estrada Toledo")
+        MsgBox("Desarrollado por: Hector J. Estrada Toledo, @hjestrada")
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click

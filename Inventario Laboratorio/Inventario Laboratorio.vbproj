@@ -66,7 +66,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1045px-Sena_Colombia_logo.svg.ico</ApplicationIcon>
+    <ApplicationIcon>unnamed.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -256,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1045px-Sena_Colombia_logo.svg.ico" />
+    <Content Include="unnamed.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

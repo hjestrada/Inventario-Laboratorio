@@ -110,7 +110,7 @@ Partial Class Estantes
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(285, 371)
+        Me.IconButton4.Location = New System.Drawing.Point(242, 375)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(146, 50)
         Me.IconButton4.TabIndex = 50
@@ -133,7 +133,7 @@ Partial Class Estantes
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(18, 371)
+        Me.IconButton1.Location = New System.Drawing.Point(90, 375)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(146, 50)
         Me.IconButton1.TabIndex = 49
@@ -179,7 +179,7 @@ Partial Class Estantes
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(171, 57)
+        Me.Label1.Location = New System.Drawing.Point(193, 56)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(81, 20)
         Me.Label1.TabIndex = 0

@@ -55,6 +55,7 @@ Partial Class PrincipalContenedor
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +67,7 @@ Partial Class PrincipalContenedor
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -87,6 +89,7 @@ Partial Class PrincipalContenedor
         '
         'Panel6
         '
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Panel6.Controls.Add(Me.PictureBox1)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 956)
@@ -106,8 +109,9 @@ Partial Class PrincipalContenedor
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.IconButton10)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Panel5.Controls.Add(Me.IconButton1)
+        Me.Panel5.Controls.Add(Me.IconButton10)
         Me.Panel5.Controls.Add(Me.IconButton8)
         Me.Panel5.Controls.Add(Me.IconButton7)
         Me.Panel5.Controls.Add(Me.IconButton3)
@@ -307,6 +311,7 @@ Partial Class PrincipalContenedor
         '
         'Panel3
         '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.IconPictureBox2)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -379,6 +384,7 @@ Partial Class PrincipalContenedor
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Controls.Add(Me.IconPictureBox3)
         Me.Panel2.Controls.Add(Me.Panel8)
         Me.Panel2.Controls.Add(Me.Lb_Fecha)
@@ -389,7 +395,7 @@ Partial Class PrincipalContenedor
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(353, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1564, 111)
+        Me.Panel2.Size = New System.Drawing.Size(1564, 148)
         Me.Panel2.TabIndex = 6
         '
         'IconPictureBox3
@@ -435,7 +441,7 @@ Partial Class PrincipalContenedor
         Me.Lb_Fecha.AutoSize = True
         Me.Lb_Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb_Fecha.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Lb_Fecha.Location = New System.Drawing.Point(82, 69)
+        Me.Lb_Fecha.Location = New System.Drawing.Point(258, 88)
         Me.Lb_Fecha.Name = "Lb_Fecha"
         Me.Lb_Fecha.Size = New System.Drawing.Size(64, 20)
         Me.Lb_Fecha.TabIndex = 3
@@ -474,7 +480,7 @@ Partial Class PrincipalContenedor
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(80, 36)
+        Me.Label3.Location = New System.Drawing.Point(256, 55)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(641, 33)
         Me.Label3.TabIndex = 3
@@ -513,6 +519,16 @@ Partial Class PrincipalContenedor
         Me.Panel_Central.Size = New System.Drawing.Size(1251, 894)
         Me.Panel_Central.TabIndex = 7
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(56, 43)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(178, 68)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
+        '
         'PrincipalContenedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -541,6 +557,7 @@ Partial Class PrincipalContenedor
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -577,4 +594,5 @@ Partial Class PrincipalContenedor
     Friend WithEvents IconPictureBox2 As IconPictureBox
     Friend WithEvents IconPictureBox3 As IconPictureBox
     Friend WithEvents Panel_Central As Panel
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
