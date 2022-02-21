@@ -157,7 +157,6 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
-
         If rolprivilegio = "Administrador" Then
             AbrirFormenPanel(New Usuarios)
 
@@ -165,6 +164,7 @@ Public Class PrincipalContenedor
             MsgBox("No posee privilegios suficientes para gestionar Usuarios, consulte con el administrador del sistema")
 
         End If
+
 
     End Sub
 
@@ -192,6 +192,12 @@ Public Class PrincipalContenedor
 
     End Sub
 
+    Public Sub privilegios()
+
+
+
+    End Sub
+
 
     Private Sub IconPictureBox2_Click(sender As Object, e As EventArgs) Handles IconPictureBox2.Click
         Panel1.Visible = False
@@ -204,5 +210,9 @@ Public Class PrincipalContenedor
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
         AbrirFormenPanel(New Fabricante)
+    End Sub
+
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+        AbrirFormenPanel(New GestionReactivos)
     End Sub
 End Class

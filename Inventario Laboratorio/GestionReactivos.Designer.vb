@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class GestionIsumos
+Partial Class GestionReactivos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,8 +22,9 @@ Partial Class GestionIsumos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionIsumos))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionReactivos))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
@@ -38,29 +39,30 @@ Partial Class GestionIsumos
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -78,7 +80,7 @@ Partial Class GestionIsumos
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton3, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton1, 0, 0)
@@ -87,9 +89,32 @@ Partial Class GestionIsumos
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(745, 69)
         Me.TableLayoutPanel1.TabIndex = 36
+        '
+        'IconButton3
+        '
+        Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.IconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.IconSize = 40
+        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.IconButton3.Location = New System.Drawing.Point(192, 3)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(146, 50)
+        Me.IconButton3.TabIndex = 7
+        Me.IconButton3.Text = "Buscar"
+        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton3.UseVisualStyleBackColor = False
         '
         'IconButton2
         '
@@ -232,13 +257,14 @@ Partial Class GestionIsumos
         'TextBox1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(13, 46)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(331, 31)
         Me.TextBox1.TabIndex = 28
+        Me.TextBox1.UseWaitCursor = True
         '
         'Label2
         '
@@ -250,17 +276,19 @@ Partial Class GestionIsumos
         Me.Label2.Size = New System.Drawing.Size(146, 20)
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "Nombre Reactivo"
+        Me.Label2.UseWaitCursor = True
         '
         'TextBox2
         '
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(13, 107)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(331, 31)
         Me.TextBox2.TabIndex = 30
+        Me.TextBox2.UseWaitCursor = True
         '
         'Label11
         '
@@ -272,6 +300,7 @@ Partial Class GestionIsumos
         Me.Label11.Size = New System.Drawing.Size(107, 20)
         Me.Label11.TabIndex = 49
         Me.Label11.Text = "Código CUS"
+        Me.Label11.UseWaitCursor = True
         '
         'GroupBox2
         '
@@ -296,94 +325,6 @@ Partial Class GestionIsumos
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.UseWaitCursor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(13, 143)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 20)
-        Me.Label3.TabIndex = 51
-        Me.Label3.Text = "Advertencia"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(13, 168)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(331, 31)
-        Me.TextBox3.TabIndex = 50
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(13, 204)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(195, 20)
-        Me.Label5.TabIndex = 53
-        Me.Label5.Text = "Indicaciones de Peligro"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(13, 229)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(331, 94)
-        Me.TextBox4.TabIndex = 52
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(13, 326)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 20)
-        Me.Label6.TabIndex = 55
-        Me.Label6.Text = "Primeros Auxilios"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(13, 349)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(331, 94)
-        Me.TextBox5.TabIndex = 54
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(13, 448)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(283, 20)
-        Me.Label7.TabIndex = 56
-        Me.Label7.Text = "Estado Específico de la Sustancia"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Sólido", "Líquido", "Gaseoso", "Coloidal", "Plasma"})
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 471)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(331, 32)
-        Me.ComboBox1.TabIndex = 57
-        '
         'ComboBox2
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -394,6 +335,7 @@ Partial Class GestionIsumos
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(331, 32)
         Me.ComboBox2.TabIndex = 59
+        Me.ComboBox2.UseWaitCursor = True
         '
         'Label8
         '
@@ -405,6 +347,103 @@ Partial Class GestionIsumos
         Me.Label8.Size = New System.Drawing.Size(154, 20)
         Me.Label8.TabIndex = 58
         Me.Label8.Text = "Unidad de Medida"
+        Me.Label8.UseWaitCursor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Sólido", "Líquido", "Gaseoso", "Coloidal", "Plasma"})
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 471)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(331, 32)
+        Me.ComboBox1.TabIndex = 57
+        Me.ComboBox1.UseWaitCursor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(13, 448)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(283, 20)
+        Me.Label7.TabIndex = 56
+        Me.Label7.Text = "Estado Específico de la Sustancia"
+        Me.Label7.UseWaitCursor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label6.Location = New System.Drawing.Point(13, 326)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(145, 20)
+        Me.Label6.TabIndex = 55
+        Me.Label6.Text = "Primeros Auxilios"
+        Me.Label6.UseWaitCursor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox5.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(13, 349)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(331, 94)
+        Me.TextBox5.TabIndex = 54
+        Me.TextBox5.UseWaitCursor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(13, 143)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(104, 20)
+        Me.Label3.TabIndex = 51
+        Me.Label3.Text = "Advertencia"
+        Me.Label3.UseWaitCursor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(13, 168)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(331, 31)
+        Me.TextBox3.TabIndex = 50
+        Me.TextBox3.UseWaitCursor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label5.Location = New System.Drawing.Point(13, 204)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(195, 20)
+        Me.Label5.TabIndex = 53
+        Me.Label5.Text = "Indicaciones de Peligro"
+        Me.Label5.UseWaitCursor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox4.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(13, 229)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(331, 94)
+        Me.TextBox4.TabIndex = 52
+        Me.TextBox4.UseWaitCursor = True
         '
         'Label9
         '
@@ -427,6 +466,8 @@ Partial Class GestionIsumos
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.IconButton7)
+        Me.GroupBox3.Controls.Add(Me.IconButton6)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.ComboBox5)
         Me.GroupBox3.Controls.Add(Me.Label14)
@@ -446,27 +487,27 @@ Partial Class GestionIsumos
         Me.GroupBox3.TabIndex = 62
         Me.GroupBox3.TabStop = False
         '
-        'Label12
+        'ComboBox5
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(9, 81)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(95, 20)
-        Me.Label12.TabIndex = 62
-        Me.Label12.Text = "Fabricante"
+        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {""})
+        Me.ComboBox5.Location = New System.Drawing.Point(10, 307)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(285, 32)
+        Me.ComboBox5.TabIndex = 63
         '
-        'ComboBox3
+        'Label14
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"miligramo", "gramo", "Kilogramo", "Litro", "mililitro", "Centímetro Cubico"})
-        Me.ComboBox3.Location = New System.Drawing.Point(10, 106)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(331, 32)
-        Me.ComboBox3.TabIndex = 60
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Location = New System.Drawing.Point(135, 362)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(16, 20)
+        Me.Label14.TabIndex = 64
+        Me.Label14.Text = "*"
         '
         'IconButton5
         '
@@ -503,24 +544,36 @@ Partial Class GestionIsumos
         Me.Label13.TabIndex = 49
         Me.Label13.Text = "Ficha Técnica"
         '
-        'Label14
+        'Label12
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(135, 362)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(16, 20)
-        Me.Label14.TabIndex = 64
-        Me.Label14.Text = "*"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label12.Location = New System.Drawing.Point(9, 81)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(95, 20)
+        Me.Label12.TabIndex = 62
+        Me.Label12.Text = "Fabricante"
         '
-        'NumericUpDown3
+        'ComboBox3
         '
-        Me.NumericUpDown3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown3.Location = New System.Drawing.Point(10, 169)
-        Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(331, 29)
-        Me.NumericUpDown3.TabIndex = 49
+        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(10, 106)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(331, 32)
+        Me.ComboBox3.TabIndex = 60
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(10, 228)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(285, 32)
+        Me.ComboBox4.TabIndex = 60
         '
         'Label15
         '
@@ -533,52 +586,63 @@ Partial Class GestionIsumos
         Me.Label15.TabIndex = 49
         Me.Label15.Text = "Cantidad"
         '
-        'ComboBox4
+        'NumericUpDown3
         '
-        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Sólido", "Líquido", "Gaseoso", "Coloidal", "Plasma"})
-        Me.ComboBox4.Location = New System.Drawing.Point(10, 228)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(331, 32)
-        Me.ComboBox4.TabIndex = 60
+        Me.NumericUpDown3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown3.Location = New System.Drawing.Point(10, 169)
+        Me.NumericUpDown3.Name = "NumericUpDown3"
+        Me.NumericUpDown3.Size = New System.Drawing.Size(331, 29)
+        Me.NumericUpDown3.TabIndex = 49
         '
-        'ComboBox5
+        'IconButton6
         '
-        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"Sólido", "Líquido", "Gaseoso", "Coloidal", "Plasma"})
-        Me.ComboBox5.Location = New System.Drawing.Point(10, 307)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(331, 32)
-        Me.ComboBox5.TabIndex = 63
+        Me.IconButton6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.Plus
+        Me.IconButton6.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton6.IconSize = 20
+        Me.IconButton6.Location = New System.Drawing.Point(301, 228)
+        Me.IconButton6.Name = "IconButton6"
+        Me.IconButton6.Size = New System.Drawing.Size(40, 32)
+        Me.IconButton6.TabIndex = 65
+        Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.IconButton6.UseVisualStyleBackColor = True
         '
-        'IconButton3
+        'IconButton7
         '
-        Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.IconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.IconSize = 40
-        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(192, 3)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(146, 50)
-        Me.IconButton3.TabIndex = 7
-        Me.IconButton3.Text = "Buscar"
-        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton3.UseVisualStyleBackColor = False
+        Me.IconButton7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.Plus
+        Me.IconButton7.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton7.IconSize = 20
+        Me.IconButton7.Location = New System.Drawing.Point(301, 307)
+        Me.IconButton7.Name = "IconButton7"
+        Me.IconButton7.Size = New System.Drawing.Size(40, 32)
+        Me.IconButton7.TabIndex = 66
+        Me.IconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.IconButton7.UseVisualStyleBackColor = True
         '
-        'GestionIsumos
+        'GestionReactivos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -587,7 +651,9 @@ Partial Class GestionIsumos
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel2)
-        Me.Name = "GestionIsumos"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "GestionReactivos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Gestion Reactivos"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -639,4 +705,6 @@ Partial Class GestionIsumos
     Friend WithEvents NumericUpDown3 As NumericUpDown
     Friend WithEvents Label14 As Label
     Friend WithEvents IconButton3 As IconButton
+    Friend WithEvents IconButton7 As IconButton
+    Friend WithEvents IconButton6 As IconButton
 End Class
