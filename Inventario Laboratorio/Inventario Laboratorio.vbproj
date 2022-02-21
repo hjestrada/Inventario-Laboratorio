@@ -140,6 +140,12 @@
     <Compile Include="Estantes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Fila.Designer.vb">
+      <DependentUpon>Fila.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fila.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GestionReactivos.Designer.vb">
       <DependentUpon>GestionReactivos.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estantes.resx">
       <DependentUpon>Estantes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fila.resx">
+      <DependentUpon>Fila.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionReactivos.resx">
       <DependentUpon>GestionReactivos.vb</DependentUpon>
