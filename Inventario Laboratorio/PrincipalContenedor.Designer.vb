@@ -29,8 +29,8 @@ Partial Class PrincipalContenedor
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.IconButton10 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton10 = New FontAwesome.Sharp.IconButton()
         Me.IconButton8 = New FontAwesome.Sharp.IconButton()
         Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
@@ -44,6 +44,7 @@ Partial Class PrincipalContenedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.IconPictureBox3 = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -55,7 +56,6 @@ Partial Class PrincipalContenedor
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,10 +64,10 @@ Partial Class PrincipalContenedor
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -124,29 +124,6 @@ Partial Class PrincipalContenedor
         Me.Panel5.Size = New System.Drawing.Size(353, 570)
         Me.Panel5.TabIndex = 1
         '
-        'IconButton10
-        '
-        Me.IconButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton10.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton10.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton10.IconChar = FontAwesome.Sharp.IconChar.Print
-        Me.IconButton10.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton10.IconSize = 40
-        Me.IconButton10.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton10.Location = New System.Drawing.Point(24, 75)
-        Me.IconButton10.Name = "IconButton10"
-        Me.IconButton10.Size = New System.Drawing.Size(321, 50)
-        Me.IconButton10.TabIndex = 11
-        Me.IconButton10.Text = "Reportes"
-        Me.IconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton10.UseVisualStyleBackColor = False
-        '
         'IconButton1
         '
         Me.IconButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -169,6 +146,29 @@ Partial Class PrincipalContenedor
         Me.IconButton1.Text = "Movimientos de Reactivos"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
+        '
+        'IconButton10
+        '
+        Me.IconButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton10.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton10.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton10.IconChar = FontAwesome.Sharp.IconChar.Print
+        Me.IconButton10.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton10.IconSize = 40
+        Me.IconButton10.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.IconButton10.Location = New System.Drawing.Point(24, 75)
+        Me.IconButton10.Name = "IconButton10"
+        Me.IconButton10.Size = New System.Drawing.Size(321, 50)
+        Me.IconButton10.TabIndex = 11
+        Me.IconButton10.Text = "Reportes"
+        Me.IconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton10.UseVisualStyleBackColor = False
         '
         'IconButton8
         '
@@ -398,6 +398,16 @@ Partial Class PrincipalContenedor
         Me.Panel2.Size = New System.Drawing.Size(1564, 148)
         Me.Panel2.TabIndex = 6
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(56, 43)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(178, 68)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
+        '
         'IconPictureBox3
         '
         Me.IconPictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
@@ -519,16 +529,6 @@ Partial Class PrincipalContenedor
         Me.Panel_Central.Size = New System.Drawing.Size(1251, 894)
         Me.Panel_Central.TabIndex = 7
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(56, 43)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(178, 68)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 17
-        Me.PictureBox3.TabStop = False
-        '
         'PrincipalContenedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -554,10 +554,10 @@ Partial Class PrincipalContenedor
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

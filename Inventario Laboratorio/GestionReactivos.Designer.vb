@@ -52,6 +52,8 @@ Partial Class GestionReactivos
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
@@ -61,8 +63,8 @@ Partial Class GestionReactivos
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
-        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -190,7 +192,7 @@ Partial Class GestionReactivos
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(9, 204)
+        Me.Label4.Location = New System.Drawing.Point(19, 306)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 20)
         Me.Label4.TabIndex = 26
@@ -248,7 +250,7 @@ Partial Class GestionReactivos
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(9, 284)
+        Me.Label10.Location = New System.Drawing.Point(19, 386)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 20)
         Me.Label10.TabIndex = 46
@@ -259,7 +261,7 @@ Partial Class GestionReactivos
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(13, 46)
+        Me.TextBox1.Location = New System.Drawing.Point(18, 123)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(331, 31)
@@ -271,7 +273,7 @@ Partial Class GestionReactivos
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(13, 21)
+        Me.Label2.Location = New System.Drawing.Point(18, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(146, 20)
         Me.Label2.TabIndex = 29
@@ -283,7 +285,7 @@ Partial Class GestionReactivos
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(13, 107)
+        Me.TextBox2.Location = New System.Drawing.Point(18, 184)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(331, 31)
@@ -295,7 +297,7 @@ Partial Class GestionReactivos
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(13, 82)
+        Me.Label11.Location = New System.Drawing.Point(18, 159)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(107, 20)
         Me.Label11.TabIndex = 49
@@ -304,8 +306,8 @@ Partial Class GestionReactivos
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
-        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label17)
+        Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
@@ -331,7 +333,7 @@ Partial Class GestionReactivos
         Me.ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"miligramo", "gramo", "Kilogramo", "Litro", "mililitro", "Centímetro Cubico"})
-        Me.ComboBox2.Location = New System.Drawing.Point(13, 535)
+        Me.ComboBox2.Location = New System.Drawing.Point(19, 84)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(331, 32)
         Me.ComboBox2.TabIndex = 59
@@ -342,7 +344,7 @@ Partial Class GestionReactivos
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(13, 512)
+        Me.Label8.Location = New System.Drawing.Point(19, 61)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(154, 20)
         Me.Label8.TabIndex = 58
@@ -355,7 +357,7 @@ Partial Class GestionReactivos
         Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Sólido", "Líquido", "Gaseoso", "Coloidal", "Plasma"})
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 471)
+        Me.ComboBox1.Location = New System.Drawing.Point(18, 548)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(331, 32)
         Me.ComboBox1.TabIndex = 57
@@ -366,7 +368,7 @@ Partial Class GestionReactivos
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(13, 448)
+        Me.Label7.Location = New System.Drawing.Point(18, 525)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(283, 20)
         Me.Label7.TabIndex = 56
@@ -378,7 +380,7 @@ Partial Class GestionReactivos
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(13, 326)
+        Me.Label6.Location = New System.Drawing.Point(18, 403)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(145, 20)
         Me.Label6.TabIndex = 55
@@ -390,7 +392,7 @@ Partial Class GestionReactivos
         Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox5.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(13, 349)
+        Me.TextBox5.Location = New System.Drawing.Point(18, 426)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(331, 94)
@@ -402,7 +404,7 @@ Partial Class GestionReactivos
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(13, 143)
+        Me.Label3.Location = New System.Drawing.Point(18, 220)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 20)
         Me.Label3.TabIndex = 51
@@ -414,7 +416,7 @@ Partial Class GestionReactivos
         Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(13, 168)
+        Me.TextBox3.Location = New System.Drawing.Point(18, 245)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(331, 31)
@@ -426,7 +428,7 @@ Partial Class GestionReactivos
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(13, 204)
+        Me.Label5.Location = New System.Drawing.Point(18, 281)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(195, 20)
         Me.Label5.TabIndex = 53
@@ -438,7 +440,7 @@ Partial Class GestionReactivos
         Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox4.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(13, 229)
+        Me.TextBox4.Location = New System.Drawing.Point(18, 306)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(331, 94)
@@ -450,7 +452,7 @@ Partial Class GestionReactivos
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(9, 20)
+        Me.Label9.Location = New System.Drawing.Point(19, 122)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(188, 20)
         Me.Label9.TabIndex = 60
@@ -459,14 +461,16 @@ Partial Class GestionReactivos
         'DateTimePicker1
         '
         Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(10, 45)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(20, 147)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(331, 20)
         Me.DateTimePicker1.TabIndex = 61
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.ComboBox2)
         Me.GroupBox3.Controls.Add(Me.IconButton7)
+        Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.IconButton6)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.ComboBox5)
@@ -487,13 +491,61 @@ Partial Class GestionReactivos
         Me.GroupBox3.TabIndex = 62
         Me.GroupBox3.TabStop = False
         '
+        'IconButton7
+        '
+        Me.IconButton7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.Plus
+        Me.IconButton7.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton7.IconSize = 20
+        Me.IconButton7.Location = New System.Drawing.Point(311, 409)
+        Me.IconButton7.Name = "IconButton7"
+        Me.IconButton7.Size = New System.Drawing.Size(40, 32)
+        Me.IconButton7.TabIndex = 66
+        Me.IconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.IconButton7.UseVisualStyleBackColor = True
+        '
+        'IconButton6
+        '
+        Me.IconButton6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.Plus
+        Me.IconButton6.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton6.IconSize = 20
+        Me.IconButton6.Location = New System.Drawing.Point(311, 330)
+        Me.IconButton6.Name = "IconButton6"
+        Me.IconButton6.Size = New System.Drawing.Size(40, 32)
+        Me.IconButton6.TabIndex = 65
+        Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.IconButton6.UseVisualStyleBackColor = True
+        '
         'ComboBox5
         '
         Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {""})
-        Me.ComboBox5.Location = New System.Drawing.Point(10, 307)
+        Me.ComboBox5.Location = New System.Drawing.Point(20, 409)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(285, 32)
         Me.ComboBox5.TabIndex = 63
@@ -503,7 +555,7 @@ Partial Class GestionReactivos
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(135, 362)
+        Me.Label14.Location = New System.Drawing.Point(145, 464)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(16, 20)
         Me.Label14.TabIndex = 64
@@ -525,7 +577,7 @@ Partial Class GestionReactivos
         Me.IconButton5.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 20
-        Me.IconButton5.Location = New System.Drawing.Point(179, 354)
+        Me.IconButton5.Location = New System.Drawing.Point(189, 456)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Size = New System.Drawing.Size(162, 28)
         Me.IconButton5.TabIndex = 63
@@ -538,7 +590,7 @@ Partial Class GestionReactivos
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(9, 362)
+        Me.Label13.Location = New System.Drawing.Point(19, 464)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(120, 20)
         Me.Label13.TabIndex = 49
@@ -549,7 +601,7 @@ Partial Class GestionReactivos
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(9, 81)
+        Me.Label12.Location = New System.Drawing.Point(19, 183)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(95, 20)
         Me.Label12.TabIndex = 62
@@ -560,7 +612,7 @@ Partial Class GestionReactivos
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(10, 106)
+        Me.ComboBox3.Location = New System.Drawing.Point(20, 208)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(331, 32)
         Me.ComboBox3.TabIndex = 60
@@ -570,7 +622,7 @@ Partial Class GestionReactivos
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(10, 228)
+        Me.ComboBox4.Location = New System.Drawing.Point(20, 330)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(285, 32)
         Me.ComboBox4.TabIndex = 60
@@ -580,7 +632,7 @@ Partial Class GestionReactivos
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label15.Location = New System.Drawing.Point(9, 142)
+        Me.Label15.Location = New System.Drawing.Point(19, 244)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(81, 20)
         Me.Label15.TabIndex = 49
@@ -589,58 +641,33 @@ Partial Class GestionReactivos
         'NumericUpDown3
         '
         Me.NumericUpDown3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown3.Location = New System.Drawing.Point(10, 169)
+        Me.NumericUpDown3.Location = New System.Drawing.Point(20, 271)
         Me.NumericUpDown3.Name = "NumericUpDown3"
         Me.NumericUpDown3.Size = New System.Drawing.Size(331, 29)
         Me.NumericUpDown3.TabIndex = 49
         '
-        'IconButton6
+        'Label16
         '
-        Me.IconButton6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.Plus
-        Me.IconButton6.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton6.IconSize = 20
-        Me.IconButton6.Location = New System.Drawing.Point(301, 228)
-        Me.IconButton6.Name = "IconButton6"
-        Me.IconButton6.Size = New System.Drawing.Size(40, 32)
-        Me.IconButton6.TabIndex = 65
-        Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.IconButton6.UseVisualStyleBackColor = True
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label16.Location = New System.Drawing.Point(18, 26)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(192, 20)
+        Me.Label16.TabIndex = 58
+        Me.Label16.Text = "Identificación Reactivo"
+        Me.Label16.UseWaitCursor = True
         '
-        'IconButton7
+        'Label17
         '
-        Me.IconButton7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.Plus
-        Me.IconButton7.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton7.IconSize = 20
-        Me.IconButton7.Location = New System.Drawing.Point(301, 307)
-        Me.IconButton7.Name = "IconButton7"
-        Me.IconButton7.Size = New System.Drawing.Size(40, 32)
-        Me.IconButton7.TabIndex = 66
-        Me.IconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.IconButton7.UseVisualStyleBackColor = True
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(16, 62)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(34, 31)
+        Me.Label17.TabIndex = 13
+        Me.Label17.Text = "--"
         '
         'GestionReactivos
         '
@@ -707,4 +734,6 @@ Partial Class GestionReactivos
     Friend WithEvents IconButton3 As IconButton
     Friend WithEvents IconButton7 As IconButton
     Friend WithEvents IconButton6 As IconButton
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
 End Class

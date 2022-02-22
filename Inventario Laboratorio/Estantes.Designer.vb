@@ -34,19 +34,21 @@ Partial Class Estantes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(455, 37)
+        Me.Panel1.Size = New System.Drawing.Size(565, 37)
         Me.Panel1.TabIndex = 12
         '
         'Button3
@@ -58,7 +60,7 @@ Partial Class Estantes
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(422, 3)
+        Me.Button3.Location = New System.Drawing.Point(532, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(30, 30)
         Me.Button3.TabIndex = 2
@@ -69,7 +71,7 @@ Partial Class Estantes
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(12, 158)
+        Me.Label3.Location = New System.Drawing.Point(22, 159)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 33)
         Me.Label3.TabIndex = 52
@@ -80,7 +82,7 @@ Partial Class Estantes
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(14, 127)
+        Me.Label4.Location = New System.Drawing.Point(24, 128)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(178, 20)
         Me.Label4.TabIndex = 46
@@ -89,16 +91,16 @@ Partial Class Estantes
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(18, 440)
+        Me.DataGridView1.Location = New System.Drawing.Point(28, 454)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.DataGridView1.Size = New System.Drawing.Size(413, 214)
+        Me.DataGridView1.Size = New System.Drawing.Size(525, 214)
         Me.DataGridView1.TabIndex = 51
         '
         'IconButton4
         '
         Me.IconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -110,7 +112,7 @@ Partial Class Estantes
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(242, 375)
+        Me.IconButton4.Location = New System.Drawing.Point(180, 376)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(146, 50)
         Me.IconButton4.TabIndex = 50
@@ -121,7 +123,7 @@ Partial Class Estantes
         'IconButton1
         '
         Me.IconButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.IconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -133,7 +135,7 @@ Partial Class Estantes
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(90, 375)
+        Me.IconButton1.Location = New System.Drawing.Point(28, 376)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(146, 50)
         Me.IconButton1.TabIndex = 49
@@ -146,10 +148,10 @@ Partial Class Estantes
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(22, 225)
+        Me.TextBox2.Location = New System.Drawing.Point(28, 245)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(413, 125)
+        Me.TextBox2.Size = New System.Drawing.Size(298, 125)
         Me.TextBox2.TabIndex = 48
         '
         'Label2
@@ -157,7 +159,7 @@ Partial Class Estantes
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(14, 202)
+        Me.Label2.Location = New System.Drawing.Point(24, 203)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(103, 20)
         Me.Label2.TabIndex = 47
@@ -165,13 +167,13 @@ Partial Class Estantes
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(455, 107)
+        Me.Panel2.Size = New System.Drawing.Size(565, 107)
         Me.Panel2.TabIndex = 45
         '
         'Label1
@@ -179,17 +181,28 @@ Partial Class Estantes
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(193, 56)
+        Me.Label1.Location = New System.Drawing.Point(245, 56)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(81, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Estantes"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(345, 144)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(208, 282)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 53
+        Me.PictureBox1.TabStop = False
+        '
         'Estantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(455, 682)
+        Me.ClientSize = New System.Drawing.Size(565, 698)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DataGridView1)
@@ -207,6 +220,7 @@ Partial Class Estantes
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -223,4 +237,5 @@ Partial Class Estantes
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
