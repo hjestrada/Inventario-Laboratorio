@@ -4,12 +4,12 @@
 
     End Sub
 
-    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs)
         Estantes.Show()
 
     End Sub
 
-    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs)
         Fila.Show()
 
     End Sub

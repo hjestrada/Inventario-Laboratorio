@@ -110,7 +110,6 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label16.Size = New System.Drawing.Size(128, 20)
         Me.Label16.TabIndex = 59
         Me.Label16.Text = "Grupo General"
-        Me.Label16.UseWaitCursor = True
         '
         'GroupBox2
         '
@@ -132,7 +131,6 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.GroupBox2.Size = New System.Drawing.Size(375, 439)
         Me.GroupBox2.TabIndex = 60
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.UseWaitCursor = True
         '
         'IconButton7
         '
@@ -214,7 +212,6 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label2.Size = New System.Drawing.Size(139, 20)
         Me.Label2.TabIndex = 72
         Me.Label2.Text = "Clase de Peligro"
-        Me.Label2.UseWaitCursor = True
         '
         'Label3
         '
@@ -226,7 +223,6 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label3.Size = New System.Drawing.Size(172, 20)
         Me.Label3.TabIndex = 75
         Me.Label3.Text = "Categoria de Peligro"
-        Me.Label3.UseWaitCursor = True
         '
         'IconButton2
         '
@@ -305,19 +301,17 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label4.Size = New System.Drawing.Size(195, 20)
         Me.Label4.TabIndex = 77
         Me.Label4.Text = "Palabra de Advertencia"
-        Me.Label4.UseWaitCursor = True
         '
         'TextBox3
         '
         Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(10, 256)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(331, 59)
         Me.TextBox3.TabIndex = 76
-        Me.TextBox3.UseWaitCursor = True
         '
         'Label5
         '
@@ -329,19 +323,17 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label5.Size = New System.Drawing.Size(176, 20)
         Me.Label5.TabIndex = 79
         Me.Label5.Text = "Indicación de Peligro"
-        Me.Label5.UseWaitCursor = True
         '
         'TextBox1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(10, 353)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(331, 59)
         Me.TextBox1.TabIndex = 78
-        Me.TextBox1.UseWaitCursor = True
         '
         'Label6
         '
@@ -358,14 +350,13 @@ Partial Class Sistema_Globalmente_Armonizado
         'TextBox2
         '
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(29, 353)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(331, 59)
         Me.TextBox2.TabIndex = 81
-        Me.TextBox2.UseWaitCursor = True
         '
         'GroupBox1
         '
@@ -388,6 +379,7 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Sistema_Globalmente_Armonizado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema_Globalmente_Armonizado"
