@@ -65,12 +65,22 @@ Partial Class GestionReactivos
         Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -87,12 +97,12 @@ Partial Class GestionReactivos
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton4, 3, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 720)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(27, 531)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(745, 69)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(604, 69)
         Me.TableLayoutPanel1.TabIndex = 36
         '
         'IconButton3
@@ -110,9 +120,9 @@ Partial Class GestionReactivos
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton3.IconSize = 40
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(192, 3)
+        Me.IconButton3.Location = New System.Drawing.Point(145, 3)
         Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(146, 50)
+        Me.IconButton3.Size = New System.Drawing.Size(136, 50)
         Me.IconButton3.TabIndex = 7
         Me.IconButton3.Text = "Buscar"
         Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -133,9 +143,9 @@ Partial Class GestionReactivos
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 40
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton2.Location = New System.Drawing.Point(381, 3)
+        Me.IconButton2.Location = New System.Drawing.Point(287, 3)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(146, 50)
+        Me.IconButton2.Size = New System.Drawing.Size(136, 50)
         Me.IconButton2.TabIndex = 4
         Me.IconButton2.Text = "Actualizar"
         Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -158,7 +168,7 @@ Partial Class GestionReactivos
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.IconButton1.Location = New System.Drawing.Point(3, 3)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(146, 50)
+        Me.IconButton1.Size = New System.Drawing.Size(136, 50)
         Me.IconButton1.TabIndex = 3
         Me.IconButton1.Text = "Guardar"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -179,7 +189,7 @@ Partial Class GestionReactivos
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(570, 3)
+        Me.IconButton4.Location = New System.Drawing.Point(429, 3)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(146, 50)
         Me.IconButton4.TabIndex = 6
@@ -206,7 +216,7 @@ Partial Class GestionReactivos
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(772, 107)
+        Me.Panel2.Size = New System.Drawing.Size(1406, 107)
         Me.Panel2.TabIndex = 25
         '
         'Panel1
@@ -216,7 +226,7 @@ Partial Class GestionReactivos
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(772, 37)
+        Me.Panel1.Size = New System.Drawing.Size(1406, 37)
         Me.Panel1.TabIndex = 12
         '
         'Button3
@@ -228,7 +238,7 @@ Partial Class GestionReactivos
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(739, 3)
+        Me.Button3.Location = New System.Drawing.Point(1373, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(30, 30)
         Me.Button3.TabIndex = 2
@@ -239,7 +249,7 @@ Partial Class GestionReactivos
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(294, 64)
+        Me.Label1.Location = New System.Drawing.Point(576, 61)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(181, 20)
         Me.Label1.TabIndex = 0
@@ -669,14 +679,115 @@ Partial Class GestionReactivos
         Me.Label17.TabIndex = 13
         Me.Label17.Text = "--"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.IconButton9)
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.Label21)
+        Me.GroupBox1.Controls.Add(Me.ComboBox7)
+        Me.GroupBox1.Controls.Add(Me.Label20)
+        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
+        Me.GroupBox1.Controls.Add(Me.ComboBox6)
+        Me.GroupBox1.Location = New System.Drawing.Point(763, 114)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(620, 600)
+        Me.GroupBox1.TabIndex = 67
+        Me.GroupBox1.TabStop = False
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label20.Location = New System.Drawing.Point(9, 25)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(196, 20)
+        Me.Label20.TabIndex = 68
+        Me.Label20.Text = "Clasificación de Riesgo"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(10, 50)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(331, 32)
+        Me.ComboBox6.TabIndex = 67
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label21.Location = New System.Drawing.Point(9, 85)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(99, 20)
+        Me.Label21.TabIndex = 70
+        Me.Label21.Text = "Pictograma"
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(10, 110)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(331, 32)
+        Me.ComboBox7.TabIndex = 69
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 220)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DataGridView1.Size = New System.Drawing.Size(589, 244)
+        Me.DataGridView1.TabIndex = 71
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label18.Location = New System.Drawing.Point(9, 189)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(345, 20)
+        Me.Label18.TabIndex = 72
+        Me.Label18.Text = "Listado de Riesgos Asociados al Reactivo"
+        '
+        'IconButton9
+        '
+        Me.IconButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton9.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton9.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton9.IconChar = FontAwesome.Sharp.IconChar.Plus
+        Me.IconButton9.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton9.IconSize = 40
+        Me.IconButton9.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.IconButton9.Location = New System.Drawing.Point(356, 70)
+        Me.IconButton9.Name = "IconButton9"
+        Me.IconButton9.Size = New System.Drawing.Size(173, 50)
+        Me.IconButton9.TabIndex = 73
+        Me.IconButton9.Text = "Agregar Riesgo"
+        Me.IconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton9.UseVisualStyleBackColor = False
+        '
         'GestionReactivos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 801)
+        Me.ClientSize = New System.Drawing.Size(1406, 737)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GestionReactivos"
@@ -691,6 +802,9 @@ Partial Class GestionReactivos
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -736,4 +850,12 @@ Partial Class GestionReactivos
     Friend WithEvents IconButton6 As IconButton
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents IconButton9 As IconButton
 End Class

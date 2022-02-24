@@ -195,6 +195,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Sistema Globalmente Armonizado.Designer.vb">
+      <DependentUpon>Sistema Globalmente Armonizado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema Globalmente Armonizado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Usuarios.Designer.vb">
       <DependentUpon>Usuarios.vb</DependentUpon>
     </Compile>
@@ -235,6 +241,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema Globalmente Armonizado.resx">
+      <DependentUpon>Sistema Globalmente Armonizado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>
