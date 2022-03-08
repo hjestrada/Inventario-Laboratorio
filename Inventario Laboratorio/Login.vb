@@ -75,19 +75,19 @@ Public Class Login
 
             Dim CONSULTA As String
             Dim LISTA As Byte
-            CONSULTA = "Select *  From USUARIOS WHERE USER ='" & USER & "' "
+            CONSULTA = "Select *  From USUARIO WHERE USER ='" & USER & "' "
             MySQLDA1 = New SQLiteDataAdapter(CONSULTA, SQLiteCon)
             datos1 = New DataSet
-            MySQLDA1.Fill(datos1, "USUARIOS")
-            LISTA = datos1.Tables("USUARIOS").Rows.Count
+            MySQLDA1.Fill(datos1, "USUARIO")
+            LISTA = datos1.Tables("USUARIO").Rows.Count
 
             If LISTA <> 0 Then
 
-                USERBD = datos1.Tables("USUARIOS").Rows(0).Item("USER")
-                PWDBD = datos1.Tables("USUARIOS").Rows(0).Item("PWD")
-                NOMBREUSUARIO = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
-                ROL = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
-                IDUSUARIO = datos1.Tables("USUARIOS").Rows(0).Item("ID_USUARIO")
+                USERBD = datos1.Tables("USUARIO").Rows(0).Item("USER")
+                PWDBD = datos1.Tables("USUARIO").Rows(0).Item("PWD")
+                NOMBREUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("NOMBRES")
+                ROL = datos1.Tables("USUARIO").Rows(0).Item("ROL")
+                IDUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("ID_USUARIO")
 
                 SQLiteCon.Close()
 
