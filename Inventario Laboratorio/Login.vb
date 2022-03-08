@@ -12,6 +12,7 @@ Imports System.IO
 
 
 Public Class Login
+
     Dim DB_Path As String = "Data Source=" & Application.StartupPath & "\BD_Lab.s3db;"
     Dim SQLiteCon As New SQLiteConnection(DB_Path)
     Dim SQLliteCMD As New SQLiteCommand
