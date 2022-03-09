@@ -165,7 +165,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
-    <Compile Include="Modulo.vb" />
     <Compile Include="Movimientos.Designer.vb">
       <DependentUpon>Movimientos.vb</DependentUpon>
     </Compile>

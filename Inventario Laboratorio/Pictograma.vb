@@ -29,7 +29,7 @@ Public Class Pictograma
 
     Private Sub CargarDatos()
 
-        Dim sql As String = "SELECT * FROM PICTOGRAMAS"
+        Dim sql As String = "SELECT `ID_PICTOGRAMA`,`DESCRIPCION` FROM PICTOGRAMAS"
 
         Using con As New SQLiteConnection(DB_Path)
             Dim command As New SQLiteCommand(sql, con)
@@ -57,9 +57,9 @@ Public Class Pictograma
                 SQLliteCMD = New SQLiteCommand
 
                 With SQLliteCMD
-                    .CommandText = " INSERT INTO PICTOGRAMAS (`ID_PICTO`, `NOMBRE`, `IMAGEN`) VALUES (NULL, @NOMBRE,@IMAGEN)"
+                    .CommandText = " INSERT INTO PICTOGRAMAS (`ID_PICTOGRAMA`, `DESCRIPCION`, `IMAGEN`) VALUES (NULL, @DESCRIPCION,@IMAGEN)"
                     .Connection = SQLiteCon
-                    .Parameters.AddWithValue("@NOMBRE", Me.TextBox2.Text)
+                    .Parameters.AddWithValue("@DESCRIPCION", Me.TextBox2.Text)
                     .Parameters.AddWithValue("@IMAGEN", Imag)
                     .ExecuteNonQuery()
                 End With
@@ -150,7 +150,7 @@ Public Class Pictograma
 
 
 
-            consulta1 = "SELECT * FROM `PICTOGRAMAS` WHERE `ID_PICTO`=" & Numero & ""
+            consulta1 = "SELECT * FROM `PICTOGRAMAS` WHERE `ID_PICTOGRAMA`=" & Numero & ""
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
             datos1 = New DataSet
             MySQLDA1.Fill(datos1, "PICTOGRAMAS")
@@ -163,8 +163,8 @@ Public Class Pictograma
             End If
 
 
-            Label3.Text = datos1.Tables("PICTOGRAMAS").Rows(0).Item("ID_PICTO")
-            TextBox2.Text = datos1.Tables("PICTOGRAMAS").Rows(0).Item("NOMBRE")
+            Label3.Text = datos1.Tables("PICTOGRAMAS").Rows(0).Item("ID_PICTOGRAMA")
+            TextBox2.Text = datos1.Tables("PICTOGRAMAS").Rows(0).Item("DESCRIPCION")
             Dim ImgArray() As Byte = datos1.Tables("PICTOGRAMAS").Rows(0).Item("IMAGEN")
             Dim lmgStr As New System.IO.MemoryStream(ImgArray)
             PictureBox2.Image = Image.FromStream(lmgStr)

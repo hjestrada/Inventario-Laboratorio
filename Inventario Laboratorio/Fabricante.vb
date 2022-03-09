@@ -36,9 +36,9 @@ Public Class Fabricante
                 SQLliteCMD = New SQLiteCommand
 
                 With SQLliteCMD
-                    .CommandText = " INSERT INTO FABRICANTE (`ID_FABRICANTE`, `NOMBRE`) VALUES (NULL, @NOMBRE)"
+                    .CommandText = " INSERT INTO FABRICANTE (`ID_FABRICANTE`, `NOMBRE_FAB`) VALUES (NULL, @NOMBRE_FAB)"
                     .Connection = SQLiteCon
-                    .Parameters.AddWithValue("@NOMBRE", Me.TextBox2.Text)
+                    .Parameters.AddWithValue("@NOMBRE_FAB", Me.TextBox2.Text)
                     .ExecuteNonQuery()
                 End With
 
@@ -62,7 +62,7 @@ Public Class Fabricante
 
     Private Sub CargarDatos()
 
-        Dim sql As String = "SELECT `ID_FABRICANTE`, `NOMBRE` FROM FABRICANTE"
+        Dim sql As String = "SELECT `ID_FABRICANTE`, `NOMBRE_FAB` FROM FABRICANTE"
 
         Using con As New SQLiteConnection(DB_Path)
             Dim command As New SQLiteCommand(sql, con)

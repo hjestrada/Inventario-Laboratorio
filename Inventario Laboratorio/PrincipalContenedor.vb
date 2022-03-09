@@ -17,7 +17,7 @@ Public Class PrincipalContenedor
     Dim MySQLDA1 As New SQLiteDataAdapter
 
     Dim bandera As Boolean = True
-    Dim rolprivilegio As String
+
 
     'Necesarios para redondear formulario
     Public SD As Integer
@@ -157,9 +157,11 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+        '------------------------
+
         If rolprivilegio = "" Then
 
-            MsgBox("Usuario NUll")
+            MsgBox("Usuario Null")
             AbrirFormenPanel(New Usuarios)
         Else
             If rolprivilegio = "Administrador" Then
