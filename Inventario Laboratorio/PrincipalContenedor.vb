@@ -60,7 +60,7 @@ Public Class PrincipalContenedor
         fh.Dock = DockStyle.None
         'fh.Dock = StartPosition.CenterScreen
 
-        'fh.StartPosition = FormStartPosition.CenterScreen
+        'fh.StartPosition = FormStartPosition.CenterParent
         Me.Panel_Central.Controls.Add(fh)
         Me.Panel_Central.Tag = fh
         fh.Show()
@@ -95,23 +95,23 @@ Public Class PrincipalContenedor
         Try
 
 
-            consulta1 = "SELECT * FROM `USUARIOS` WHERE `ID_USUARIO`=" & IDUSUARIO2 & ""
+            consulta1 = "SELECT * FROM `USUARIO` WHERE `ID_USUARIO`=" & IDUSUARIO2 & ""
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
             datos1 = New DataSet
-            MySQLDA1.Fill(datos1, "USUARIOS")
-            lista1 = datos1.Tables("USUARIOS").Rows.Count
+            MySQLDA1.Fill(datos1, "USUARIO")
+            lista1 = datos1.Tables("USUARIO").Rows.Count
 
             If lista1 = 0 Then
                 MsgBox("Registro no encontrado")
 
             End If
 
-            Label2.Text = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
-            Label5.Text = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
+            Label2.Text = datos1.Tables("USUARIO").Rows(0).Item("NOMBRE")
+            Label5.Text = datos1.Tables("USUARIO").Rows(0).Item("ROL")
             rolprivilegio = Label5.Text
 
 
-            Dim ImgArray() As Byte = datos1.Tables("USUARIOS").Rows(0).Item("FOTO")
+            Dim ImgArray() As Byte = datos1.Tables("USUARIO").Rows(0).Item("FOTO")
             Dim lmgStr As New System.IO.MemoryStream(ImgArray)
             PictureBox2.Image = Image.FromStream(lmgStr)
             PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
@@ -157,13 +157,21 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
-        If rolprivilegio = "Administrador" Then
-            AbrirFormenPanel(New Usuarios)
+        If rolprivilegio = "" Then
 
+            MsgBox("Usuario NUll")
+            AbrirFormenPanel(New Usuarios)
         Else
-            MsgBox("No posee privilegios suficientes para gestionar Usuarios, consulte con el administrador del sistema")
+            If rolprivilegio = "Administrador" Then
+                AbrirFormenPanel(New Usuarios)
+
+            Else
+                MsgBox("No posee privilegios suficientes para gestionar Usuarios, consulte con el administrador del sistema")
+
+            End If
 
         End If
+
 
 
     End Sub
@@ -173,7 +181,7 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
-        AbrirFormenPanel(New Sistema_Globalmente_Armonizado)
+        AbrirFormenPanel(New menu)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -208,7 +216,7 @@ Public Class PrincipalContenedor
         Panel1.Visible = True
     End Sub
 
-    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs)
         AbrirFormenPanel(New Fabricante)
     End Sub
 

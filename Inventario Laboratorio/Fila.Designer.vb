@@ -51,7 +51,7 @@ Partial Class Fila
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(626, 107)
+        Me.Panel2.Size = New System.Drawing.Size(611, 107)
         Me.Panel2.TabIndex = 46
         '
         'Panel3
@@ -61,7 +61,7 @@ Partial Class Fila
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(626, 37)
+        Me.Panel3.Size = New System.Drawing.Size(611, 37)
         Me.Panel3.TabIndex = 12
         '
         'Button1
@@ -73,7 +73,7 @@ Partial Class Fila
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(593, 3)
+        Me.Button1.Location = New System.Drawing.Point(578, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(30, 30)
         Me.Button1.TabIndex = 2
@@ -84,7 +84,7 @@ Partial Class Fila
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(290, 68)
+        Me.Label1.Location = New System.Drawing.Point(280, 61)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(47, 20)
         Me.Label1.TabIndex = 0
@@ -95,7 +95,7 @@ Partial Class Fila
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(26, 275)
+        Me.Label3.Location = New System.Drawing.Point(26, 237)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 33)
         Me.Label3.TabIndex = 59
@@ -106,7 +106,7 @@ Partial Class Fila
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(28, 243)
+        Me.Label4.Location = New System.Drawing.Point(28, 207)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(153, 20)
         Me.Label4.TabIndex = 53
@@ -115,10 +115,10 @@ Partial Class Fila
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 560)
+        Me.DataGridView1.Location = New System.Drawing.Point(22, 501)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.DataGridView1.Size = New System.Drawing.Size(569, 214)
+        Me.DataGridView1.Size = New System.Drawing.Size(569, 192)
         Me.DataGridView1.TabIndex = 58
         '
         'IconButton4
@@ -136,7 +136,7 @@ Partial Class Fila
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(330, 492)
+        Me.IconButton4.Location = New System.Drawing.Point(222, 445)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(146, 50)
         Me.IconButton4.TabIndex = 57
@@ -159,7 +159,7 @@ Partial Class Fila
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(162, 492)
+        Me.IconButton1.Location = New System.Drawing.Point(26, 445)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(146, 50)
         Me.IconButton1.TabIndex = 56
@@ -172,7 +172,7 @@ Partial Class Fila
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(26, 345)
+        Me.TextBox2.Location = New System.Drawing.Point(26, 303)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(342, 125)
@@ -183,7 +183,7 @@ Partial Class Fila
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(28, 322)
+        Me.Label2.Location = New System.Drawing.Point(28, 280)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(103, 20)
         Me.Label2.TabIndex = 54
@@ -194,7 +194,7 @@ Partial Class Fila
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(31, 163)
+        Me.Label12.Location = New System.Drawing.Point(28, 128)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(72, 20)
         Me.Label12.TabIndex = 64
@@ -205,15 +205,15 @@ Partial Class Fila
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(26, 196)
+        Me.ComboBox3.Location = New System.Drawing.Point(26, 160)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(351, 32)
+        Me.ComboBox3.Size = New System.Drawing.Size(342, 32)
         Me.ComboBox3.TabIndex = 63
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(396, 188)
+        Me.PictureBox1.Location = New System.Drawing.Point(383, 160)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(208, 282)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -224,7 +224,7 @@ Partial Class Fila
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(626, 790)
+        Me.ClientSize = New System.Drawing.Size(611, 723)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.ComboBox3)

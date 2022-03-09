@@ -89,10 +89,10 @@ Public Class Usuarios
 
 
                     With SQLliteCMD
-                        .CommandText = " INSERT INTO USUARIOS (`ID_USUARIO`, `NOMBRES`, `ROL`,`TELEFONO`,`EMAIL`,`FOTO`,`USER`,`PWD`) VALUES (@ID_USUARIO, @NOMBRES, @ROL,@TELEFONO,@EMAIL,@FOTO,@USER,@PWD)"
+                        .CommandText = " INSERT INTO USUARIO (`ID_USUARIO`, `NOMBRE`, `ROL`,`TELEFONO`,`EMAIL`,`FOTO`,`USER`,`PWD`) VALUES (@ID_USUARIO, @NOMBRE, @ROL,@TELEFONO,@EMAIL,@FOTO,@USER,@PWD)"
                         .Connection = SQLiteCon
                         .Parameters.AddWithValue("@ID_USUARIO", Me.TextBox1.Text)
-                        .Parameters.AddWithValue("@NOMBRES", Me.TextBox2.Text)
+                        .Parameters.AddWithValue("@NOMBRE", Me.TextBox2.Text)
                         .Parameters.AddWithValue("@ROL", Me.ComboBox1.Text)
                         .Parameters.AddWithValue("@TELEFONO", Me.MaskedTextBox1.Text)
                         .Parameters.AddWithValue("@EMAIL", Me.TextBox4.Text)
@@ -110,8 +110,8 @@ Public Class Usuarios
 
                 Catch ex As Exception
                     MsgBox("Error al momento de guardar, verifique que el numero de identificación no este repetido en el sistema. ")
-                    SQLiteCon.Close()
-                    Return
+                SQLiteCon.Close()
+                Return
                 End Try
                 SQLiteCon.Close()
             End If
@@ -204,26 +204,26 @@ Public Class Usuarios
             Numero = InputBox("Por favor digite la idenificación del usuario:")
 
 
-            consulta1 = "SELECT * FROM `USUARIOS` WHERE `ID_USUARIO`=" & Numero & ""
+            consulta1 = "SELECT * FROM `USUARIO` WHERE `ID_USUARIO`=" & Numero & ""
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
             datos1 = New DataSet
-            MySQLDA1.Fill(datos1, "USUARIOS")
-            lista1 = datos1.Tables("USUARIOS").Rows.Count
+            MySQLDA1.Fill(datos1, "USUARIO")
+            lista1 = datos1.Tables("USUARIO").Rows.Count
 
             If lista1 = 0 Then
                 MsgBox("Registro no encontrado")
 
             End If
 
-            TextBox1.Text = datos1.Tables("USUARIOS").Rows(0).Item("ID_USUARIO")
-            TextBox2.Text = datos1.Tables("USUARIOS").Rows(0).Item("NOMBRES")
-            ComboBox1.Text = datos1.Tables("USUARIOS").Rows(0).Item("ROL")
-            MaskedTextBox1.Text = datos1.Tables("USUARIOS").Rows(0).Item("TELEFONO")
-            TextBox4.Text = datos1.Tables("USUARIOS").Rows(0).Item("EMAIL")
-            TextBox5.Text = datos1.Tables("USUARIOS").Rows(0).Item("USER")
-            TextBox6.Text = datos1.Tables("USUARIOS").Rows(0).Item("PWD")
+            TextBox1.Text = datos1.Tables("USUARIO").Rows(0).Item("ID_USUARIO")
+            TextBox2.Text = datos1.Tables("USUARIO").Rows(0).Item("NOMBRE")
+            ComboBox1.Text = datos1.Tables("USUARIO").Rows(0).Item("ROL")
+            MaskedTextBox1.Text = datos1.Tables("USUARIO").Rows(0).Item("TELEFONO")
+            TextBox4.Text = datos1.Tables("USUARIO").Rows(0).Item("EMAIL")
+            TextBox5.Text = datos1.Tables("USUARIO").Rows(0).Item("USER")
+            TextBox6.Text = datos1.Tables("USUARIO").Rows(0).Item("PWD")
 
-            Dim ImgArray() As Byte = datos1.Tables("USUARIOS").Rows(0).Item("FOTO")
+            Dim ImgArray() As Byte = datos1.Tables("USUARIO").Rows(0).Item("FOTO")
             Dim lmgStr As New System.IO.MemoryStream(ImgArray)
             PictureBox2.Image = Image.FromStream(lmgStr)
             PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
@@ -243,7 +243,7 @@ Public Class Usuarios
 
 
         If MessageBox.Show("¿Seguro que desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
-            SQLliteCMD = New SQLite.SQLiteCommand("delete from USUARIOS where ID_USUARIO='" & Numero & "'", SQLiteCon)
+            SQLliteCMD = New SQLite.SQLiteCommand("delete from USUARIO where ID_USUARIO='" & Numero & "'", SQLiteCon)
             SQLliteCMD.ExecuteNonQuery()
             limpiarform()
             SQLiteCon.Close()

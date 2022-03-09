@@ -69,7 +69,7 @@ Public Class Fabricante
             Dim da As New SQLiteDataAdapter
             da.SelectCommand = command
             Dim dt As New DataTable
-            da.Fill(dt)
+            'da.Fill(dt)
             DataGridView1.DataSource = dt
 
         End Using

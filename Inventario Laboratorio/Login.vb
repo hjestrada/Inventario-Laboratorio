@@ -52,63 +52,63 @@ Public Class Login
     End Function
 
 
-
-
-
-
-
-
-
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
 
     End Sub
     Sub login()
+
+
+        'Try
+
+
         USER = UsernameTextBox.Text
-        PWD = PasswordTextBox.Text
+            PWD = PasswordTextBox.Text
 
 
-        If USER = "" Or PWD = "" Then
-            MsgBox("Todos los campos son obligatorios")
-        Else
-
-            Dim CONSULTA As String
-            Dim LISTA As Byte
-            CONSULTA = "Select *  From USUARIO WHERE USER ='" & USER & "' "
-            MySQLDA1 = New SQLiteDataAdapter(CONSULTA, SQLiteCon)
-            datos1 = New DataSet
-            MySQLDA1.Fill(datos1, "USUARIO")
-            LISTA = datos1.Tables("USUARIO").Rows.Count
-
-            If LISTA <> 0 Then
-
-                USERBD = datos1.Tables("USUARIO").Rows(0).Item("USER")
-                PWDBD = datos1.Tables("USUARIO").Rows(0).Item("PWD")
-                NOMBREUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("NOMBRES")
-                ROL = datos1.Tables("USUARIO").Rows(0).Item("ROL")
-                IDUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("ID_USUARIO")
-
-                SQLiteCon.Close()
-
-                If (USER = USERBD) And (PWD = PWDBD) Then
-                    Me.Hide()
-                    MsgBox("Bienvenido al Sistema, " & ROL & " " & NOMBREUSUARIO & "")
-                    IDUSUARIO2 = IDUSUARIO
-                    UsernameTextBox.Clear()
-                    PasswordTextBox.Clear()
-
-                    PrincipalContenedor.Show()
-                Else
-                    MsgBox("Error al Validar Usuario y/o Contraseña")
-                    UsernameTextBox.Clear()
-                    PasswordTextBox.Clear()
-                End If
+            If USER = "" Or PWD = "" Then
+                MsgBox("Todos los campos son obligatorios")
             Else
-                MsgBox("No se encontraron datos")
-            End If
-        End If
 
+                Dim CONSULTA As String
+                Dim LISTA As Byte
+                CONSULTA = "Select *  From USUARIO WHERE USER ='" & USER & "' "
+                MySQLDA1 = New SQLiteDataAdapter(CONSULTA, SQLiteCon)
+                datos1 = New DataSet
+                MySQLDA1.Fill(datos1, "USUARIO")
+                LISTA = datos1.Tables("USUARIO").Rows.Count
+
+                If LISTA <> 0 Then
+
+                    USERBD = datos1.Tables("USUARIO").Rows(0).Item("USER")
+                    PWDBD = datos1.Tables("USUARIO").Rows(0).Item("PWD")
+                NOMBREUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("NOMBRE")
+                ROL = datos1.Tables("USUARIO").Rows(0).Item("ROL")
+                    IDUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("ID_USUARIO")
+
+                    SQLiteCon.Close()
+
+                    If (USER = USERBD) And (PWD = PWDBD) Then
+                        Me.Hide()
+                        MsgBox("Bienvenido al Sistema, " & ROL & " " & NOMBREUSUARIO & "")
+                        IDUSUARIO2 = IDUSUARIO
+                        UsernameTextBox.Clear()
+                        PasswordTextBox.Clear()
+
+                        PrincipalContenedor.Show()
+                    Else
+                        MsgBox("Error al Validar Usuario y/o Contraseña")
+                        UsernameTextBox.Clear()
+                        PasswordTextBox.Clear()
+                    End If
+                Else
+                    MsgBox("No se encontraron datos")
+                End If
+            End If
+        'Catch ex As Exception
+
+        '  MsgBox("¡Error en Base de Datos!")
+        '   End Try
     End Sub
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         login()
@@ -130,10 +130,8 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         'Necesario para redondear formulario
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
-
-
-
     End Sub
 End Class

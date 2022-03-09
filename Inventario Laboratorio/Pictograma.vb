@@ -29,7 +29,7 @@ Public Class Pictograma
 
     Private Sub CargarDatos()
 
-        Dim sql As String = "SELECT `ID_PICTO`, `NOMBRE` FROM PICTOGRAMAS"
+        Dim sql As String = "SELECT * FROM PICTOGRAMAS"
 
         Using con As New SQLiteConnection(DB_Path)
             Dim command As New SQLiteCommand(sql, con)
@@ -182,7 +182,7 @@ Public Class Pictograma
 
         MySQLDA1.SelectCommand = New SQLiteCommand
         MySQLDA1.SelectCommand.Connection = SQLiteCon
-        MySQLDA1.SelectCommand.CommandText = "SELECT MAX(`ID_PICTO`)  AS id FROM PICTOGRAMAS"
+        MySQLDA1.SelectCommand.CommandText = "SELECT MAX(`ID_PICTOGRAMA`)  AS id FROM PICTOGRAMAS"
         SQLiteCon.Open()
         Dim valorDefecto As Integer = 1
         Dim ValorRetornado As Object = MySQLDA1.SelectCommand.ExecuteScalar()
