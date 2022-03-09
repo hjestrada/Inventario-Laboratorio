@@ -39,9 +39,9 @@ Partial Class Usuarios
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -60,7 +60,7 @@ Partial Class Usuarios
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
@@ -71,7 +71,7 @@ Partial Class Usuarios
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -234,33 +234,10 @@ Partial Class Usuarios
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(608, 57)
         Me.TableLayoutPanel1.TabIndex = 16
         '
-        'IconButton4
-        '
-        Me.IconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Trash
-        Me.IconButton4.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 40
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(407, 3)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(146, 50)
-        Me.IconButton4.TabIndex = 6
-        Me.IconButton4.Text = "Eliminar"
-        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton4.UseVisualStyleBackColor = False
-        '
         'IconButton2
         '
         Me.IconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.IconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -283,7 +260,7 @@ Partial Class Usuarios
         'IconButton1
         '
         Me.IconButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.IconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -303,10 +280,33 @@ Partial Class Usuarios
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
         '
+        'IconButton4
+        '
+        Me.IconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Trash
+        Me.IconButton4.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.IconSize = 40
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.IconButton4.Location = New System.Drawing.Point(407, 3)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(146, 50)
+        Me.IconButton4.TabIndex = 6
+        Me.IconButton4.Text = "Eliminar"
+        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton4.UseVisualStyleBackColor = False
+        '
         'IconButton5
         '
         Me.IconButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton5.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton5.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.IconButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.IconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -323,7 +323,7 @@ Partial Class Usuarios
         Me.IconButton5.TabIndex = 17
         Me.IconButton5.Text = "Agregar Imagen"
         Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton5.UseVisualStyleBackColor = True
+        Me.IconButton5.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -431,7 +431,7 @@ Partial Class Usuarios
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Usuarios"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuarios"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

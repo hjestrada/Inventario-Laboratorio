@@ -68,4 +68,25 @@
 
 
     End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        '------------------------
+
+        If rolprivilegio = "" Then
+
+            MsgBox("Usuario Null")
+            Usuarios.Show()
+        Else
+            If rolprivilegio = "Administrador" Then
+                Usuarios.Show()
+
+            Else
+                MsgBox("No posee privilegios suficientes para gestionar Usuarios, consulte con el administrador del sistema")
+
+            End If
+
+        End If
+
+
+    End Sub
 End Class

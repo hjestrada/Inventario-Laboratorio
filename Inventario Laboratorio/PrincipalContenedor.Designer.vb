@@ -34,7 +34,6 @@ Partial Class PrincipalContenedor
         Me.IconButton8 = New FontAwesome.Sharp.IconButton()
         Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -114,7 +113,6 @@ Partial Class PrincipalContenedor
         Me.Panel5.Controls.Add(Me.IconButton8)
         Me.Panel5.Controls.Add(Me.IconButton7)
         Me.Panel5.Controls.Add(Me.IconButton3)
-        Me.Panel5.Controls.Add(Me.IconButton6)
         Me.Panel5.Controls.Add(Me.IconButton4)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 420)
@@ -132,16 +130,16 @@ Partial Class PrincipalContenedor
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Microscope
         Me.IconButton1.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(24, 19)
+        Me.IconButton1.Location = New System.Drawing.Point(12, 60)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(321, 50)
         Me.IconButton1.TabIndex = 2
-        Me.IconButton1.Text = "Movimientos de Reactivos"
+        Me.IconButton1.Text = "Gestión de Reactivos"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
         '
@@ -160,7 +158,7 @@ Partial Class PrincipalContenedor
         Me.IconButton10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton10.IconSize = 40
         Me.IconButton10.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton10.Location = New System.Drawing.Point(24, 75)
+        Me.IconButton10.Location = New System.Drawing.Point(12, 116)
         Me.IconButton10.Name = "IconButton10"
         Me.IconButton10.Size = New System.Drawing.Size(321, 50)
         Me.IconButton10.TabIndex = 11
@@ -183,7 +181,7 @@ Partial Class PrincipalContenedor
         Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton8.IconSize = 40
         Me.IconButton8.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton8.Location = New System.Drawing.Point(24, 471)
+        Me.IconButton8.Location = New System.Drawing.Point(12, 340)
         Me.IconButton8.Name = "IconButton8"
         Me.IconButton8.Size = New System.Drawing.Size(321, 50)
         Me.IconButton8.TabIndex = 9
@@ -206,7 +204,7 @@ Partial Class PrincipalContenedor
         Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton7.IconSize = 40
         Me.IconButton7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton7.Location = New System.Drawing.Point(24, 187)
+        Me.IconButton7.Location = New System.Drawing.Point(12, 172)
         Me.IconButton7.Name = "IconButton7"
         Me.IconButton7.Size = New System.Drawing.Size(321, 50)
         Me.IconButton7.TabIndex = 8
@@ -230,36 +228,13 @@ Partial Class PrincipalContenedor
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton3.IconSize = 40
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(24, 243)
+        Me.IconButton3.Location = New System.Drawing.Point(12, 228)
         Me.IconButton3.Name = "IconButton3"
         Me.IconButton3.Size = New System.Drawing.Size(321, 50)
         Me.IconButton3.TabIndex = 4
         Me.IconButton3.Text = "Inventario"
         Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton3.UseVisualStyleBackColor = False
-        '
-        'IconButton6
-        '
-        Me.IconButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.Users
-        Me.IconButton6.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton6.IconSize = 40
-        Me.IconButton6.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton6.Location = New System.Drawing.Point(24, 131)
-        Me.IconButton6.Name = "IconButton6"
-        Me.IconButton6.Size = New System.Drawing.Size(321, 50)
-        Me.IconButton6.TabIndex = 7
-        Me.IconButton6.Text = "Usuarios"
-        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton6.UseVisualStyleBackColor = False
         '
         'IconButton4
         '
@@ -276,7 +251,7 @@ Partial Class PrincipalContenedor
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(24, 299)
+        Me.IconButton4.Location = New System.Drawing.Point(12, 284)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(321, 50)
         Me.IconButton4.TabIndex = 5
@@ -551,7 +526,6 @@ Partial Class PrincipalContenedor
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton8 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel6 As Panel

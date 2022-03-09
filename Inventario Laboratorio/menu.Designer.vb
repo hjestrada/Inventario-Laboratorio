@@ -33,6 +33,7 @@ Partial Class menu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -222,11 +223,35 @@ Partial Class menu
         Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton3.UseVisualStyleBackColor = False
         '
+        'IconButton4
+        '
+        Me.IconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Users
+        Me.IconButton4.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.IconSize = 40
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.IconButton4.Location = New System.Drawing.Point(53, 151)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(321, 50)
+        Me.IconButton4.TabIndex = 29
+        Me.IconButton4.Text = "Usuarios"
+        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton4.UseVisualStyleBackColor = False
+        '
         'menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(416, 650)
+        Me.ClientSize = New System.Drawing.Size(416, 581)
+        Me.Controls.Add(Me.IconButton4)
         Me.Controls.Add(Me.IconButton3)
         Me.Controls.Add(Me.IconButton2)
         Me.Controls.Add(Me.Panel2)
@@ -255,4 +280,5 @@ Partial Class menu
     Friend WithEvents Label1 As Label
     Friend WithEvents IconButton2 As IconButton
     Friend WithEvents IconButton3 As IconButton
+    Friend WithEvents IconButton4 As IconButton
 End Class

@@ -156,24 +156,7 @@ Public Class PrincipalContenedor
 
     End Sub
 
-    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
-        '------------------------
-
-        If rolprivilegio = "" Then
-
-            MsgBox("Usuario Null")
-            AbrirFormenPanel(New Usuarios)
-        Else
-            If rolprivilegio = "Administrador" Then
-                AbrirFormenPanel(New Usuarios)
-
-            Else
-                MsgBox("No posee privilegios suficientes para gestionar Usuarios, consulte con el administrador del sistema")
-
-            End If
-
-        End If
-
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs)
 
 
     End Sub

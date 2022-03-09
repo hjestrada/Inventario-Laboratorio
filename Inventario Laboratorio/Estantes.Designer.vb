@@ -26,7 +26,6 @@ Partial Class Estantes
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
@@ -35,6 +34,7 @@ Partial Class Estantes
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -76,17 +76,6 @@ Partial Class Estantes
         Me.Label3.Size = New System.Drawing.Size(63, 33)
         Me.Label3.TabIndex = 52
         Me.Label3.Text = "000"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(24, 128)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(178, 20)
-        Me.Label4.TabIndex = 46
-        Me.Label4.Text = "Identificador Estante"
         '
         'DataGridView1
         '
@@ -197,14 +186,25 @@ Partial Class Estantes
         Me.PictureBox1.TabIndex = 53
         Me.PictureBox1.TabStop = False
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label12.Location = New System.Drawing.Point(24, 130)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(133, 20)
+        Me.Label12.TabIndex = 65
+        Me.Label12.Text = "Código Estante"
+        '
         'Estantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(565, 595)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.IconButton4)
         Me.Controls.Add(Me.IconButton1)
@@ -229,7 +229,6 @@ Partial Class Estantes
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents IconButton4 As IconButton
     Friend WithEvents IconButton1 As IconButton
@@ -238,4 +237,5 @@ Partial Class Estantes
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label12 As Label
 End Class
