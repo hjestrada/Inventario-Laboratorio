@@ -82,7 +82,7 @@ Partial Class PrincipalContenedor
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(353, 1078)
+        Me.Panel1.Size = New System.Drawing.Size(353, 1040)
         Me.Panel1.TabIndex = 5
         '
         'Panel6
@@ -90,7 +90,7 @@ Partial Class PrincipalContenedor
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Panel6.Controls.Add(Me.PictureBox1)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(0, 956)
+        Me.Panel6.Location = New System.Drawing.Point(0, 918)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(353, 122)
         Me.Panel6.TabIndex = 10
@@ -460,7 +460,7 @@ Partial Class PrincipalContenedor
         'StatusStrip1
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 1078)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 1040)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1868, 22)
         Me.StatusStrip1.TabIndex = 4
@@ -479,7 +479,7 @@ Partial Class PrincipalContenedor
         Me.Panel_Central.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel_Central.Location = New System.Drawing.Point(615, 168)
         Me.Panel_Central.Name = "Panel_Central"
-        Me.Panel_Central.Size = New System.Drawing.Size(1068, 894)
+        Me.Panel_Central.Size = New System.Drawing.Size(1068, 822)
         Me.Panel_Central.TabIndex = 7
         '
         'PrincipalContenedor
@@ -487,7 +487,7 @@ Partial Class PrincipalContenedor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1868, 1100)
+        Me.ClientSize = New System.Drawing.Size(1868, 1062)
         Me.Controls.Add(Me.Panel_Central)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
