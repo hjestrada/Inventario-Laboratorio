@@ -211,6 +211,29 @@ Public Class Sistema_Globalmente_Armonizado
 
 
 
+    Sub validarGUardar()
+
+        Dim consulta1 As String
+            Dim lista1 As Byte
+
+
+        consulta1 = "SELECT * FROM   compatibilidades WHERE   compatibilidades.ID_PICTOGRAMA = " & id_picto1 & " AND    compatibilidades.ID_PICTOGRAMA2 =" & id_picto2 & ""
+        MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
+                datos1 = New DataSet
+                MySQLDA1.Fill(datos1, "pictogramas")
+                lista1 = datos1.Tables("pictogramas").Rows.Count
+
+            If lista1 = 0 Then
+                guardarcompatibilidad()
+            Else
+                MsgBox("Error, ya existe registrada esta compatibilidad")
+            End If
+
+
+
+
+    End Sub
+
 
 
 
@@ -346,6 +369,22 @@ Public Class Sistema_Globalmente_Armonizado
     End Sub
 
     Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+        validarGUardar()
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+    Sub guardarcompatibilidad()
+
+
+
+
         If MsgBox("Advertencia, ¿esta seguro de que la información suministrada es correcta y desea guardar esta compatibilidad?", MsgBoxStyle.Information + vbYesNo) = vbYes Then
 
 
@@ -373,22 +412,15 @@ Public Class Sistema_Globalmente_Armonizado
             Catch ex As Exception
                 MsgBox("Error al momento de guardar Compatibilidad.")
                 SQLiteCon.Close()
-                    Return
-                End Try
-                SQLiteCon.Close()
+                Return
+            End Try
+            SQLiteCon.Close()
 
         Else
 
             MsgBox("Operacion de Guardado Cancelado")
 
         End If
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class
