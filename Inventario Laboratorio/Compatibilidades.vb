@@ -21,7 +21,9 @@ Public Class Sistema_Globalmente_Armonizado
     Dim datos1 As DataSet
     Dim MySQLDA1 As New SQLiteDataAdapter
 
-
+    Dim compatibilidad As String
+    Dim id_picto2 As String
+    Dim id_picto1 As String
 
 
 
@@ -42,6 +44,7 @@ Public Class Sistema_Globalmente_Armonizado
 
         CargarPictogramas()
         CargarPictogramas2()
+        cargaDataview()
 
     End Sub
 
@@ -132,7 +135,7 @@ Public Class Sistema_Globalmente_Armonizado
             Dim lista1 As Byte
 
 
-            Dim id_picto1 As String
+
             id_picto1 = ComboBox5.SelectedValue
 
             If id_picto1 <> "" Then
@@ -152,6 +155,7 @@ Public Class Sistema_Globalmente_Armonizado
                 PictureBox2.Image = Image.FromStream(lmgStr)
                 PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
                 lmgStr.Close()
+                Label5.Text = id_picto1
 
             End If
 
@@ -174,7 +178,7 @@ Public Class Sistema_Globalmente_Armonizado
             Dim lista1 As Byte
 
 
-            Dim id_picto2 As String
+
             id_picto2 = ComboBox1.SelectedValue
 
             If id_picto2 <> "" Then
@@ -194,7 +198,7 @@ Public Class Sistema_Globalmente_Armonizado
                 PictureBox1.Image = Image.FromStream(lmgStr)
                 PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
                 lmgStr.Close()
-
+                Label6.Text = id_picto2
             End If
 
 
@@ -254,11 +258,137 @@ Public Class Sistema_Globalmente_Armonizado
         End Try
     End Function
 
+
+
+    Sub cargaDataview()
+        Try
+            Dim datos As DataSet
+            Dim Consulta As String
+            Dim MySQLCMD As New SQLiteCommand
+            Dim MySQLDA As New SQLiteDataAdapter
+
+            'ClaseConexion.CadenaConex.Open()
+            Consulta = "SELECT * FROM Compatibilidades"
+            MySQLDA = New SQLiteDataAdapter(Consulta, SQLiteCon)
+            datos = New DataSet
+            MySQLDA.Fill(datos, "Compatibilidades")
+            DataGridView1.DataSource = datos
+            DataGridView1.DataMember = "Compatibilidades"
+            'DataGridView1.RowsDefaultCellStyle.BackColor = Color.LightGreen
+            DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            SQLiteCon.Close()
+
+        Catch ex As Exception
+            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+            SQLiteCon.Close()
+        End Try
+
+    End Sub
+
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
         busqueda()
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         busqueda2()
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        Try
+
+
+            SQLiteCon.Open()
+            Dim Numero As String
+            Numero = InputBox("Por favor digite el identificador de la Compatibilidad")
+
+            If MessageBox.Show("¿Seguro que desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
+                SQLliteCMD = New SQLite.SQLiteCommand("delete from Compatibilidades where ID_COMPATIBILIDAD='" & Numero & "'", SQLiteCon)
+                SQLliteCMD.ExecuteNonQuery()
+                cargaDataview()
+                SQLiteCon.Close()
+
+            End If
+
+        Catch ex As Exception
+            MsgBox("Operación eliminar cancelada por el usuario")
+        End Try
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+
+        If RadioButton1.Checked Then
+            compatibilidad = "Compatible"
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+
+        If RadioButton2.Checked Then
+            compatibilidad = "No Compatible"
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+
+        If RadioButton3.Checked Then
+            compatibilidad = "Solamente podrán almacenarse juntos,adoptando ciertas medidas."
+
+        End If
+
+    End Sub
+
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+        If MsgBox("Advertencia, ¿esta seguro de que la información suministrada es correcta y desea guardar esta compatibilidad?", MsgBoxStyle.Information + vbYesNo) = vbYes Then
+
+
+            SQLiteCon.Close()
+            Try
+                SQLiteCon.Open()
+                SQLliteCMD = New SQLiteCommand
+
+
+                With SQLliteCMD
+                    .CommandText = " INSERT INTO compatibilidades (`ID_COMPATIBILIDAD`, `ID_PICTOGRAMA`, `ID_PICTOGRAMA2`,`DEF_COMP`) VALUES (NULL, @ID_PICTOGRAMA, @ID_PICTOGRAMA2,@DEF_COMP)"
+                    .Connection = SQLiteCon
+                    .Parameters.AddWithValue("@ID_PICTOGRAMA", Me.Label5.Text)
+                    .Parameters.AddWithValue("@ID_PICTOGRAMA2", Me.Label6.Text)
+                    .Parameters.AddWithValue("@DEF_COMP", compatibilidad)
+
+                    .ExecuteNonQuery()
+                End With
+
+                SQLiteCon.Close()
+                MsgBox("Datos Registrados Exitosamente")
+                cargaDataview()
+
+
+            Catch ex As Exception
+                MsgBox("Error al momento de guardar Compatibilidad.")
+                SQLiteCon.Close()
+                    Return
+                End Try
+                SQLiteCon.Close()
+
+        Else
+
+            MsgBox("Operacion de Guardado Cancelado")
+
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

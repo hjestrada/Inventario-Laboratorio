@@ -29,7 +29,7 @@ Public Class Pictograma
 
     Private Sub CargarDatos()
 
-        Dim sql As String = "SELECT `ID_PICTOGRAMA`,`DESCRIPCION` FROM PICTOGRAMAS"
+        Dim sql As String = "SELECT `ID_PICTOGRAMA`, `DESCRIPCION`  FROM PICTOGRAMAS"
 
         Using con As New SQLiteConnection(DB_Path)
             Dim command As New SQLiteCommand(sql, con)
