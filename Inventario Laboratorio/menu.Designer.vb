@@ -31,7 +31,6 @@ Partial Class menu
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton7 = New FontAwesome.Sharp.IconButton()
@@ -178,29 +177,6 @@ Partial Class menu
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Menú de Ajustes"
         '
-        'IconButton2
-        '
-        Me.IconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Bong
-        Me.IconButton2.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 40
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton2.Location = New System.Drawing.Point(53, 431)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(321, 50)
-        Me.IconButton2.TabIndex = 27
-        Me.IconButton2.Text = "Sistema Globalmente Armonizado"
-        Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton2.UseVisualStyleBackColor = False
-        '
         'IconButton3
         '
         Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -216,7 +192,7 @@ Partial Class menu
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton3.IconSize = 40
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(53, 487)
+        Me.IconButton3.Location = New System.Drawing.Point(53, 431)
         Me.IconButton3.Name = "IconButton3"
         Me.IconButton3.Size = New System.Drawing.Size(321, 50)
         Me.IconButton3.TabIndex = 28
@@ -262,7 +238,7 @@ Partial Class menu
         Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton7.IconSize = 40
         Me.IconButton7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton7.Location = New System.Drawing.Point(53, 543)
+        Me.IconButton7.Location = New System.Drawing.Point(53, 487)
         Me.IconButton7.Name = "IconButton7"
         Me.IconButton7.Size = New System.Drawing.Size(321, 50)
         Me.IconButton7.TabIndex = 30
@@ -274,11 +250,10 @@ Partial Class menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(416, 637)
+        Me.ClientSize = New System.Drawing.Size(416, 587)
         Me.Controls.Add(Me.IconButton7)
         Me.Controls.Add(Me.IconButton4)
         Me.Controls.Add(Me.IconButton3)
-        Me.Controls.Add(Me.IconButton2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.IconButton10)
@@ -303,7 +278,6 @@ Partial Class menu
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents IconButton2 As IconButton
     Friend WithEvents IconButton3 As IconButton
     Friend WithEvents IconButton4 As IconButton
     Friend WithEvents IconButton7 As IconButton

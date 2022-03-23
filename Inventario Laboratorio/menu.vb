@@ -52,7 +52,7 @@
 
     End Sub
     ' //--
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs)
 
         If rolprivilegio = "Administrador" Then
             Sistema_Globalmente_Armonizado.Show()
@@ -83,5 +83,16 @@
         End If
 
 
+    End Sub
+
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+
+        If rolprivilegio = "Administrador" Then
+            Sistema_Globalmente_Armonizado.Show()
+
+
+        Else
+            MsgBox("No posee suficientes Privilegios para Modificar los parametros  del Sistema Globalmente Armonizado validados en esta aplicación.")
+        End If
     End Sub
 End Class

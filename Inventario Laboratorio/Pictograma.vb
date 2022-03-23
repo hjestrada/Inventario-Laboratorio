@@ -196,18 +196,18 @@ Public Class Pictograma
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
-        Try
 
 
-            SQLiteCon.Open()
+
+        SQLiteCon.Open()
             Dim Numero As String
 
             Numero = InputBox("Por favor digite el identificador de Pictograma:")
 
 
             If MessageBox.Show("¿Seguro que desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = vbYes Then
-                SQLliteCMD = New SQLite.SQLiteCommand("delete from PICTOGRAMAS where ID_PICTO='" & Numero & "'", SQLiteCon)
-                SQLliteCMD.ExecuteNonQuery()
+            SQLliteCMD = New SQLite.SQLiteCommand("delete from PICTOGRAMAS where ID_PICTOGRAMA='" & Numero & "'", SQLiteCon)
+            SQLliteCMD.ExecuteNonQuery()
                 CargarDatos()
                 SQLiteCon.Close()
                 MAXID()
@@ -216,9 +216,6 @@ Public Class Pictograma
 
 
 
-        Catch ex As Exception
-            MsgBox("Error al procesar esta solicitud")
-        End Try
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
