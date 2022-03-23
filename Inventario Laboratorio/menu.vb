@@ -1,4 +1,33 @@
-﻿Public Class menu
+﻿
+
+
+
+Option Strict Off
+Option Explicit On
+Imports System.IO
+Imports System.Text.RegularExpressions
+Imports System.Data
+
+
+
+Imports System.Runtime.InteropServices
+Imports System.Text
+
+
+
+
+
+Public Class menu
+
+    Dim Path As String
+    Dim BackupPath As String
+    Dim DatabaseName As String = "BK_InventarioLaboratorio" + Date.Now.ToString("dd-MM-yyyy HH-mm-ss")
+
+
+
+
+
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
     End Sub
@@ -95,4 +124,40 @@
             MsgBox("No posee suficientes Privilegios para Modificar los parametros  del Sistema Globalmente Armonizado validados en esta aplicación.")
         End If
     End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+        Dim msgvalue As Integer
+        msgvalue = MsgBox("¿Está seguro que desea realizar una copia de seguridad de su información?, Tenga en cuenta que el archivo generado debe asegurarse para evitar perdida de datos.  ¿Desea Continuar? ", vbQuestion + vbYesNo, "Mensaje de Alerta")
+
+        Select Case msgvalue
+
+            Case 6 'Yes
+                FolderBrowserDialog1.ShowDialog()
+                BackupPath = FolderBrowserDialog1.SelectedPath.ToString() + "\"
+                backup()
+
+            Case 7 'No
+                MsgBox("Proceso de Copia de Seguridad Cancelada")
+        End Select
+
+
+    End Sub
+
+
+
+    Sub backup()
+
+
+
+    End Sub
+
+
+
+
+
+
 End Class

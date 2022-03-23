@@ -24,6 +24,7 @@ Partial Class Sistema_Globalmente_Armonizado
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Sistema_Globalmente_Armonizado))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -44,7 +45,9 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +62,7 @@ Partial Class Sistema_Globalmente_Armonizado
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
@@ -66,6 +70,16 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1025, 107)
         Me.Panel2.TabIndex = 26
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(592, 43)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(54, 51)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 69
+        Me.PictureBox3.TabStop = False
         '
         'Panel1
         '
@@ -95,11 +109,11 @@ Partial Class Sistema_Globalmente_Armonizado
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(425, 61)
+        Me.Label1.Location = New System.Drawing.Point(348, 53)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(146, 20)
+        Me.Label1.Size = New System.Drawing.Size(238, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Compatibilidades"
         '
@@ -261,11 +275,12 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.IconButton7.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton7.IconSize = 40
-        Me.IconButton7.Location = New System.Drawing.Point(66, 59)
+        Me.IconButton7.Location = New System.Drawing.Point(53, 72)
         Me.IconButton7.Name = "IconButton7"
         Me.IconButton7.Size = New System.Drawing.Size(321, 50)
         Me.IconButton7.TabIndex = 31
         Me.IconButton7.Text = "Validar Compatibilidades"
+        Me.IconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton7.UseVisualStyleBackColor = False
         '
@@ -283,17 +298,42 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(6, 23)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(446, 287)
+        Me.DataGridView1.Size = New System.Drawing.Size(446, 245)
         Me.DataGridView1.TabIndex = 84
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.IconButton4)
         Me.GroupBox5.Controls.Add(Me.DataGridView1)
         Me.GroupBox5.Location = New System.Drawing.Point(548, 113)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(458, 330)
         Me.GroupBox5.TabIndex = 85
         Me.GroupBox5.TabStop = False
+        '
+        'IconButton4
+        '
+        Me.IconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Trash
+        Me.IconButton4.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.IconSize = 40
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.IconButton4.Location = New System.Drawing.Point(6, 274)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(446, 50)
+        Me.IconButton4.TabIndex = 85
+        Me.IconButton4.Text = "Eliminar Compatibilidad"
+        Me.IconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton4.UseVisualStyleBackColor = False
         '
         'Sistema_Globalmente_Armonizado
         '
@@ -313,6 +353,7 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Text = "Sistema_Globalmente_Armonizado"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -350,4 +391,6 @@ Partial Class Sistema_Globalmente_Armonizado
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents IconButton4 As IconButton
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
