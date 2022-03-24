@@ -130,7 +130,7 @@ Partial Class PrincipalContenedor
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Microscope
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Random
         Me.IconButton1.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
@@ -139,7 +139,7 @@ Partial Class PrincipalContenedor
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(321, 50)
         Me.IconButton1.TabIndex = 2
-        Me.IconButton1.Text = "Gestión de Reactivos"
+        Me.IconButton1.Text = "Movimiento de Reactivos"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
         '
@@ -158,7 +158,7 @@ Partial Class PrincipalContenedor
         Me.IconButton10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton10.IconSize = 40
         Me.IconButton10.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton10.Location = New System.Drawing.Point(12, 116)
+        Me.IconButton10.Location = New System.Drawing.Point(12, 228)
         Me.IconButton10.Name = "IconButton10"
         Me.IconButton10.Size = New System.Drawing.Size(321, 50)
         Me.IconButton10.TabIndex = 11
@@ -228,7 +228,7 @@ Partial Class PrincipalContenedor
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton3.IconSize = 40
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(12, 228)
+        Me.IconButton3.Location = New System.Drawing.Point(12, 116)
         Me.IconButton3.Name = "IconButton3"
         Me.IconButton3.Size = New System.Drawing.Size(321, 50)
         Me.IconButton3.TabIndex = 4
@@ -477,9 +477,9 @@ Partial Class PrincipalContenedor
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel_Central.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel_Central.Location = New System.Drawing.Point(615, 168)
+        Me.Panel_Central.Location = New System.Drawing.Point(409, 168)
         Me.Panel_Central.Name = "Panel_Central"
-        Me.Panel_Central.Size = New System.Drawing.Size(1068, 822)
+        Me.Panel_Central.Size = New System.Drawing.Size(1394, 822)
         Me.Panel_Central.TabIndex = 7
         '
         'PrincipalContenedor

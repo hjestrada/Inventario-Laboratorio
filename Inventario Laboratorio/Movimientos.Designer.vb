@@ -24,20 +24,18 @@ Partial Class Movimientos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Movimientos))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,19 +49,29 @@ Partial Class Movimientos
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(992, 174)
+        Me.Panel2.Size = New System.Drawing.Size(588, 174)
         Me.Panel2.TabIndex = 1
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(502, 76)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(54, 51)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 70
+        Me.PictureBox3.TabStop = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(284, 90)
+        Me.Label1.Location = New System.Drawing.Point(51, 86)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(340, 31)
+        Me.Label1.Size = New System.Drawing.Size(445, 31)
         Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Movimiento de Reactivos"
+        Me.Label1.Text = "Tipo de Movimiento de Reactivos"
         '
         'Panel1
         '
@@ -72,7 +80,7 @@ Partial Class Movimientos
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(992, 37)
+        Me.Panel1.Size = New System.Drawing.Size(588, 37)
         Me.Panel1.TabIndex = 14
         '
         'Button3
@@ -84,82 +92,66 @@ Partial Class Movimientos
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(959, 3)
+        Me.Button3.Location = New System.Drawing.Point(555, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(30, 30)
         Me.Button3.TabIndex = 2
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(630, 80)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(54, 51)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 70
-        Me.PictureBox3.TabStop = False
         '
         'Panel3
         '
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 174)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(992, 27)
+        Me.Panel3.Size = New System.Drawing.Size(588, 10)
         Me.Panel3.TabIndex = 2
         '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 201)
+        Me.Panel4.Location = New System.Drawing.Point(0, 184)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(992, 98)
+        Me.Panel4.Size = New System.Drawing.Size(588, 84)
         Me.Panel4.TabIndex = 3
         '
-        'IconButton4
+        'TableLayoutPanel1
         '
-        Me.IconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Users
-        Me.IconButton4.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 40
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(3, 3)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(171, 50)
-        Me.IconButton4.TabIndex = 30
-        Me.IconButton4.Text = "Usuarios"
-        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton4.UseVisualStyleBackColor = False
+        Me.TableLayoutPanel1.AutoSize = True
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.00001!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.IconButton2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.IconButton1, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(57, 6)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(499, 70)
+        Me.TableLayoutPanel1.TabIndex = 35
         '
         'IconButton1
         '
         Me.IconButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Users
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight
         Me.IconButton1.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(195, 3)
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(252, 3)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(171, 50)
+        Me.IconButton1.Size = New System.Drawing.Size(244, 64)
         Me.IconButton1.TabIndex = 31
-        Me.IconButton1.Text = "Usuarios"
+        Me.IconButton1.Text = "Salida"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
         '
@@ -168,71 +160,30 @@ Partial Class Movimientos
         Me.IconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.IconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Users
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Walking
         Me.IconButton2.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 40
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton2.Location = New System.Drawing.Point(387, 3)
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(3, 3)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(171, 50)
+        Me.IconButton2.Size = New System.Drawing.Size(243, 64)
         Me.IconButton2.TabIndex = 32
-        Me.IconButton2.Text = "Usuarios"
+        Me.IconButton2.Text = "Entrada"
         Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton2.UseVisualStyleBackColor = False
-        '
-        'IconButton3
-        '
-        Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Users
-        Me.IconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.IconSize = 40
-        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton3.Location = New System.Drawing.Point(579, 3)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(171, 50)
-        Me.IconButton3.TabIndex = 33
-        Me.IconButton3.Text = "Usuarios"
-        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton3.UseVisualStyleBackColor = False
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.AutoSize = True
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.IconButton4, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.IconButton1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.IconButton2, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.IconButton3, 3, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(113, 6)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(770, 70)
-        Me.TableLayoutPanel1.TabIndex = 35
         '
         'Movimientos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(992, 772)
+        Me.ClientSize = New System.Drawing.Size(588, 334)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -242,8 +193,8 @@ Partial Class Movimientos
         Me.Text = "Movimientos"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -258,9 +209,7 @@ Partial Class Movimientos
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents IconButton4 As IconButton
     Friend WithEvents IconButton1 As IconButton
     Friend WithEvents IconButton2 As IconButton
-    Friend WithEvents IconButton3 As IconButton
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class
