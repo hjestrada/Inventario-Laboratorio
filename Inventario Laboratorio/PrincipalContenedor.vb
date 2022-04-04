@@ -206,6 +206,6 @@ Public Class PrincipalContenedor
     End Sub
 
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
-        AbrirFormenPanel(New GestionReactivos)
+        'AbrirFormenPanel(New GestionReactivos)
     End Sub
 End Class

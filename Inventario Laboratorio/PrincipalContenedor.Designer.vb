@@ -479,7 +479,7 @@ Partial Class PrincipalContenedor
         Me.Panel_Central.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel_Central.Location = New System.Drawing.Point(409, 168)
         Me.Panel_Central.Name = "Panel_Central"
-        Me.Panel_Central.Size = New System.Drawing.Size(1394, 822)
+        Me.Panel_Central.Size = New System.Drawing.Size(1394, 857)
         Me.Panel_Central.TabIndex = 7
         '
         'PrincipalContenedor

@@ -46,6 +46,19 @@ Public Class Sistema_Globalmente_Armonizado
         CargarPictogramas2()
         cargaDataview()
 
+        'hacemos que las columnas se ajusten a al tamaño del contenido
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DataGridView1.ScrollBars = ScrollBars.Both
+        DataGridView1.ForeColor = Color.Black
+        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan
+        DataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+
+
+
+
+
+
     End Sub
 
 
@@ -421,6 +434,10 @@ Public Class Sistema_Globalmente_Armonizado
             MsgBox("Operacion de Guardado Cancelado")
 
         End If
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

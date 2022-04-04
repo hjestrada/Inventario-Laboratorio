@@ -33,6 +33,8 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -41,17 +43,15 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,13 +75,13 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1236, 107)
+        Me.Panel2.Size = New System.Drawing.Size(1130, 107)
         Me.Panel2.TabIndex = 26
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(692, 41)
+        Me.PictureBox3.Location = New System.Drawing.Point(534, 46)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(54, 51)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -95,7 +95,7 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1236, 37)
+        Me.Panel1.Size = New System.Drawing.Size(1130, 37)
         Me.Panel1.TabIndex = 12
         '
         'Button3
@@ -107,7 +107,7 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(1203, 3)
+        Me.Button3.Location = New System.Drawing.Point(1097, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(30, 30)
         Me.Button3.TabIndex = 2
@@ -118,7 +118,7 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(448, 51)
+        Me.Label1.Location = New System.Drawing.Point(290, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(238, 31)
         Me.Label1.TabIndex = 0
@@ -147,6 +147,28 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.GroupBox2.Size = New System.Drawing.Size(262, 330)
         Me.GroupBox2.TabIndex = 60
         Me.GroupBox2.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(170, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(69, 20)
+        Me.Label5.TabIndex = 70
+        Me.Label5.Text = "----------"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(142, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(30, 20)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Id:"
         '
         'PictureBox2
         '
@@ -240,6 +262,28 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.GroupBox1.TabIndex = 81
         Me.GroupBox1.TabStop = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(170, 16)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(69, 20)
+        Me.Label6.TabIndex = 71
+        Me.Label6.Text = "----------"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Location = New System.Drawing.Point(142, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 20)
+        Me.Label4.TabIndex = 69
+        Me.Label4.Text = "Id:"
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
@@ -286,9 +330,9 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.IconButton7.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton7.IconSize = 40
-        Me.IconButton7.Location = New System.Drawing.Point(18, 22)
+        Me.IconButton7.Location = New System.Drawing.Point(6, 22)
         Me.IconButton7.Name = "IconButton7"
-        Me.IconButton7.Size = New System.Drawing.Size(639, 50)
+        Me.IconButton7.Size = New System.Drawing.Size(540, 50)
         Me.IconButton7.TabIndex = 31
         Me.IconButton7.Text = "Validar Compatibilidades"
         Me.IconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -301,18 +345,9 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.GroupBox4.Controls.Add(Me.IconButton7)
         Me.GroupBox4.Location = New System.Drawing.Point(548, 449)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(676, 157)
+        Me.GroupBox4.Size = New System.Drawing.Size(552, 157)
         Me.GroupBox4.TabIndex = 83
         Me.GroupBox4.TabStop = False
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.DataGridView1)
-        Me.GroupBox5.Location = New System.Drawing.Point(548, 113)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(676, 330)
-        Me.GroupBox5.TabIndex = 85
-        Me.GroupBox5.TabStop = False
         '
         'IconButton4
         '
@@ -329,63 +364,28 @@ Partial Class Sistema_Globalmente_Armonizado
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.IconButton4.Location = New System.Drawing.Point(18, 78)
+        Me.IconButton4.Location = New System.Drawing.Point(6, 78)
         Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(639, 50)
+        Me.IconButton4.Size = New System.Drawing.Size(540, 50)
         Me.IconButton4.TabIndex = 85
         Me.IconButton4.Text = "Eliminar Compatibilidad"
         Me.IconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton4.UseVisualStyleBackColor = False
         '
-        'Label3
+        'GroupBox5
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(142, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 20)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Id:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(142, 16)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 20)
-        Me.Label4.TabIndex = 69
-        Me.Label4.Text = "Id:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(170, 16)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 20)
-        Me.Label5.TabIndex = 70
-        Me.Label5.Text = "----------"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(170, 16)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(69, 20)
-        Me.Label6.TabIndex = 71
-        Me.Label6.Text = "----------"
+        Me.GroupBox5.Controls.Add(Me.DataGridView1)
+        Me.GroupBox5.Location = New System.Drawing.Point(548, 113)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(552, 330)
+        Me.GroupBox5.TabIndex = 85
+        Me.GroupBox5.TabStop = False
         '
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
@@ -395,7 +395,7 @@ Partial Class Sistema_Globalmente_Armonizado
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -416,18 +416,18 @@ Partial Class Sistema_Globalmente_Armonizado
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DataGridView1.ShowCellErrors = False
         Me.DataGridView1.ShowCellToolTips = False
         Me.DataGridView1.ShowEditingIcon = False
-        Me.DataGridView1.Size = New System.Drawing.Size(670, 311)
+        Me.DataGridView1.Size = New System.Drawing.Size(546, 311)
         Me.DataGridView1.TabIndex = 80
         '
         'Sistema_Globalmente_Armonizado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1236, 627)
+        Me.ClientSize = New System.Drawing.Size(1130, 627)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
