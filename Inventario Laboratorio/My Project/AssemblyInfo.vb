@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("Inventario Laboratorio")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Inventario Laboratorio")>
+<Assembly: AssemblyTitle("SIGILab")>
+<Assembly: AssemblyDescription("Sistema para la gestion de reactivos de laboratorio")>
+<Assembly: AssemblyCompany("Tecnoparque Nodo Pitalito")>
+<Assembly: AssemblyProduct("SIGILab")>
 <Assembly: AssemblyCopyright("Copyright ©  2021")>
 <Assembly: AssemblyTrademark("")>
 
