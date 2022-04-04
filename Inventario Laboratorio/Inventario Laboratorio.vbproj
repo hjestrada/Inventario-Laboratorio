@@ -28,9 +28,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -43,6 +44,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>SIGILab.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +55,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>SIGILab.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -230,6 +233,12 @@
     <Compile Include="Compatibilidades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen1vb.Designer.vb">
+      <DependentUpon>SplashScreen1vb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1vb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Usuarios.Designer.vb">
       <DependentUpon>Usuarios.vb</DependentUpon>
     </Compile>
@@ -276,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compatibilidades.resx">
       <DependentUpon>Compatibilidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1vb.resx">
+      <DependentUpon>SplashScreen1vb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>

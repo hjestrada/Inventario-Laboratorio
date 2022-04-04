@@ -54,6 +54,8 @@ Partial Class PrincipalContenedor
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
+        Me.Version = New System.Windows.Forms.Label()
+        Me.Copyright = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +90,8 @@ Partial Class PrincipalContenedor
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.Version)
+        Me.Panel6.Controls.Add(Me.Copyright)
         Me.Panel6.Controls.Add(Me.PictureBox1)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 918)
@@ -100,7 +104,7 @@ Partial Class PrincipalContenedor
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(32, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(268, 69)
+        Me.PictureBox1.Size = New System.Drawing.Size(221, 57)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -482,6 +486,30 @@ Partial Class PrincipalContenedor
         Me.Panel_Central.Size = New System.Drawing.Size(1394, 857)
         Me.Panel_Central.TabIndex = 7
         '
+        'Version
+        '
+        Me.Version.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Version.BackColor = System.Drawing.Color.Transparent
+        Me.Version.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Version.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Version.Location = New System.Drawing.Point(29, 75)
+        Me.Version.Name = "Version"
+        Me.Version.Size = New System.Drawing.Size(241, 20)
+        Me.Version.TabIndex = 3
+        Me.Version.Text = "Versión {0}.{1:00}"
+        '
+        'Copyright
+        '
+        Me.Copyright.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Copyright.BackColor = System.Drawing.Color.Transparent
+        Me.Copyright.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Copyright.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Copyright.Location = New System.Drawing.Point(29, 95)
+        Me.Copyright.Name = "Copyright"
+        Me.Copyright.Size = New System.Drawing.Size(241, 21)
+        Me.Copyright.TabIndex = 4
+        Me.Copyright.Text = "Copyright"
+        '
         'PrincipalContenedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -546,4 +574,6 @@ Partial Class PrincipalContenedor
     Friend WithEvents IconPictureBox3 As IconPictureBox
     Friend WithEvents Panel_Central As Panel
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Version As Label
+    Friend WithEvents Copyright As Label
 End Class

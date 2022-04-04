@@ -59,10 +59,10 @@ Public Class Login
     Sub login()
 
 
-        'Try
+        Try
 
 
-        USER = UsernameTextBox.Text
+            USER = UsernameTextBox.Text
             PWD = PasswordTextBox.Text
 
 
@@ -82,8 +82,8 @@ Public Class Login
 
                     USERBD = datos1.Tables("USUARIO").Rows(0).Item("USER")
                     PWDBD = datos1.Tables("USUARIO").Rows(0).Item("PWD")
-                NOMBREUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("NOMBRE")
-                ROL = datos1.Tables("USUARIO").Rows(0).Item("ROL")
+                    NOMBREUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("NOMBRE")
+                    ROL = datos1.Tables("USUARIO").Rows(0).Item("ROL")
                     IDUSUARIO = datos1.Tables("USUARIO").Rows(0).Item("ID_USUARIO")
 
                     SQLiteCon.Close()
@@ -105,10 +105,10 @@ Public Class Login
                     MsgBox("No se encontraron datos")
                 End If
             End If
-        'Catch ex As Exception
+        Catch ex As Exception
 
-        '  MsgBox("¡Error en Base de Datos!")
-        '   End Try
+            MsgBox("¡Error en Base de Datos!")
+        End Try
     End Sub
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         login()

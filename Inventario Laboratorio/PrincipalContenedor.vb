@@ -81,7 +81,12 @@ Public Class PrincipalContenedor
         'Necesario para redondear formulario
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
 
+        Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
 
+        'Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor)
+
+        'Información de Copyright
+        Copyright.Text = My.Application.Info.Copyright
 
 
 

@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Revisar los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("SIGILab")>
-<Assembly: AssemblyDescription("Sistema para la gestion de reactivos de laboratorio")>
+<Assembly: AssemblyDescription("Sistema para la gestión de reactivos de laboratorio")>
 <Assembly: AssemblyCompany("Tecnoparque Nodo Pitalito")>
 <Assembly: AssemblyProduct("SIGILab")>
 <Assembly: AssemblyCopyright("Copyright ©  2021")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTrademark("SIGILab")>
 
 <Assembly: ComVisible(True)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' utilizando el carácter "*", como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.15")>
+<Assembly: AssemblyFileVersion("1.0.0.15")>
