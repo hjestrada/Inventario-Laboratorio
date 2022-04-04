@@ -168,10 +168,10 @@
     <Compile Include="Fila.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionReactivos.Designer.vb">
-      <DependentUpon>GestionReactivos.vb</DependentUpon>
+    <Compile Include="Inventario.Designer.vb">
+      <DependentUpon>Inventario.vb</DependentUpon>
     </Compile>
-    <Compile Include="GestionReactivos.vb">
+    <Compile Include="Inventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="Fila.resx">
       <DependentUpon>Fila.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionReactivos.resx">
-      <DependentUpon>GestionReactivos.vb</DependentUpon>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

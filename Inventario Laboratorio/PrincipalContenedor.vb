@@ -152,7 +152,7 @@ Public Class PrincipalContenedor
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
 
-        AbrirFormenPanel(New Movimientos)
+        AbrirFormenPanel(New Inventario)
 
     End Sub
 
