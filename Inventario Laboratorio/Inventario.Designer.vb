@@ -32,6 +32,14 @@ Partial Class Inventario
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
@@ -70,18 +78,6 @@ Partial Class Inventario
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -181,10 +177,6 @@ Partial Class Inventario
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
         Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TabPage1.Controls.Add(Me.TextBox10)
-        Me.TabPage1.Controls.Add(Me.TextBox9)
-        Me.TabPage1.Controls.Add(Me.TextBox8)
-        Me.TabPage1.Controls.Add(Me.TextBox5)
         Me.TabPage1.Controls.Add(Me.TextBox4)
         Me.TabPage1.Controls.Add(Me.TextBox7)
         Me.TabPage1.Controls.Add(Me.ComboBox2)
@@ -233,6 +225,69 @@ Partial Class Inventario
         Me.TabPage1.Size = New System.Drawing.Size(1264, 680)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entrada"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(735, 358)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(209, 29)
+        Me.TextBox4.TabIndex = 120
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(735, 320)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(209, 29)
+        Me.TextBox7.TabIndex = 119
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Litros", "miliLitros", "Centimetros cúbicos", "gramos", "miligramos", "Kilogramos", "Libras", "Onzas", "metros cúbicos"})
+        Me.ComboBox2.Location = New System.Drawing.Point(252, 425)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(209, 28)
+        Me.ComboBox2.TabIndex = 118
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Estado sólido.", "Estado líquido.", "Estado gaseoso.", "Estado plasmático."})
+        Me.ComboBox1.Location = New System.Drawing.Point(252, 387)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(209, 28)
+        Me.ComboBox1.TabIndex = 117
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(252, 36)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(209, 29)
+        Me.TextBox6.TabIndex = 116
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(252, 73)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(209, 29)
+        Me.TextBox3.TabIndex = 115
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(252, 107)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(209, 29)
+        Me.TextBox2.TabIndex = 114
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(252, 144)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(209, 29)
+        Me.TextBox1.TabIndex = 113
         '
         'DataGridView1
         '
@@ -426,13 +481,13 @@ Partial Class Inventario
         'ComboBox4
         '
         Me.ComboBox4.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {""})
         Me.ComboBox4.Location = New System.Drawing.Point(661, 194)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(68, 32)
+        Me.ComboBox4.Size = New System.Drawing.Size(331, 28)
         Me.ComboBox4.TabIndex = 97
         '
         'Label15
@@ -449,25 +504,25 @@ Partial Class Inventario
         'ComboBox5
         '
         Me.ComboBox5.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {""})
         Me.ComboBox5.Location = New System.Drawing.Point(661, 156)
         Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(68, 32)
+        Me.ComboBox5.Size = New System.Drawing.Size(331, 28)
         Me.ComboBox5.TabIndex = 95
         '
         'ComboBox8
         '
         Me.ComboBox8.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.ComboBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox8.FormattingEnabled = True
         Me.ComboBox8.Items.AddRange(New Object() {""})
         Me.ComboBox8.Location = New System.Drawing.Point(661, 117)
         Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(68, 32)
+        Me.ComboBox8.Size = New System.Drawing.Size(331, 28)
         Me.ComboBox8.TabIndex = 94
         '
         'Label19
@@ -573,12 +628,12 @@ Partial Class Inventario
         'ComboBox3
         '
         Me.ComboBox3.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(661, 79)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(68, 32)
+        Me.ComboBox3.Size = New System.Drawing.Size(331, 28)
         Me.ComboBox3.TabIndex = 88
         '
         'RichTextBox2
@@ -698,99 +753,6 @@ Partial Class Inventario
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(252, 144)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(209, 29)
-        Me.TextBox1.TabIndex = 113
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(252, 107)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(209, 29)
-        Me.TextBox2.TabIndex = 114
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(252, 73)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(209, 29)
-        Me.TextBox3.TabIndex = 115
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(252, 36)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(209, 29)
-        Me.TextBox6.TabIndex = 116
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Estado sólido.", "Estado líquido.", "Estado gaseoso.", "Estado plasmático."})
-        Me.ComboBox1.Location = New System.Drawing.Point(252, 387)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(209, 32)
-        Me.ComboBox1.TabIndex = 117
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Litros", "miliLitros", "Centimetros cúbicos", "gramos", "miligramos", "Kilogramos", "Libras", "Onzas", "metros cúbicos"})
-        Me.ComboBox2.Location = New System.Drawing.Point(252, 425)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(209, 32)
-        Me.ComboBox2.TabIndex = 118
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(735, 320)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(209, 29)
-        Me.TextBox7.TabIndex = 119
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(735, 358)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(209, 29)
-        Me.TextBox4.TabIndex = 120
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(735, 82)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(257, 29)
-        Me.TextBox5.TabIndex = 121
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(735, 120)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(257, 29)
-        Me.TextBox8.TabIndex = 122
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(735, 159)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(257, 29)
-        Me.TextBox9.TabIndex = 123
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(735, 194)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(257, 29)
-        Me.TextBox10.TabIndex = 124
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -869,8 +831,4 @@ Partial Class Inventario
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox5 As TextBox
 End Class

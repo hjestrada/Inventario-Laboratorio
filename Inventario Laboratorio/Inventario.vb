@@ -1,4 +1,30 @@
-﻿Public Class Inventario
+﻿
+
+
+Option Strict Off
+Option Explicit On
+
+Imports System.Runtime.InteropServices
+Imports System.Data.SQLite
+Imports System.Data.SqlClient
+Imports System.IO
+
+
+
+
+
+Public Class Inventario
+
+    Dim DB_Path As String = "Data Source=" & Application.StartupPath & "\BD_Lab.s3db;"
+    Dim SQLiteCon As New SQLiteConnection(DB_Path)
+    Dim SQLliteCMD As New SQLiteCommand
+    Dim Imag As Byte()
+    Dim consulta1 As String
+    Dim lista1 As Byte
+    Dim datos1 As DataSet
+    Dim MySQLDA1 As New SQLiteDataAdapter
+    Dim GrupoGeneralaux As String
+    Dim table As New DataTable
 
 
 
@@ -16,6 +42,18 @@
 
 
 
+        ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList
+
+
+        ComboBox8.DropDownStyle = ComboBoxStyle.DropDownList
+
+        ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
+
+        MAXID()
+        cargarfabricante2()
+        GrupoGeneral()
+
+
     End Sub
 
     Private Sub TabControl1_DrawItem(sender As Object, e As DrawItemEventArgs) Handles TabControl1.DrawItem
@@ -29,5 +67,99 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
 
+    End Sub
+
+
+
+
+    Public Sub GrupoGeneral()
+        Try
+
+            Dim cmd As String = "SELECT `ID_GRUPO_SGA`,`GRUPO_GENERAL`FROM sga"
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("sga")
+            da.Fill(dt)
+            With ComboBox8
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+            cargarClasePeligro()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub cargarClasePeligro()
+
+
+        GrupoGeneralaux = ComboBox8.SelectedValue.ToString
+
+
+
+        Try
+
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
+
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux)
+            Dim ds As New DataSet
+            Dim table As New DataTable
+
+            MySQLDA.Fill(ds)
+
+            ComboBox5.DataSource = ds.Tables(0)
+            ComboBox5.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+
+        Catch ex As Exception
+            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+
+
+        Finally
+            SQLiteCon.Close()
+
+        End Try
+
+    End Sub
+
+
+    Public Sub cargarfabricante2()
+        Try
+            'Dim cmd As String = "Select`ID_FABRICANTE` || ' | ' || `NOMBRE_FAB` AS ALGO FROM FABRICANTE"
+            Dim cmd As String = "SELECT `ID_FABRICANTE`,`NOMBRE_FAB`FROM FABRICANTE"
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("FABRICANTE")
+            da.Fill(dt)
+            With ComboBox3
+                .DataSource = dt
+                .DisplayMember = "NOMBRE_FAB"
+                .ValueMember = "ID_FABRICANTE"
+            End With
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+
+    Sub MAXID()
+
+        MySQLDA1.SelectCommand = New SQLiteCommand
+        MySQLDA1.SelectCommand.Connection = SQLiteCon
+        MySQLDA1.SelectCommand.CommandText = "SELECT MAX(`id_reactivo`)  AS id FROM reactivo"
+        SQLiteCon.Open()
+        Dim valorDefecto As Integer = 1
+        Dim ValorRetornado As Object = MySQLDA1.SelectCommand.ExecuteScalar()
+
+        If ValorRetornado Is DBNull.Value Then
+            TextBox6.Text = CStr(valorDefecto)
+        Else
+            TextBox6.Text = CStr(ValorRetornado) + 1
+        End If
+        SQLiteCon.Close()
+    End Sub
+
+    Private Sub ComboBox8_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox8.SelectedIndexChanged
+        cargarClasePeligro()
     End Sub
 End Class
