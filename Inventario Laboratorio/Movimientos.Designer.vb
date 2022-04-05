@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Movimientos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Movimientos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Movimientos))
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -128,7 +128,7 @@ Partial Class Movimientos
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(500, 70)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(502, 70)
         Me.TableLayoutPanel1.TabIndex = 35
         '
         'IconButton2
@@ -149,7 +149,7 @@ Partial Class Movimientos
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton2.Location = New System.Drawing.Point(3, 3)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(243, 64)
+        Me.IconButton2.Size = New System.Drawing.Size(244, 64)
         Me.IconButton2.TabIndex = 32
         Me.IconButton2.Text = "Entrada"
         Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -171,9 +171,9 @@ Partial Class Movimientos
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(252, 3)
+        Me.IconButton1.Location = New System.Drawing.Point(253, 3)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(245, 64)
+        Me.IconButton1.Size = New System.Drawing.Size(246, 64)
         Me.IconButton1.TabIndex = 31
         Me.IconButton1.Text = "Salida"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText

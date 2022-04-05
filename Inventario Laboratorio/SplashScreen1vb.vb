@@ -10,13 +10,7 @@
         'TODO: Personalice la información del ensamblado de la aplicación en el panel "Aplicación" del cuadro de diálogo 
         '  propiedades del proyecto (bajo el menú "Proyecto").
 
-        'Título de la aplicación
-        If My.Application.Info.Title <> "" Then
-            ApplicationTitle.Text = My.Application.Info.Title
-        Else
-            'Si falta el título de la aplicación, utilice el nombre de la aplicación sin la extensión
-            ApplicationTitle.Text = System.IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
-        End If
+
 
         'Dé formato a la información de versión usando el texto establecido en el control de versiones en tiempo de diseño como
         '  cadena de formato.  Esto le permite una localización efectiva si lo desea.
@@ -32,7 +26,7 @@
         Copyright.Text = My.Application.Info.Copyright
     End Sub
 
-    Private Sub ApplicationTitle_Click(sender As Object, e As EventArgs) Handles ApplicationTitle.Click
+    Private Sub ApplicationTitle_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

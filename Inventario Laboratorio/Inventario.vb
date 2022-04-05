@@ -8,6 +8,13 @@
 
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label20.Text = Now
+        ComboBox1.SelectedIndex = 0
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+
+        ComboBox2.SelectedIndex = 0
+        ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList
+
+
 
     End Sub
 
