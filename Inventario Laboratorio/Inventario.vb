@@ -53,7 +53,7 @@ Public Class Inventario
         MAXID()
         cargarfabricante2()
         GrupoGeneral()
-
+        cargarPictograma()
 
     End Sub
 
@@ -87,7 +87,7 @@ Public Class Inventario
             End With
             cargarClasePeligro()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            '   MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -114,7 +114,7 @@ Public Class Inventario
 
 
         Catch ex As Exception
-            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+            '  MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
 
 
         Finally
@@ -146,7 +146,7 @@ Public Class Inventario
             ComboBox4.ValueMember = "ID_CAT_PELIGRO"
 
         Catch ex As Exception
-            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+            '  MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
 
 
         Finally
@@ -158,42 +158,39 @@ Public Class Inventario
 
 
     Public Sub cargarPictograma()
-
-        CategoriaPeligroaux = ComboBox4.SelectedValue.ToString
-        ' MsgBox(GrupoClasePeligroaux)
-
         Try
 
-            Dim MySQLDA As New SQLiteDataAdapter("SELECT IMAGEN FROM PICTOGRAMAS WHERE ID_PICTOGRAMA=@Gg", SQLiteCon)
 
-            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", CategoriaPeligroaux)
-            Dim ds As New DataSet
-            Dim table As New DataTable
+            Dim consulta1 As String
+            Dim lista1 As Byte
 
-            MySQLDA.Fill(ds)
+            CategoriaPeligroaux = ComboBox4.SelectedValue.ToString
+
+            consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
+
+            MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
 
 
-            Dim ImgArray() As Byte = ds.Tables("PICTOGRAMAS").Rows(1).Item("IMAGEN")
+            datos1 = New DataSet
+            MySQLDA1.Fill(datos1, "pictogramas")
+            lista1 = datos1.Tables("pictogramas").Rows.Count
+
+
+            If lista1 = 0 Then
+
+                'MsgBox("Error al cargar datos")
+
+            End If
+
+            Dim ImgArray() As Byte = datos1.Tables("PICTOGRAMAS").Rows(0).Item("IMAGEN")
             Dim lmgStr As New System.IO.MemoryStream(ImgArray)
             PictureBox1.Image = Image.FromStream(lmgStr)
             PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
             lmgStr.Close()
 
-            'ComboBox4.DataSource = ds.Tables(0)
-            'ComboBox4.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
-            'ComboBox4.ValueMember = "ID_CAT_PELIGRO"
-
-
         Catch ex As Exception
-            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
-
-
-        Finally
-            SQLiteCon.Close()
 
         End Try
-
-
 
     End Sub
 
@@ -254,7 +251,7 @@ Public Class Inventario
             End With
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            'MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -278,10 +275,10 @@ Public Class Inventario
     End Sub
 
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
-
+        cargarPictograma()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         cargarPictograma()
     End Sub
 
