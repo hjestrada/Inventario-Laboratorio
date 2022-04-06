@@ -159,23 +159,30 @@ Public Class Inventario
 
     Public Sub cargarPictograma()
 
-        CategoriaPeligroaux = ComboBox5.SelectedValue.ToString
+        CategoriaPeligroaux = ComboBox4.SelectedValue.ToString
         ' MsgBox(GrupoClasePeligroaux)
 
         Try
 
-            Dim MySQLDA As New SQLiteDataAdapter("SELECT CAT_PELIGRO,ID_CAT_PELIGRO FROM cat_peligro INNER JOIN clasificacion WHERE clasificacion.ID_CLASIFICACION=@Gg and cat_peligro.ID_CLASIFICACION=@Gg", SQLiteCon)
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT IMAGEN FROM PICTOGRAMAS WHERE ID_PICTOGRAMA=@Gg", SQLiteCon)
 
-            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg",
-        CategoriaPeligroaux)
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", CategoriaPeligroaux)
             Dim ds As New DataSet
             Dim table As New DataTable
 
             MySQLDA.Fill(ds)
 
-            ComboBox4.DataSource = ds.Tables(0)
-            ComboBox4.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
-            ComboBox4.ValueMember = "ID_CAT_PELIGRO"
+
+            Dim ImgArray() As Byte = ds.Tables("PICTOGRAMAS").Rows(1).Item("IMAGEN")
+            Dim lmgStr As New System.IO.MemoryStream(ImgArray)
+            PictureBox1.Image = Image.FromStream(lmgStr)
+            PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+            lmgStr.Close()
+
+            'ComboBox4.DataSource = ds.Tables(0)
+            'ComboBox4.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+            'ComboBox4.ValueMember = "ID_CAT_PELIGRO"
+
 
         Catch ex As Exception
             MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
@@ -189,6 +196,47 @@ Public Class Inventario
 
 
     End Sub
+
+    'convertir binario a imágen
+    Private Function Bytes_Imagen(ByVal Imagen As Byte()) As Image
+        Try
+            'si hay imagen
+            If Not Imagen Is Nothing Then
+                'caturar array con memorystream hacia Bin
+                Dim Bin As New MemoryStream(Imagen)
+                'con el método FroStream de Image obtenemos imagen
+                Dim Resultado As Image = Image.FromStream(Bin)
+                'y la retornamos
+                Return Resultado
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    'convertir imagen a binario
+    Private Function Imagen_Bytes(ByVal Imagen As Image) As Byte()
+        Try
+
+            'si hay imagen
+            If Not Imagen Is Nothing Then
+                'variable de datos binarios en stream(flujo)
+                Dim Bin As New MemoryStream
+                'convertir a bytes
+                Imagen.Save(Bin, Imaging.ImageFormat.Jpeg)
+                'retorna binario
+                Return Bin.GetBuffer
+            Else
+                Return Nothing
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
 
 
 
@@ -227,6 +275,14 @@ Public Class Inventario
             TextBox6.Text = CStr(ValorRetornado) + 1
         End If
         SQLiteCon.Close()
+    End Sub
+
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        cargarPictograma()
     End Sub
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
