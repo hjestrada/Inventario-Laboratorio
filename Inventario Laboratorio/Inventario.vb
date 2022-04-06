@@ -23,7 +23,7 @@ Public Class Inventario
     Dim lista1 As Byte
     Dim datos1 As DataSet
     Dim MySQLDA1 As New SQLiteDataAdapter
-    Dim GrupoGeneralaux As String
+    Dim GrupoGeneralaux, GrupoClasePeligroaux, CategoriaPeligroaux As String
     Dim table As New DataTable
 
 
@@ -49,6 +49,7 @@ Public Class Inventario
 
         ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
 
+        ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
         MAXID()
         cargarfabricante2()
         GrupoGeneral()
@@ -99,7 +100,7 @@ Public Class Inventario
 
         Try
 
-            Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO,ID_CLASIFICACION FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
 
             MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux)
             Dim ds As New DataSet
@@ -109,6 +110,8 @@ Public Class Inventario
 
             ComboBox5.DataSource = ds.Tables(0)
             ComboBox5.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+            ComboBox5.ValueMember = "ID_CLASIFICACION"
+
 
         Catch ex As Exception
             MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
@@ -120,6 +123,73 @@ Public Class Inventario
         End Try
 
     End Sub
+
+
+
+    Public Sub cargarCategoriaPeligro()
+
+        GrupoClasePeligroaux = ComboBox5.SelectedValue.ToString
+        ' MsgBox(GrupoClasePeligroaux)
+
+        Try
+
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT CAT_PELIGRO,ID_CAT_PELIGRO FROM cat_peligro INNER JOIN clasificacion WHERE clasificacion.ID_CLASIFICACION=@Gg and cat_peligro.ID_CLASIFICACION=@Gg", SQLiteCon)
+
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoClasePeligroaux)
+            Dim ds As New DataSet
+            Dim table As New DataTable
+
+            MySQLDA.Fill(ds)
+
+            ComboBox4.DataSource = ds.Tables(0)
+            ComboBox4.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+            ComboBox4.ValueMember = "ID_CAT_PELIGRO"
+
+        Catch ex As Exception
+            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+
+
+        Finally
+            SQLiteCon.Close()
+
+        End Try
+
+    End Sub
+
+
+    Public Sub cargarPictograma()
+
+        CategoriaPeligroaux = ComboBox5.SelectedValue.ToString
+        ' MsgBox(GrupoClasePeligroaux)
+
+        Try
+
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT CAT_PELIGRO,ID_CAT_PELIGRO FROM cat_peligro INNER JOIN clasificacion WHERE clasificacion.ID_CLASIFICACION=@Gg and cat_peligro.ID_CLASIFICACION=@Gg", SQLiteCon)
+
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg",
+        CategoriaPeligroaux)
+            Dim ds As New DataSet
+            Dim table As New DataTable
+
+            MySQLDA.Fill(ds)
+
+            ComboBox4.DataSource = ds.Tables(0)
+            ComboBox4.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+            ComboBox4.ValueMember = "ID_CAT_PELIGRO"
+
+        Catch ex As Exception
+            MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+
+
+        Finally
+            SQLiteCon.Close()
+
+        End Try
+
+
+
+    End Sub
+
 
 
     Public Sub cargarfabricante2()
@@ -157,6 +227,10 @@ Public Class Inventario
             TextBox6.Text = CStr(ValorRetornado) + 1
         End If
         SQLiteCon.Close()
+    End Sub
+
+    Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
+        cargarCategoriaPeligro()
     End Sub
 
     Private Sub ComboBox8_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox8.SelectedIndexChanged
