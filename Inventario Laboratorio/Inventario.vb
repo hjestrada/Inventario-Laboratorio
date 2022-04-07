@@ -166,7 +166,7 @@ Public Class Inventario
 
             CategoriaPeligroaux = ComboBox4.SelectedValue.ToString
 
-            consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
+            consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
 
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
 
@@ -183,10 +183,19 @@ Public Class Inventario
             End If
 
             Dim ImgArray() As Byte = datos1.Tables("PICTOGRAMAS").Rows(0).Item("IMAGEN")
+
             Dim lmgStr As New System.IO.MemoryStream(ImgArray)
             PictureBox1.Image = Image.FromStream(lmgStr)
             PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+            Dim aux1, aux2
+
+            aux1 = datos1.Tables("pictogramas").Rows(0).Item("PALABRA_ADVERTENCIA")
+            TextBox1.Text = aux1
+            aux2 = datos1.Tables("pictogramas").Rows(0).Item("INDICACION_PELIGRO")
+            TextBox4.Text = aux2
             lmgStr.Close()
+
+
 
         Catch ex As Exception
 

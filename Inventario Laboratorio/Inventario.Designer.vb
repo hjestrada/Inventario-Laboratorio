@@ -111,6 +111,10 @@ Partial Class Inventario
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -219,6 +223,10 @@ Partial Class Inventario
         Me.TabPage1.Controls.Add(Me.TextBox8)
         Me.TabPage1.Controls.Add(Me.TextBox7)
         Me.TabPage1.Controls.Add(Me.TextBox5)
+        Me.TabPage1.Controls.Add(Me.Label40)
+        Me.TabPage1.Controls.Add(Me.Label39)
+        Me.TabPage1.Controls.Add(Me.Label38)
+        Me.TabPage1.Controls.Add(Me.Label37)
         Me.TabPage1.Controls.Add(Me.TextBox4)
         Me.TabPage1.Controls.Add(Me.Panel3)
         Me.TabPage1.Controls.Add(Me.Panel10)
@@ -305,9 +313,9 @@ Partial Class Inventario
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Litros", "miliLitros", "Centimetros cúbicos", "gramos", "miligramos", "Kilogramos", "Libras", "Onzas", "metros cúbicos"})
-        Me.ComboBox2.Location = New System.Drawing.Point(227, 465)
+        Me.ComboBox2.Location = New System.Drawing.Point(193, 483)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(158, 28)
+        Me.ComboBox2.Size = New System.Drawing.Size(198, 28)
         Me.ComboBox2.TabIndex = 118
         '
         'ComboBox1
@@ -315,39 +323,40 @@ Partial Class Inventario
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Estado sólido.", "Estado líquido.", "Estado gaseoso.", "Estado plasmático."})
-        Me.ComboBox1.Location = New System.Drawing.Point(227, 427)
+        Me.ComboBox1.Location = New System.Drawing.Point(193, 445)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(158, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(198, 28)
         Me.ComboBox1.TabIndex = 117
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(227, 76)
+        Me.TextBox6.Location = New System.Drawing.Point(193, 80)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(158, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(198, 29)
         Me.TextBox6.TabIndex = 116
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(227, 113)
+        Me.TextBox3.Location = New System.Drawing.Point(193, 117)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(158, 29)
+        Me.TextBox3.Size = New System.Drawing.Size(198, 29)
         Me.TextBox3.TabIndex = 115
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(227, 147)
+        Me.TextBox2.Location = New System.Drawing.Point(193, 151)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(158, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(198, 29)
         Me.TextBox2.TabIndex = 114
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(227, 184)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(193, 188)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(158, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(198, 22)
         Me.TextBox1.TabIndex = 113
         '
         'TableLayoutPanel1
@@ -515,7 +524,7 @@ Partial Class Inventario
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(22, 465)
+        Me.Label8.Location = New System.Drawing.Point(22, 483)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(138, 20)
         Me.Label8.TabIndex = 85
@@ -527,7 +536,7 @@ Partial Class Inventario
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(22, 508)
+        Me.Label9.Location = New System.Drawing.Point(22, 526)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(168, 20)
         Me.Label9.TabIndex = 87
@@ -540,9 +549,9 @@ Partial Class Inventario
         Me.DateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.DateTimePicker1.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(227, 508)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(193, 526)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(158, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(198, 20)
         Me.DateTimePicker1.TabIndex = 89
         '
         'IconButton5
@@ -598,17 +607,17 @@ Partial Class Inventario
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(227, 550)
+        Me.ComboBox3.Location = New System.Drawing.Point(193, 550)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(158, 28)
+        Me.ComboBox3.Size = New System.Drawing.Size(198, 28)
         Me.ComboBox3.TabIndex = 88
         '
         'RichTextBox2
         '
         Me.RichTextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.RichTextBox2.Location = New System.Drawing.Point(227, 361)
+        Me.RichTextBox2.Location = New System.Drawing.Point(1100, 364)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(158, 60)
+        Me.RichTextBox2.Size = New System.Drawing.Size(363, 199)
         Me.RichTextBox2.TabIndex = 70
         Me.RichTextBox2.Text = ""
         '
@@ -617,7 +626,7 @@ Partial Class Inventario
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(22, 427)
+        Me.Label7.Location = New System.Drawing.Point(22, 445)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(151, 20)
         Me.Label7.TabIndex = 68
@@ -641,7 +650,7 @@ Partial Class Inventario
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(22, 361)
+        Me.Label6.Location = New System.Drawing.Point(1097, 341)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(128, 20)
         Me.Label6.TabIndex = 66
@@ -664,12 +673,13 @@ Partial Class Inventario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(22, 227)
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(22, 216)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(172, 20)
         Me.Label5.TabIndex = 65
         Me.Label5.Text = "Indicaciones de Peligro"
+        Me.ToolTip1.SetToolTip(Me.Label5, "Dependiendo de los pictogramas seleccionados posteriormente")
         Me.Label5.UseWaitCursor = True
         '
         'Label2
@@ -1205,7 +1215,7 @@ Partial Class Inventario
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label36.Location = New System.Drawing.Point(1095, 314)
+        Me.Label36.Location = New System.Drawing.Point(1094, 304)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(294, 31)
         Me.Label36.TabIndex = 162
@@ -1222,35 +1232,91 @@ Partial Class Inventario
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(227, 221)
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(45, 243)
+        Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(158, 29)
+        Me.TextBox4.Size = New System.Drawing.Size(346, 43)
         Me.TextBox4.TabIndex = 166
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label37.Location = New System.Drawing.Point(16, 254)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(18, 20)
+        Me.Label37.TabIndex = 170
+        Me.Label37.Text = "1"
+        Me.Label37.UseWaitCursor = True
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label38.Location = New System.Drawing.Point(16, 303)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(18, 20)
+        Me.Label38.TabIndex = 171
+        Me.Label38.Text = "2"
+        Me.Label38.UseWaitCursor = True
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label39.Location = New System.Drawing.Point(16, 352)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(18, 20)
+        Me.Label39.TabIndex = 172
+        Me.Label39.Text = "3"
+        Me.Label39.UseWaitCursor = True
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label40.Location = New System.Drawing.Point(16, 401)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(18, 20)
+        Me.Label40.TabIndex = 173
+        Me.Label40.Text = "4"
+        Me.Label40.UseWaitCursor = True
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(227, 256)
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(45, 292)
+        Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(158, 29)
-        Me.TextBox5.TabIndex = 167
+        Me.TextBox5.Size = New System.Drawing.Size(346, 43)
+        Me.TextBox5.TabIndex = 174
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(227, 291)
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(45, 341)
+        Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(158, 29)
-        Me.TextBox7.TabIndex = 168
+        Me.TextBox7.Size = New System.Drawing.Size(346, 43)
+        Me.TextBox7.TabIndex = 175
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(227, 326)
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(45, 390)
+        Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(158, 29)
-        Me.TextBox8.TabIndex = 169
+        Me.TextBox8.Size = New System.Drawing.Size(346, 43)
+        Me.TextBox8.TabIndex = 176
         '
         'Inventario
         '
@@ -1366,8 +1432,12 @@ Partial Class Inventario
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Label36 As Label
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label37 As Label
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
 End Class
