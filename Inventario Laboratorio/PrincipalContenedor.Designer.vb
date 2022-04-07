@@ -84,7 +84,7 @@ Partial Class PrincipalContenedor
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(353, 995)
+        Me.Panel1.Size = New System.Drawing.Size(353, 987)
         Me.Panel1.TabIndex = 5
         '
         'Panel6
@@ -94,7 +94,7 @@ Partial Class PrincipalContenedor
         Me.Panel6.Controls.Add(Me.Copyright)
         Me.Panel6.Controls.Add(Me.PictureBox1)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(0, 873)
+        Me.Panel6.Location = New System.Drawing.Point(0, 865)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(353, 122)
         Me.Panel6.TabIndex = 10
@@ -373,7 +373,7 @@ Partial Class PrincipalContenedor
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(353, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1515, 148)
+        Me.Panel2.Size = New System.Drawing.Size(1524, 148)
         Me.Panel2.TabIndex = 6
         '
         'PictureBox3
@@ -406,7 +406,7 @@ Partial Class PrincipalContenedor
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel8.Location = New System.Drawing.Point(0, 0)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1515, 37)
+        Me.Panel8.Size = New System.Drawing.Size(1524, 37)
         Me.Panel8.TabIndex = 14
         '
         'Button3
@@ -418,7 +418,7 @@ Partial Class PrincipalContenedor
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(1482, 3)
+        Me.Button3.Location = New System.Drawing.Point(1491, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(30, 30)
         Me.Button3.TabIndex = 2
@@ -442,7 +442,7 @@ Partial Class PrincipalContenedor
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(1075, 14)
+        Me.Label4.Location = New System.Drawing.Point(1084, 14)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(255, 20)
         Me.Label4.TabIndex = 3
@@ -457,7 +457,7 @@ Partial Class PrincipalContenedor
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 40
-        Me.IconPictureBox1.Location = New System.Drawing.Point(916, 42)
+        Me.IconPictureBox1.Location = New System.Drawing.Point(925, 42)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(32, 32)
         Me.IconPictureBox1.TabIndex = 4
@@ -479,7 +479,7 @@ Partial Class PrincipalContenedor
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(954, 43)
+        Me.TextBox1.Location = New System.Drawing.Point(963, 43)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(496, 31)
@@ -488,9 +488,9 @@ Partial Class PrincipalContenedor
         'StatusStrip1
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 995)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 987)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1868, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1877, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -505,9 +505,9 @@ Partial Class PrincipalContenedor
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel_Central.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel_Central.Location = New System.Drawing.Point(409, 154)
+        Me.Panel_Central.Location = New System.Drawing.Point(359, 154)
         Me.Panel_Central.Name = "Panel_Central"
-        Me.Panel_Central.Size = New System.Drawing.Size(1394, 835)
+        Me.Panel_Central.Size = New System.Drawing.Size(1506, 827)
         Me.Panel_Central.TabIndex = 7
         '
         'PrincipalContenedor
@@ -515,7 +515,7 @@ Partial Class PrincipalContenedor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1868, 1017)
+        Me.ClientSize = New System.Drawing.Size(1877, 1009)
         Me.Controls.Add(Me.Panel_Central)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)

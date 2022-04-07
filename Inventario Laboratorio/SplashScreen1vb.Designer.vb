@@ -35,7 +35,7 @@ Partial Class SplashScreen1vb
         Me.Version.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Version.BackColor = System.Drawing.Color.Transparent
         Me.Version.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(218, 270)
+        Me.Version.Location = New System.Drawing.Point(153, 244)
         Me.Version.Name = "Version"
         Me.Version.Size = New System.Drawing.Size(241, 20)
         Me.Version.TabIndex = 6
@@ -47,7 +47,7 @@ Partial Class SplashScreen1vb
         Me.Copyright.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Copyright.BackColor = System.Drawing.Color.Transparent
         Me.Copyright.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Copyright.Location = New System.Drawing.Point(218, 290)
+        Me.Copyright.Location = New System.Drawing.Point(153, 264)
         Me.Copyright.Name = "Copyright"
         Me.Copyright.Size = New System.Drawing.Size(241, 40)
         Me.Copyright.TabIndex = 7
@@ -57,9 +57,10 @@ Partial Class SplashScreen1vb
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(70, 43)
+        Me.PictureBox1.Location = New System.Drawing.Point(89, 96)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(536, 212)
+        Me.PictureBox1.Size = New System.Drawing.Size(369, 132)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
@@ -69,7 +70,7 @@ Partial Class SplashScreen1vb
         Me.ProgressBar1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ProgressBar1.Location = New System.Drawing.Point(0, 347)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(695, 10)
+        Me.ProgressBar1.Size = New System.Drawing.Size(548, 10)
         Me.ProgressBar1.Step = 1
         Me.ProgressBar1.TabIndex = 9
         Me.ProgressBar1.Value = 100
@@ -79,7 +80,7 @@ Partial Class SplashScreen1vb
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(695, 357)
+        Me.ClientSize = New System.Drawing.Size(548, 357)
         Me.ControlBox = False
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.PictureBox1)
