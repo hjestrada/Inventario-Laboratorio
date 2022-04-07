@@ -59,9 +59,7 @@ Partial Class Inventario
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -118,6 +116,8 @@ Partial Class Inventario
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -129,6 +129,7 @@ Partial Class Inventario
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -220,7 +221,9 @@ Partial Class Inventario
         '
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
-        Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.PictureBox6)
         Me.TabPage1.Controls.Add(Me.TextBox8)
         Me.TabPage1.Controls.Add(Me.TextBox7)
         Me.TabPage1.Controls.Add(Me.TextBox5)
@@ -296,9 +299,7 @@ Partial Class Inventario
         Me.TabPage1.Controls.Add(Me.RichTextBox2)
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.Label16)
-        Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -331,7 +332,7 @@ Partial Class Inventario
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(193, 80)
+        Me.TextBox6.Location = New System.Drawing.Point(193, 45)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(198, 29)
@@ -339,25 +340,25 @@ Partial Class Inventario
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(193, 117)
+        Me.TextBox3.Location = New System.Drawing.Point(159, 82)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(198, 29)
+        Me.TextBox3.Size = New System.Drawing.Size(232, 29)
         Me.TextBox3.TabIndex = 115
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(193, 151)
+        Me.TextBox2.Location = New System.Drawing.Point(156, 116)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(235, 29)
         Me.TextBox2.TabIndex = 114
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(193, 188)
+        Me.TextBox1.Location = New System.Drawing.Point(156, 153)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(198, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(235, 22)
         Me.TextBox1.TabIndex = 113
         '
         'TableLayoutPanel1
@@ -608,13 +609,14 @@ Partial Class Inventario
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(193, 550)
+        Me.ComboBox3.Location = New System.Drawing.Point(159, 550)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(198, 28)
+        Me.ComboBox3.Size = New System.Drawing.Size(232, 28)
         Me.ComboBox3.TabIndex = 88
         '
         'RichTextBox2
         '
+        Me.RichTextBox2.AutoWordSelection = True
         Me.RichTextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.RichTextBox2.Location = New System.Drawing.Point(1100, 364)
         Me.RichTextBox2.Name = "RichTextBox2"
@@ -640,56 +642,31 @@ Partial Class Inventario
         Me.Label16.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label16.Location = New System.Drawing.Point(22, 81)
+        Me.Label16.Location = New System.Drawing.Point(22, 46)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(169, 20)
         Me.Label16.TabIndex = 67
         Me.Label16.Text = "Identificación Reactivo"
         Me.Label16.UseWaitCursor = True
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(1097, 341)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(128, 20)
-        Me.Label6.TabIndex = 66
-        Me.Label6.Text = "Primeros Auxilios"
-        Me.Label6.UseWaitCursor = True
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(22, 190)
+        Me.Label3.Location = New System.Drawing.Point(22, 155)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 20)
         Me.Label3.TabIndex = 64
         Me.Label3.Text = "Advertencia"
         Me.Label3.UseWaitCursor = True
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(22, 216)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 20)
-        Me.Label5.TabIndex = 65
-        Me.Label5.Text = "Indicaciones de Peligro"
-        Me.ToolTip1.SetToolTip(Me.Label5, "Dependiendo de los pictogramas seleccionados posteriormente")
-        Me.Label5.UseWaitCursor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(22, 119)
+        Me.Label2.Location = New System.Drawing.Point(22, 84)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(131, 20)
         Me.Label2.TabIndex = 62
@@ -701,7 +678,7 @@ Partial Class Inventario
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(22, 153)
+        Me.Label11.Location = New System.Drawing.Point(22, 118)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(97, 20)
         Me.Label11.TabIndex = 63
@@ -711,7 +688,6 @@ Partial Class Inventario
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.Transparent
-        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
         Me.TabPage2.Location = New System.Drawing.Point(4, 36)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -736,7 +712,7 @@ Partial Class Inventario
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(411, 287)
+        Me.Label10.Location = New System.Drawing.Point(413, 251)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(152, 20)
         Me.Label10.TabIndex = 98
@@ -752,7 +728,7 @@ Partial Class Inventario
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.IntegralHeight = False
         Me.ComboBox4.Items.AddRange(New Object() {""})
-        Me.ComboBox4.Location = New System.Drawing.Point(574, 284)
+        Me.ComboBox4.Location = New System.Drawing.Point(576, 248)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox4.TabIndex = 97
@@ -762,7 +738,7 @@ Partial Class Inventario
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label15.Location = New System.Drawing.Point(411, 253)
+        Me.Label15.Location = New System.Drawing.Point(413, 217)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(123, 20)
         Me.Label15.TabIndex = 96
@@ -778,7 +754,7 @@ Partial Class Inventario
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.IntegralHeight = False
         Me.ComboBox5.Items.AddRange(New Object() {""})
-        Me.ComboBox5.Location = New System.Drawing.Point(574, 250)
+        Me.ComboBox5.Location = New System.Drawing.Point(576, 214)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox5.TabIndex = 95
@@ -793,7 +769,7 @@ Partial Class Inventario
         Me.ComboBox8.FormattingEnabled = True
         Me.ComboBox8.IntegralHeight = False
         Me.ComboBox8.Items.AddRange(New Object() {""})
-        Me.ComboBox8.Location = New System.Drawing.Point(574, 216)
+        Me.ComboBox8.Location = New System.Drawing.Point(576, 180)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox8.TabIndex = 94
@@ -803,7 +779,7 @@ Partial Class Inventario
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label19.Location = New System.Drawing.Point(411, 219)
+        Me.Label19.Location = New System.Drawing.Point(413, 183)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(115, 20)
         Me.Label19.TabIndex = 93
@@ -814,7 +790,7 @@ Partial Class Inventario
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(595, 107)
+        Me.PictureBox1.Location = New System.Drawing.Point(597, 71)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(110, 103)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -826,7 +802,7 @@ Partial Class Inventario
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(409, 28)
+        Me.Label14.Location = New System.Drawing.Point(411, 11)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(185, 31)
         Me.Label14.TabIndex = 127
@@ -836,7 +812,7 @@ Partial Class Inventario
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(595, 370)
+        Me.PictureBox2.Location = New System.Drawing.Point(597, 334)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(110, 103)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -848,7 +824,7 @@ Partial Class Inventario
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label22.Location = New System.Drawing.Point(411, 550)
+        Me.Label22.Location = New System.Drawing.Point(413, 514)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(152, 20)
         Me.Label22.TabIndex = 133
@@ -864,7 +840,7 @@ Partial Class Inventario
         Me.ComboBox9.FormattingEnabled = True
         Me.ComboBox9.IntegralHeight = False
         Me.ComboBox9.Items.AddRange(New Object() {""})
-        Me.ComboBox9.Location = New System.Drawing.Point(574, 547)
+        Me.ComboBox9.Location = New System.Drawing.Point(576, 511)
         Me.ComboBox9.Name = "ComboBox9"
         Me.ComboBox9.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox9.TabIndex = 132
@@ -874,7 +850,7 @@ Partial Class Inventario
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label23.Location = New System.Drawing.Point(411, 516)
+        Me.Label23.Location = New System.Drawing.Point(413, 480)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(123, 20)
         Me.Label23.TabIndex = 131
@@ -890,7 +866,7 @@ Partial Class Inventario
         Me.ComboBox10.FormattingEnabled = True
         Me.ComboBox10.IntegralHeight = False
         Me.ComboBox10.Items.AddRange(New Object() {""})
-        Me.ComboBox10.Location = New System.Drawing.Point(574, 513)
+        Me.ComboBox10.Location = New System.Drawing.Point(576, 477)
         Me.ComboBox10.Name = "ComboBox10"
         Me.ComboBox10.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox10.TabIndex = 130
@@ -905,7 +881,7 @@ Partial Class Inventario
         Me.ComboBox11.FormattingEnabled = True
         Me.ComboBox11.IntegralHeight = False
         Me.ComboBox11.Items.AddRange(New Object() {""})
-        Me.ComboBox11.Location = New System.Drawing.Point(574, 479)
+        Me.ComboBox11.Location = New System.Drawing.Point(576, 443)
         Me.ComboBox11.Name = "ComboBox11"
         Me.ComboBox11.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox11.TabIndex = 129
@@ -915,7 +891,7 @@ Partial Class Inventario
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label24.Location = New System.Drawing.Point(411, 482)
+        Me.Label24.Location = New System.Drawing.Point(413, 446)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(115, 20)
         Me.Label24.TabIndex = 128
@@ -926,7 +902,7 @@ Partial Class Inventario
         '
         Me.PictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(926, 107)
+        Me.PictureBox4.Location = New System.Drawing.Point(928, 71)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(110, 103)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -938,7 +914,7 @@ Partial Class Inventario
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label25.Location = New System.Drawing.Point(735, 287)
+        Me.Label25.Location = New System.Drawing.Point(737, 251)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(152, 20)
         Me.Label25.TabIndex = 140
@@ -954,7 +930,7 @@ Partial Class Inventario
         Me.ComboBox12.FormattingEnabled = True
         Me.ComboBox12.IntegralHeight = False
         Me.ComboBox12.Items.AddRange(New Object() {""})
-        Me.ComboBox12.Location = New System.Drawing.Point(905, 284)
+        Me.ComboBox12.Location = New System.Drawing.Point(907, 248)
         Me.ComboBox12.Name = "ComboBox12"
         Me.ComboBox12.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox12.TabIndex = 139
@@ -964,7 +940,7 @@ Partial Class Inventario
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label26.Location = New System.Drawing.Point(735, 253)
+        Me.Label26.Location = New System.Drawing.Point(737, 217)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(123, 20)
         Me.Label26.TabIndex = 138
@@ -980,7 +956,7 @@ Partial Class Inventario
         Me.ComboBox13.FormattingEnabled = True
         Me.ComboBox13.IntegralHeight = False
         Me.ComboBox13.Items.AddRange(New Object() {""})
-        Me.ComboBox13.Location = New System.Drawing.Point(905, 250)
+        Me.ComboBox13.Location = New System.Drawing.Point(907, 214)
         Me.ComboBox13.Name = "ComboBox13"
         Me.ComboBox13.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox13.TabIndex = 137
@@ -995,7 +971,7 @@ Partial Class Inventario
         Me.ComboBox14.FormattingEnabled = True
         Me.ComboBox14.IntegralHeight = False
         Me.ComboBox14.Items.AddRange(New Object() {""})
-        Me.ComboBox14.Location = New System.Drawing.Point(905, 216)
+        Me.ComboBox14.Location = New System.Drawing.Point(907, 180)
         Me.ComboBox14.Name = "ComboBox14"
         Me.ComboBox14.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox14.TabIndex = 136
@@ -1005,7 +981,7 @@ Partial Class Inventario
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label27.Location = New System.Drawing.Point(735, 219)
+        Me.Label27.Location = New System.Drawing.Point(737, 183)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(115, 20)
         Me.Label27.TabIndex = 135
@@ -1016,7 +992,7 @@ Partial Class Inventario
         '
         Me.PictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(926, 370)
+        Me.PictureBox5.Location = New System.Drawing.Point(928, 334)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(110, 103)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1028,7 +1004,7 @@ Partial Class Inventario
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label28.Location = New System.Drawing.Point(735, 550)
+        Me.Label28.Location = New System.Drawing.Point(737, 514)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(152, 20)
         Me.Label28.TabIndex = 147
@@ -1044,7 +1020,7 @@ Partial Class Inventario
         Me.ComboBox15.FormattingEnabled = True
         Me.ComboBox15.IntegralHeight = False
         Me.ComboBox15.Items.AddRange(New Object() {""})
-        Me.ComboBox15.Location = New System.Drawing.Point(905, 547)
+        Me.ComboBox15.Location = New System.Drawing.Point(907, 511)
         Me.ComboBox15.Name = "ComboBox15"
         Me.ComboBox15.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox15.TabIndex = 146
@@ -1054,7 +1030,7 @@ Partial Class Inventario
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label29.Location = New System.Drawing.Point(735, 516)
+        Me.Label29.Location = New System.Drawing.Point(737, 480)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(123, 20)
         Me.Label29.TabIndex = 145
@@ -1070,7 +1046,7 @@ Partial Class Inventario
         Me.ComboBox16.FormattingEnabled = True
         Me.ComboBox16.IntegralHeight = False
         Me.ComboBox16.Items.AddRange(New Object() {""})
-        Me.ComboBox16.Location = New System.Drawing.Point(905, 513)
+        Me.ComboBox16.Location = New System.Drawing.Point(907, 477)
         Me.ComboBox16.Name = "ComboBox16"
         Me.ComboBox16.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox16.TabIndex = 144
@@ -1085,7 +1061,7 @@ Partial Class Inventario
         Me.ComboBox17.FormattingEnabled = True
         Me.ComboBox17.IntegralHeight = False
         Me.ComboBox17.Items.AddRange(New Object() {""})
-        Me.ComboBox17.Location = New System.Drawing.Point(905, 479)
+        Me.ComboBox17.Location = New System.Drawing.Point(907, 443)
         Me.ComboBox17.Name = "ComboBox17"
         Me.ComboBox17.Size = New System.Drawing.Size(152, 24)
         Me.ComboBox17.TabIndex = 143
@@ -1095,7 +1071,7 @@ Partial Class Inventario
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label30.Location = New System.Drawing.Point(735, 482)
+        Me.Label30.Location = New System.Drawing.Point(737, 446)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(115, 20)
         Me.Label30.TabIndex = 142
@@ -1107,7 +1083,7 @@ Partial Class Inventario
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label31.Location = New System.Drawing.Point(14, 28)
+        Me.Label31.Location = New System.Drawing.Point(14, 11)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(278, 31)
         Me.Label31.TabIndex = 149
@@ -1118,7 +1094,7 @@ Partial Class Inventario
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label32.Location = New System.Drawing.Point(635, 73)
+        Me.Label32.Location = New System.Drawing.Point(637, 37)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(30, 31)
         Me.Label32.TabIndex = 150
@@ -1129,7 +1105,7 @@ Partial Class Inventario
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label33.Location = New System.Drawing.Point(966, 74)
+        Me.Label33.Location = New System.Drawing.Point(968, 38)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(30, 31)
         Me.Label33.TabIndex = 151
@@ -1140,7 +1116,7 @@ Partial Class Inventario
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label34.Location = New System.Drawing.Point(635, 336)
+        Me.Label34.Location = New System.Drawing.Point(637, 300)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(30, 31)
         Me.Label34.TabIndex = 152
@@ -1151,7 +1127,7 @@ Partial Class Inventario
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label35.Location = New System.Drawing.Point(966, 336)
+        Me.Label35.Location = New System.Drawing.Point(968, 300)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(30, 31)
         Me.Label35.TabIndex = 153
@@ -1218,11 +1194,11 @@ Partial Class Inventario
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label36.Location = New System.Drawing.Point(1094, 304)
+        Me.Label36.Location = New System.Drawing.Point(1095, 315)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(294, 31)
+        Me.Label36.Size = New System.Drawing.Size(239, 31)
         Me.Label36.TabIndex = 162
-        Me.Label36.Text = "Información Adicional"
+        Me.Label36.Text = "Primeros Auxilios"
         '
         'Panel3
         '
@@ -1321,6 +1297,27 @@ Partial Class Inventario
         Me.TextBox8.Size = New System.Drawing.Size(346, 43)
         Me.TextBox8.TabIndex = 176
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(1409, 307)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(54, 51)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 177
+        Me.PictureBox6.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(14, 198)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(317, 31)
+        Me.Label6.TabIndex = 178
+        Me.Label6.Text = "Indicaciones de Peligro"
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1345,6 +1342,7 @@ Partial Class Inventario
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1358,9 +1356,7 @@ Partial Class Inventario
     Friend WithEvents Label4 As Label
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Label16 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label7 As Label
@@ -1443,4 +1439,6 @@ Partial Class Inventario
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox6 As PictureBox
 End Class

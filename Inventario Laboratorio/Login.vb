@@ -90,7 +90,7 @@ Public Class Login
 
                     If (USER = USERBD) And (PWD = PWDBD) Then
                         Me.Hide()
-                        MsgBox("Bienvenido al Sistema, " & ROL & " " & NOMBREUSUARIO & "")
+                        'MsgBox("Bienvenido al Sistema, " & ROL & " " & NOMBREUSUARIO & "")
                         IDUSUARIO2 = IDUSUARIO
                         UsernameTextBox.Clear()
                         PasswordTextBox.Clear()
