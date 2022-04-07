@@ -196,7 +196,6 @@ Public Class Inventario
             lmgStr.Close()
 
 
-
         Catch ex As Exception
 
         End Try

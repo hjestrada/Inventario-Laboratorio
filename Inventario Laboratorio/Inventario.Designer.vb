@@ -204,6 +204,7 @@ Partial Class Inventario
         '
         'TabControl1
         '
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -218,8 +219,8 @@ Partial Class Inventario
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
-        Me.TabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.Controls.Add(Me.TextBox8)
         Me.TabPage1.Controls.Add(Me.TextBox7)
         Me.TabPage1.Controls.Add(Me.TextBox5)
@@ -301,10 +302,10 @@ Partial Class Inventario
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 33)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 36)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1489, 662)
+        Me.TabPage1.Size = New System.Drawing.Size(1489, 659)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entrada"
         '
@@ -569,7 +570,7 @@ Partial Class Inventario
         Me.IconButton5.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 20
-        Me.IconButton5.Location = New System.Drawing.Point(1101, 246)
+        Me.IconButton5.Location = New System.Drawing.Point(1103, 246)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Size = New System.Drawing.Size(197, 28)
         Me.IconButton5.TabIndex = 91
@@ -636,6 +637,7 @@ Partial Class Inventario
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label16.Location = New System.Drawing.Point(22, 81)
@@ -708,11 +710,12 @@ Partial Class Inventario
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.Gainsboro
-        Me.TabPage2.Location = New System.Drawing.Point(4, 33)
+        Me.TabPage2.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 36)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1603, 768)
+        Me.TabPage2.Size = New System.Drawing.Size(1489, 659)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Salidas"
         '
@@ -1225,9 +1228,9 @@ Partial Class Inventario
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(3, 618)
+        Me.Panel3.Location = New System.Drawing.Point(3, 619)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1479, 37)
+        Me.Panel3.Size = New System.Drawing.Size(1483, 37)
         Me.Panel3.TabIndex = 165
         '
         'TextBox4
