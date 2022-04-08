@@ -116,14 +116,6 @@ Public Class Inventario
     End Sub
 
 
-
-
-
-
-
-
-
-
     Public Sub cargarClasePeligro()
 
 
