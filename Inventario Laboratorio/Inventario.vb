@@ -44,17 +44,23 @@ Public Class Inventario
 
         ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList
 
-
         ComboBox8.DropDownStyle = ComboBoxStyle.DropDownList
 
         ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
-
         ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
+
+        ComboBox14.DropDownStyle = ComboBoxStyle.DropDownList
+
+        ComboBox13.DropDownStyle = ComboBoxStyle.DropDownList
+
+        ComboBox12.DropDownStyle = ComboBoxStyle.DropDownList
+
         MAXID()
         cargarfabricante2()
         GrupoGeneral()
+        GrupoGeneral2()
         cargarPictograma()
-
+        cargarPictograma2()
     End Sub
 
     Private Sub TabControl1_DrawItem(sender As Object, e As DrawItemEventArgs) Handles TabControl1.DrawItem
@@ -91,6 +97,33 @@ Public Class Inventario
         End Try
     End Sub
 
+    Public Sub GrupoGeneral2()
+        Try
+
+            Dim cmd As String = "SELECT `ID_GRUPO_SGA`,`GRUPO_GENERAL`FROM sga"
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("sga")
+            da.Fill(dt)
+            With ComboBox14
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+            cargarClasePeligro2()
+        Catch ex As Exception
+            '   MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+
+
+
+
+
+
+
+
     Public Sub cargarClasePeligro()
 
 
@@ -126,6 +159,45 @@ Public Class Inventario
 
 
 
+    Public Sub cargarClasePeligro2()
+
+
+        GrupoGeneralaux = ComboBox14.SelectedValue.ToString
+
+
+
+        Try
+
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO,ID_CLASIFICACION FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
+
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux)
+            Dim ds As New DataSet
+            Dim table As New DataTable
+
+            MySQLDA.Fill(ds)
+
+            ComboBox13.DataSource = ds.Tables(0)
+            ComboBox13.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+            ComboBox13.ValueMember = "ID_CLASIFICACION"
+
+
+        Catch ex As Exception
+            '  MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+
+
+        Finally
+            SQLiteCon.Close()
+
+        End Try
+
+    End Sub
+
+
+
+
+
+
+
     Public Sub cargarCategoriaPeligro()
 
         GrupoClasePeligroaux = ComboBox5.SelectedValue.ToString
@@ -155,6 +227,46 @@ Public Class Inventario
         End Try
 
     End Sub
+
+
+    Public Sub cargarCategoriaPeligro2()
+
+        GrupoClasePeligroaux = ComboBox13.SelectedValue.ToString
+        ' MsgBox(GrupoClasePeligroaux)
+
+        Try
+
+            Dim MySQLDA As New SQLiteDataAdapter("SELECT CAT_PELIGRO,ID_CAT_PELIGRO FROM cat_peligro INNER JOIN clasificacion WHERE clasificacion.ID_CLASIFICACION=@Gg and cat_peligro.ID_CLASIFICACION=@Gg", SQLiteCon)
+
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoClasePeligroaux)
+            Dim ds As New DataSet
+            Dim table As New DataTable
+
+            MySQLDA.Fill(ds)
+
+            ComboBox12.DataSource = ds.Tables(0)
+            ComboBox12.DisplayMember = ds.Tables(0).Columns(0).Caption.ToString
+            ComboBox12.ValueMember = "ID_CAT_PELIGRO"
+
+        Catch ex As Exception
+            '  MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+
+
+        Finally
+            SQLiteCon.Close()
+
+        End Try
+
+    End Sub
+
+
+
+
+
+
+
+
+
 
 
     Public Sub cargarPictograma()
@@ -201,6 +313,85 @@ Public Class Inventario
         End Try
 
     End Sub
+
+
+    Public Sub cargarPictograma2()
+        Try
+
+
+            Dim consulta1 As String
+            Dim lista1 As Byte
+
+            CategoriaPeligroaux = ComboBox12.SelectedValue.ToString
+
+            consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
+
+            MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
+
+
+            datos1 = New DataSet
+            MySQLDA1.Fill(datos1, "pictogramas")
+            lista1 = datos1.Tables("pictogramas").Rows.Count
+
+
+            If lista1 = 0 Then
+
+                'MsgBox("Error al cargar datos")
+
+            End If
+
+            Dim ImgArray() As Byte = datos1.Tables("PICTOGRAMAS").Rows(0).Item("IMAGEN")
+
+            Dim lmgStr As New System.IO.MemoryStream(ImgArray)
+            PictureBox4.Image = Image.FromStream(lmgStr)
+            PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+            Dim aux1, aux2
+
+            aux1 = datos1.Tables("pictogramas").Rows(0).Item("PALABRA_ADVERTENCIA")
+            '   TextBox5.Text = aux1
+            aux2 = datos1.Tables("pictogramas").Rows(0).Item("INDICACION_PELIGRO")
+            TextBox5.Text = aux2
+            lmgStr.Close()
+
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     'convertir binario a imágen
     Private Function Bytes_Imagen(ByVal Imagen As Byte()) As Image
@@ -288,6 +479,18 @@ Public Class Inventario
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         cargarPictograma()
+    End Sub
+
+    Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox14.SelectedIndexChanged
+        cargarClasePeligro2()
+    End Sub
+
+    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox13.SelectedIndexChanged
+        cargarCategoriaPeligro2()
+    End Sub
+
+    Private Sub ComboBox12_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox12.SelectedIndexChanged
+        cargarPictograma2()
     End Sub
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
