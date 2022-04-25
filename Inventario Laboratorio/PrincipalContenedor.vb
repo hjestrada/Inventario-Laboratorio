@@ -76,7 +76,7 @@ Public Class PrincipalContenedor
 
     Private Sub PrincipalContenedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarInfoLogin()
-        TextBox1.Focus()
+
         Lb_Fecha.Text = Now
         'Necesario para redondear formulario
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))

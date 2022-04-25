@@ -50,9 +50,7 @@ Partial Class PrincipalContenedor
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Lb_Fecha = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Central = New System.Windows.Forms.Panel()
@@ -67,7 +65,6 @@ Partial Class PrincipalContenedor
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
-        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -367,9 +364,7 @@ Partial Class PrincipalContenedor
         Me.Panel2.Controls.Add(Me.Panel8)
         Me.Panel2.Controls.Add(Me.Lb_Fecha)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.IconPictureBox1)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(353, 0)
         Me.Panel2.Name = "Panel2"
@@ -379,7 +374,7 @@ Partial Class PrincipalContenedor
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(56, 43)
+        Me.PictureBox3.Location = New System.Drawing.Point(44, 54)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(178, 68)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -427,11 +422,11 @@ Partial Class PrincipalContenedor
         'Lb_Fecha
         '
         Me.Lb_Fecha.AutoSize = True
-        Me.Lb_Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb_Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb_Fecha.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Lb_Fecha.Location = New System.Drawing.Point(258, 88)
+        Me.Lb_Fecha.Location = New System.Drawing.Point(230, 87)
         Me.Lb_Fecha.Name = "Lb_Fecha"
-        Me.Lb_Fecha.Size = New System.Drawing.Size(64, 20)
+        Me.Lb_Fecha.Size = New System.Drawing.Size(76, 24)
         Me.Lb_Fecha.TabIndex = 3
         Me.Lb_Fecha.Text = "-----------"
         Me.Lb_Fecha.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -448,42 +443,16 @@ Partial Class PrincipalContenedor
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Búsqueda por nombre de Reactivo"
         '
-        'IconPictureBox1
-        '
-        Me.IconPictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconPictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.IconSize = 40
-        Me.IconPictureBox1.Location = New System.Drawing.Point(948, 42)
-        Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(32, 32)
-        Me.IconPictureBox1.TabIndex = 4
-        Me.IconPictureBox1.TabStop = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(256, 55)
+        Me.Label3.Location = New System.Drawing.Point(228, 54)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(641, 33)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Sistema de Gestión de Inventario en Laboratorio"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(986, 43)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(496, 31)
-        Me.TextBox1.TabIndex = 1
         '
         'StatusStrip1
         '
@@ -501,13 +470,10 @@ Partial Class PrincipalContenedor
         '
         'Panel_Central
         '
-        Me.Panel_Central.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel_Central.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel_Central.Location = New System.Drawing.Point(388, 154)
+        Me.Panel_Central.Location = New System.Drawing.Point(374, 171)
         Me.Panel_Central.Name = "Panel_Central"
-        Me.Panel_Central.Size = New System.Drawing.Size(1500, 827)
+        Me.Panel_Central.Size = New System.Drawing.Size(1514, 810)
         Me.Panel_Central.TabIndex = 7
         '
         'PrincipalContenedor
@@ -538,7 +504,6 @@ Partial Class PrincipalContenedor
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
-        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -548,7 +513,6 @@ Partial Class PrincipalContenedor
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
@@ -561,7 +525,6 @@ Partial Class PrincipalContenedor
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents Label4 As Label
     Friend WithEvents Lb_Fecha As Label
