@@ -69,10 +69,13 @@ Public Class Inventario
         GrupoGeneral()
         GrupoGeneral2()
         GrupoGeneral3()
+        GrupoGeneral4()
+
         cargarPictograma()
         cargarPictograma2()
         cargarClasePeligro3()
         cargarPictograma3()
+
 
     End Sub
 
@@ -135,6 +138,23 @@ Public Class Inventario
             Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
             Dim dt As DataTable = New DataTable("sga")
             da.Fill(dt)
+            With ComboBox17
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+            cargarClasePeligro()
+        Catch ex As Exception
+            '   MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Public Sub GrupoGeneral4()
+        Try
+
+            Dim cmd As String = "SELECT `ID_GRUPO_SGA`,`GRUPO_GENERAL`FROM sga"
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("sga")
+            da.Fill(dt)
             With ComboBox11
                 .DataSource = dt
                 .DisplayMember = "GRUPO_GENERAL"
@@ -145,6 +165,9 @@ Public Class Inventario
             '   MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+
+
 
     Public Sub cargarClasePeligro()
 
@@ -248,8 +271,6 @@ Public Class Inventario
 
 
 
-
-
     Public Sub cargarCategoriaPeligro()
 
         GrupoClasePeligroaux = ComboBox5.SelectedValue.ToString
@@ -342,6 +363,9 @@ Public Class Inventario
         End Try
 
     End Sub
+
+
+
 
 
 
@@ -513,11 +537,6 @@ Public Class Inventario
 
 
 
-
-
-
-
-
     'convertir binario a imágen
     Private Function Bytes_Imagen(ByVal Imagen As Byte()) As Image
         Try
@@ -631,6 +650,18 @@ Public Class Inventario
     End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub ComboBox17_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox17.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox16_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox16.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox15_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox15.SelectedIndexChanged
 
     End Sub
 
