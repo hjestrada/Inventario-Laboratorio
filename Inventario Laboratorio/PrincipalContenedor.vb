@@ -213,4 +213,8 @@ Public Class PrincipalContenedor
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
         'AbrirFormenPanel(New GestionReactivos)
     End Sub
+
+    Private Sub Lb_Fecha_Click(sender As Object, e As EventArgs) Handles Lb_Fecha.Click
+        FormError.Show()
+    End Sub
 End Class

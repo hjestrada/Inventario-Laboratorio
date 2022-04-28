@@ -121,6 +121,7 @@ Partial Class Inventario
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -261,6 +262,7 @@ Partial Class Inventario
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TabPage1.Controls.Add(Me.Label41)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.PictureBox6)
         Me.TabPage1.Controls.Add(Me.TextBox8)
@@ -372,7 +374,7 @@ Partial Class Inventario
         '
         'TextBox8
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox8.Location = New System.Drawing.Point(45, 390)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
@@ -382,7 +384,7 @@ Partial Class Inventario
         '
         'TextBox7
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.Location = New System.Drawing.Point(45, 341)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
@@ -392,7 +394,7 @@ Partial Class Inventario
         '
         'TextBox5
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(45, 292)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
@@ -450,7 +452,7 @@ Partial Class Inventario
         '
         'TextBox4
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(45, 243)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
@@ -1357,6 +1359,18 @@ Partial Class Inventario
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "Información"
         '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.ForeColor = System.Drawing.Color.Red
+        Me.Label41.Location = New System.Drawing.Point(1204, 209)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(16, 20)
+        Me.Label41.TabIndex = 179
+        Me.Label41.Text = "*"
+        Me.ToolTip1.SetToolTip(Me.Label41, "Es necesario Ingresar la ficha técnica en formato PDF menor a 10MB")
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1485,4 +1499,5 @@ Partial Class Inventario
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label41 As Label
 End Class

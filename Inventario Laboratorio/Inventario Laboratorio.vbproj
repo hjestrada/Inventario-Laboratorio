@@ -173,6 +173,12 @@
     <Compile Include="Fila.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormError.Designer.vb">
+      <DependentUpon>FormError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormError.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inventario.Designer.vb">
       <DependentUpon>Inventario.vb</DependentUpon>
     </Compile>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fila.resx">
       <DependentUpon>Fila.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormError.resx">
+      <DependentUpon>FormError.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>
