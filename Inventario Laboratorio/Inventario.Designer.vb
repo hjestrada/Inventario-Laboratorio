@@ -35,6 +35,10 @@ Partial Class Inventario
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -46,7 +50,6 @@ Partial Class Inventario
         Me.Label37 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label36 = New System.Windows.Forms.Label()
@@ -121,7 +124,7 @@ Partial Class Inventario
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label41 = New System.Windows.Forms.Label()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,6 +132,7 @@ Partial Class Inventario
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -262,6 +266,9 @@ Partial Class Inventario
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TabPage1.Controls.Add(Me.PictureBox9)
+        Me.TabPage1.Controls.Add(Me.TextBox9)
+        Me.TabPage1.Controls.Add(Me.Panel10)
         Me.TabPage1.Controls.Add(Me.Label41)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.PictureBox6)
@@ -274,7 +281,6 @@ Partial Class Inventario
         Me.TabPage1.Controls.Add(Me.Label37)
         Me.TabPage1.Controls.Add(Me.TextBox4)
         Me.TabPage1.Controls.Add(Me.Panel3)
-        Me.TabPage1.Controls.Add(Me.Panel10)
         Me.TabPage1.Controls.Add(Me.Panel11)
         Me.TabPage1.Controls.Add(Me.Panel4)
         Me.TabPage1.Controls.Add(Me.Label36)
@@ -343,13 +349,54 @@ Partial Class Inventario
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 36)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1489, 659)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entrada"
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(1317, 71)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(146, 174)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 182
+        Me.PictureBox9.TabStop = False
+        '
+        'TextBox9
+        '
+        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.Location = New System.Drawing.Point(1100, 254)
+        Me.TextBox9.Multiline = True
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(368, 39)
+        Me.TextBox9.TabIndex = 181
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel10.Location = New System.Drawing.Point(1074, 299)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(403, 2)
+        Me.Panel10.TabIndex = 160
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.ForeColor = System.Drawing.Color.Red
+        Me.Label41.Location = New System.Drawing.Point(1210, 192)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(16, 20)
+        Me.Label41.TabIndex = 179
+        Me.Label41.Text = "*"
+        Me.ToolTip1.SetToolTip(Me.Label41, "Es necesario Ingresar la ficha técnica en formato PDF menor a 10MB")
         '
         'Label6
         '
@@ -365,9 +412,9 @@ Partial Class Inventario
         'PictureBox6
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(1409, 307)
+        Me.PictureBox6.Location = New System.Drawing.Point(1398, 519)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(54, 51)
+        Me.PictureBox6.Size = New System.Drawing.Size(65, 63)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 177
         Me.PictureBox6.TabStop = False
@@ -469,14 +516,6 @@ Partial Class Inventario
         Me.Panel3.Size = New System.Drawing.Size(1483, 37)
         Me.Panel3.TabIndex = 165
         '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(1072, 287)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(403, 2)
-        Me.Panel10.TabIndex = 160
-        '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
@@ -498,7 +537,7 @@ Partial Class Inventario
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label36.Location = New System.Drawing.Point(1095, 315)
+        Me.Label36.Location = New System.Drawing.Point(1074, 313)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(239, 31)
         Me.Label36.TabIndex = 162
@@ -941,13 +980,13 @@ Partial Class Inventario
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton4, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1314, 71)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1314, 352)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(155, 168)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(155, 161)
         Me.TableLayoutPanel1.TabIndex = 111
         '
         'IconButton4
@@ -965,7 +1004,7 @@ Partial Class Inventario
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 40
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton4.Location = New System.Drawing.Point(3, 121)
+        Me.IconButton4.Location = New System.Drawing.Point(3, 114)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(146, 44)
         Me.IconButton4.TabIndex = 109
@@ -988,7 +1027,7 @@ Partial Class Inventario
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 40
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton2.Location = New System.Drawing.Point(3, 64)
+        Me.IconButton2.Location = New System.Drawing.Point(3, 57)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(146, 50)
         Me.IconButton2.TabIndex = 110
@@ -1013,7 +1052,7 @@ Partial Class Inventario
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.IconButton1.Location = New System.Drawing.Point(3, 3)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(146, 50)
+        Me.IconButton1.Size = New System.Drawing.Size(146, 48)
         Me.IconButton1.TabIndex = 108
         Me.IconButton1.Text = "Guardar"
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -1033,9 +1072,12 @@ Partial Class Inventario
         'NumericUpDown1
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(1171, 152)
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.ReadOnly = True
         Me.NumericUpDown1.Size = New System.Drawing.Size(127, 29)
         Me.NumericUpDown1.TabIndex = 106
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label18
         '
@@ -1223,7 +1265,7 @@ Partial Class Inventario
         Me.IconButton5.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 20
-        Me.IconButton5.Location = New System.Drawing.Point(1103, 246)
+        Me.IconButton5.Location = New System.Drawing.Point(1101, 217)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Size = New System.Drawing.Size(197, 28)
         Me.IconButton5.TabIndex = 91
@@ -1236,7 +1278,7 @@ Partial Class Inventario
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(1097, 209)
+        Me.Label13.Location = New System.Drawing.Point(1097, 192)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(107, 20)
         Me.Label13.TabIndex = 84
@@ -1270,9 +1312,9 @@ Partial Class Inventario
         '
         Me.RichTextBox2.AutoWordSelection = True
         Me.RichTextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.RichTextBox2.Location = New System.Drawing.Point(1100, 364)
+        Me.RichTextBox2.Location = New System.Drawing.Point(1080, 352)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(363, 199)
+        Me.RichTextBox2.Size = New System.Drawing.Size(227, 235)
         Me.RichTextBox2.TabIndex = 70
         Me.RichTextBox2.Text = ""
         '
@@ -1359,18 +1401,6 @@ Partial Class Inventario
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "Información"
         '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.ForeColor = System.Drawing.Color.Red
-        Me.Label41.Location = New System.Drawing.Point(1204, 209)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(16, 20)
-        Me.Label41.TabIndex = 179
-        Me.Label41.Text = "*"
-        Me.ToolTip1.SetToolTip(Me.Label41, "Es necesario Ingresar la ficha técnica en formato PDF menor a 10MB")
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1391,6 +1421,7 @@ Partial Class Inventario
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1500,4 +1531,7 @@ Partial Class Inventario
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label41 As Label
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents PictureBox9 As PictureBox
 End Class

@@ -3,12 +3,6 @@ Imports System.Data.SQLite
 Imports System.Data.SqlClient
 Imports System.IO
 
-
-
-
-
-
-
 Public Class Sistema_Globalmente_Armonizado
 
 
@@ -26,26 +20,19 @@ Public Class Sistema_Globalmente_Armonizado
     Dim id_picto1 As String
 
 
-
-
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
 
     End Sub
-
-
 
     Private Sub Sistema_Globalmente_Armonizado_Load(sender As Object, e As EventArgs) Handles Me.Load
         ComboBox1.SelectedIndex = 0
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox5.SelectedIndex = 0
         ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
-
         CargarPictogramas()
         CargarPictogramas2()
         cargaDataview()
-
         'hacemos que las columnas se ajusten a al tamaño del contenido
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
@@ -54,13 +41,7 @@ Public Class Sistema_Globalmente_Armonizado
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan
         DataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True
 
-
-
-
-
-
     End Sub
-
 
 
     Public Sub CargarPictogramas()
@@ -78,9 +59,7 @@ Public Class Sistema_Globalmente_Armonizado
             ComboBox1.DataSource = table
             ComboBox1.ValueMember = "ID_PICTOGRAMA"
             ComboBox1.DisplayMember = "DESCRIPCION"
-
             ComboBox1.SelectedIndex = 0
-
 
 
             SQLiteCon.Close()
@@ -95,15 +74,10 @@ Public Class Sistema_Globalmente_Armonizado
     End Sub
 
 
-
-
     Public Sub CargarPictogramas2()
 
 
         Try
-
-
-
 
             SQLiteCon.Open()
 
@@ -122,18 +96,13 @@ Public Class Sistema_Globalmente_Armonizado
             busqueda2()
             SQLiteCon.Close()
 
-
             '-----------------
-
-
-
-
         Catch ex As Exception
             MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
 
         Finally
             SQLiteCon.Close()
-        SQLliteCMD = Nothing
+            SQLliteCMD = Nothing
         End Try
     End Sub
 
@@ -180,17 +149,11 @@ Public Class Sistema_Globalmente_Armonizado
     End Sub
 
 
-
-
-
-
     Sub busqueda2()
 
         Try
             Dim consulta1 As String
             Dim lista1 As Byte
-
-
 
             id_picto2 = ComboBox1.SelectedValue
 
@@ -222,36 +185,24 @@ Public Class Sistema_Globalmente_Armonizado
     End Sub
 
 
-
-
     Sub validarGUardar()
-
         Dim consulta1 As String
-            Dim lista1 As Byte
+        Dim lista1 As Byte
 
 
         consulta1 = "SELECT * FROM   compatibilidades WHERE   compatibilidades.ID_PICTOGRAMA = " & id_picto1 & " AND    compatibilidades.ID_PICTOGRAMA2 =" & id_picto2 & ""
         MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
-                datos1 = New DataSet
-                MySQLDA1.Fill(datos1, "pictogramas")
-                lista1 = datos1.Tables("pictogramas").Rows.Count
+        datos1 = New DataSet
+        MySQLDA1.Fill(datos1, "pictogramas")
+        lista1 = datos1.Tables("pictogramas").Rows.Count
 
-            If lista1 = 0 Then
-                guardarcompatibilidad()
-            Else
-                MsgBox("Error, ya existe registrada esta compatibilidad")
-            End If
-
-
-
+        If lista1 = 0 Then
+            guardarcompatibilidad()
+        Else
+            MsgBox("Error, ya existe registrada esta compatibilidad")
+        End If
 
     End Sub
-
-
-
-
-
-
 
 
     'convertir binario a imágen

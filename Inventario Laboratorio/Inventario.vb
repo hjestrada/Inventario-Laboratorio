@@ -828,6 +828,33 @@ Public Class Inventario
         cargarfilaestantecombo()
     End Sub
 
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+
+        Dim file As New OpenFileDialog()
+        file.Filter = ("PDF File (*.pdf)|*.pdf")
+        If file.ShowDialog() = DialogResult.OK Then
+            TextBox9.Text = file.FileName
+        End If
+
+
+
+
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        Try
+            FormError.Show()
+
+        Catch ex As Exception
+            FormError.Show()
+
+        End Try
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
         cargarCategoriaPeligro()
     End Sub
@@ -835,4 +862,6 @@ Public Class Inventario
     Private Sub ComboBox8_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox8.SelectedIndexChanged
         cargarClasePeligro()
     End Sub
+
+
 End Class

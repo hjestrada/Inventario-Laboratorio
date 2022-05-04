@@ -198,10 +198,17 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
+    <Compile Include="Mod_pdf.vb" />
     <Compile Include="Movimientos.Designer.vb">
       <DependentUpon>Movimientos.vb</DependentUpon>
     </Compile>
     <Compile Include="Movimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pdf.Designer.vb">
+      <DependentUpon>Pdf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pdf.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pictograma.Designer.vb">
@@ -280,6 +287,9 @@
     <EmbeddedResource Include="Movimientos.resx">
       <DependentUpon>Movimientos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pdf.resx">
+      <DependentUpon>Pdf.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pictograma.resx">
       <DependentUpon>Pictograma.vb</DependentUpon>
     </EmbeddedResource>
@@ -334,7 +344,25 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
