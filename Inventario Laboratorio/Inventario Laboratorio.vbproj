@@ -213,6 +213,12 @@
     <Compile Include="FormError.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormGuardarExitoso.Designer.vb">
+      <DependentUpon>FormGuardarExitoso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGuardarExitoso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inventario.Designer.vb">
       <DependentUpon>Inventario.vb</DependentUpon>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormError.resx">
       <DependentUpon>FormError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGuardarExitoso.resx">
+      <DependentUpon>FormGuardarExitoso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>

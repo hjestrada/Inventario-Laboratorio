@@ -849,8 +849,8 @@ Public Class Inventario
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        ' Try
-        If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
+        Try
+            If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
 
                 mensaje_error = "Por favor seleccione categorias de peligro diferentes"
                 FormError.mensaje(mensaje_error)
@@ -864,12 +864,12 @@ Public Class Inventario
             End If
 
 
-            '  Catch ex As Exception
-        'mensaje_error = ex.Message
-        ' FormError.mensaje(mensaje_error)
-        ' FormError.Show()
+        Catch ex As Exception
+            mensaje_error = ex.Message
+        FormError.mensaje(mensaje_error)
+        FormError.Show()
 
-        ' End Try
+        End Try
     End Sub
 
 
@@ -884,7 +884,7 @@ Public Class Inventario
     Sub insertarReactivo()
 
 
-        If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) = "" Then
+        If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) = "" Or Trim(RichTextBox2.Text) = "" Or Trim(TextBox9.Text) = "" Then
             mensaje_error = "No se permiten campos vacios"
             FormError.mensaje(mensaje_error)
             FormError.Show()
@@ -916,8 +916,9 @@ Public Class Inventario
                 End With
 
                 SQLiteCon.Close()
-                MsgBox("Datos Registrados Exitosamente")
-                ' Me.TextBox2.Clear()
+                FormGuardarExitoso.Show()
+
+                limpiarformReac()
 
                 MAXID()
 
@@ -938,7 +939,13 @@ Public Class Inventario
     End Sub
 
 
+    Sub limpiarformReac()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        RichTextBox2.Clear()
+        TextBox9.Clear()
 
+    End Sub
 
 
 
