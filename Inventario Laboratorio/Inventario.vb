@@ -849,8 +849,8 @@ Public Class Inventario
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        Try
-            If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
+        ' Try
+        If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
 
                 mensaje_error = "Por favor seleccione categorias de peligro diferentes"
                 FormError.mensaje(mensaje_error)
@@ -859,16 +859,17 @@ Public Class Inventario
             Else
 
                 ' aqui bloque de codigo inserta bd
+                insertarReactivo()
 
             End If
 
 
-        Catch ex As Exception
-            mensaje_error = ex.Message
-            FormError.mensaje(mensaje_error)
-            FormError.Show()
+            '  Catch ex As Exception
+        'mensaje_error = ex.Message
+        ' FormError.mensaje(mensaje_error)
+        ' FormError.Show()
 
-        End Try
+        ' End Try
     End Sub
 
 
@@ -883,8 +884,9 @@ Public Class Inventario
     Sub insertarReactivo()
 
 
-        If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) Then
-            FormError.mensaje("No se permiten campos vacios")
+        If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) = "" Then
+            mensaje_error = "No se permiten campos vacios"
+            FormError.mensaje(mensaje_error)
             FormError.Show()
 
         Else
@@ -895,15 +897,27 @@ Public Class Inventario
                 SQLliteCMD = New SQLiteCommand
 
                 With SQLliteCMD
-                    .CommandText = " INSERT INTO ESTANTE (`ID_ESTANTE`, `DESCRIPCION`) VALUES (NULL, @DESCRIPCION)"
+                    .CommandText = " INSERT INTO REACTIVO (`ID_REACTIVO`, `NOMBRE_REAC`,`COD_CUS`,`ADVERTENCIA`,
+                                                            `PRI_AUXILIO`,`ESTADO`,`UNIDAD_MEDIDA`,
+                                                            `FECHA_VENC`, `FICHA_TEC`,`ID_FABRICANTE` ) VALUES (NULL, @NOMBRE_REAC,
+                                                            @COD_CUS,@ADVERTENCIA,@PRI_AUXILIO,@ESTADO,
+                                                            @UNIDAD_MEDIDA,@FECHA_VENC,@FICHA_TEC,@ID_FABRICANTE)"
                     .Connection = SQLiteCon
-                    .Parameters.AddWithValue("@DESCRIPCION", Me.TextBox2.Text)
+                    .Parameters.AddWithValue("@NOMBRE_REAC", Me.TextBox3.Text)
+                    .Parameters.AddWithValue("@COD_CUS", Me.TextBox2.Text)
+                    .Parameters.AddWithValue("@ADVERTENCIA", Me.TextBox1.Text)
+                    .Parameters.AddWithValue("@PRI_AUXILIO", Me.RichTextBox2.Text)
+                    .Parameters.AddWithValue("@ESTADO", Me.ComboBox1.Text)
+                    .Parameters.AddWithValue("@UNIDAD_MEDIDA", Me.ComboBox2.Text)
+                    .Parameters.AddWithValue("@FECHA_VENC", Me.DateTimePicker1.Value)
+                    .Parameters.AddWithValue("@FICHA_TEC", Application.StartupPath & "\FichasTecnicas\" & "FT" & TextBox6.Text & ".pdf")
+                    .Parameters.AddWithValue("@ID_FABRICANTE", Me.ComboBox3.SelectedValue.ToString)
                     .ExecuteNonQuery()
                 End With
 
                 SQLiteCon.Close()
                 MsgBox("Datos Registrados Exitosamente")
-                Me.TextBox2.Clear()
+                ' Me.TextBox2.Clear()
 
                 MAXID()
 

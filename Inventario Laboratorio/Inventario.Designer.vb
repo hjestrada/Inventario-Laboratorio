@@ -35,6 +35,7 @@ Partial Class Inventario
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -125,7 +126,6 @@ Partial Class Inventario
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -358,6 +358,29 @@ Partial Class Inventario
         Me.TabPage1.Size = New System.Drawing.Size(1489, 659)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entrada"
+        '
+        'IconButton3
+        '
+        Me.IconButton3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Eye
+        Me.IconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.IconSize = 20
+        Me.IconButton3.Location = New System.Drawing.Point(1263, 217)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(35, 28)
+        Me.IconButton3.TabIndex = 183
+        Me.IconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.IconButton3.UseVisualStyleBackColor = True
         '
         'PictureBox9
         '
@@ -927,7 +950,7 @@ Partial Class Inventario
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Estado sólido.", "Estado líquido.", "Estado gaseoso.", "Estado plasmático."})
+        Me.ComboBox1.Items.AddRange(New Object() {"Estado solido.", "Estado liquido.", "Estado gaseoso."})
         Me.ComboBox1.Location = New System.Drawing.Point(193, 445)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(198, 28)
@@ -1402,29 +1425,6 @@ Partial Class Inventario
         Me.ToolTip1.ShowAlways = True
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "Información"
-        '
-        'IconButton3
-        '
-        Me.IconButton3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.IconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Eye
-        Me.IconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.IconSize = 20
-        Me.IconButton3.Location = New System.Drawing.Point(1263, 217)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(35, 28)
-        Me.IconButton3.TabIndex = 183
-        Me.IconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.IconButton3.UseVisualStyleBackColor = True
         '
         'Inventario
         '
