@@ -26,11 +26,8 @@ Public Class Inventario
     Dim GrupoGeneralaux, GrupoClasePeligroaux, CategoriaPeligroaux As String
     Dim table As New DataTable
 
+    Dim Id_picto1, Id_picto2, Id_picto3, Id_picto4 As String
 
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
 
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -73,16 +70,19 @@ Public Class Inventario
             GrupoGeneral3()
             GrupoGeneral4()
 
-            cargarPictograma()
-            cargarPictograma2()
+
+
             cargarClasePeligro3()
             cargarClasePeligro4()
-            cargarPictograma3()
-            cargarPictograma4()
+
 
             EstantesCombo()
             cargarfilaestantecombo()
 
+            cargarPictograma()
+            cargarPictograma2()
+            cargarPictograma3()
+            cargarPictograma4()
         Catch ex As Exception
 
         End Try
@@ -498,13 +498,15 @@ Public Class Inventario
 
     Public Sub cargarPictograma()
         Try
-            Dim var1, var2, var3, var4 As String
+
+
 
 
             Dim consulta1 As String
             Dim lista1 As Byte
 
             CategoriaPeligroaux = ComboBox4.SelectedValue.ToString
+            Id_picto1 = CategoriaPeligroaux
 
             consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
 
@@ -551,7 +553,7 @@ Public Class Inventario
             Dim lista1 As Byte
 
             CategoriaPeligroaux = ComboBox12.SelectedValue.ToString
-
+            Id_picto2 = CategoriaPeligroaux
             consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
 
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
@@ -600,7 +602,7 @@ Public Class Inventario
             Dim lista1 As Byte
 
             CategoriaPeligroaux = ComboBox9.SelectedValue.ToString
-
+            Id_picto3 = CategoriaPeligroaux
             consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
 
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
@@ -646,7 +648,7 @@ Public Class Inventario
             Dim lista1 As Byte
 
             CategoriaPeligroaux = ComboBox15.SelectedValue.ToString
-
+            Id_picto4 = CategoriaPeligroaux
             consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
 
             MySQLDA1 = New SQLiteDataAdapter(consulta1, SQLiteCon)
@@ -843,7 +845,13 @@ Public Class Inventario
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Try
-            FormError.Show()
+            If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
+                MsgBox("Error, por favor seleccione categorias de peligro diferentes")
+
+            Else
+
+            End If
+
 
         Catch ex As Exception
             FormError.Show()

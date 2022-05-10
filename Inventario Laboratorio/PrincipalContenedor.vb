@@ -217,4 +217,8 @@ Public Class PrincipalContenedor
     Private Sub Lb_Fecha_Click(sender As Object, e As EventArgs) Handles Lb_Fecha.Click
         FormError.Show()
     End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
 End Class
