@@ -100,7 +100,9 @@ Public Class Estantes
 
 
             Catch ex As Exception
-                MsgBox("Error" & vbCr & ex.Message, MsgBoxStyle.Critical, "Error Message")
+                mensaje_error = ex.Message
+                FormError.mensaje(mensaje_error)
+                FormError.Show()
                 SQLiteCon.Close()
                 Return
             End Try
@@ -164,7 +166,10 @@ Public Class Estantes
             End If
 
         Catch ex As Exception
-            MsgBox("Operación eliminar cancelada por el usuario")
+            mensaje_error = "Operación eliminar cancelada por el usuario"
+            FormError.mensaje(mensaje_error)
+            FormError.Show()
+
         End Try
     End Sub
 End Class

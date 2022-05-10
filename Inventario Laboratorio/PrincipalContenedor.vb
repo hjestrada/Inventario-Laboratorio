@@ -123,7 +123,10 @@ Public Class PrincipalContenedor
             lmgStr.Close()
 
         Catch ex As Exception
-            MsgBox("Error" & ex.Message)
+
+            mensaje_error = ex.Message
+            FormError.mensaje(mensaje_error)
+            FormError.Show()
         End Try
 
 
@@ -190,13 +193,6 @@ Public Class PrincipalContenedor
 
     End Sub
 
-    Public Sub privilegios()
-
-
-
-    End Sub
-
-
     Private Sub IconPictureBox2_Click(sender As Object, e As EventArgs) Handles IconPictureBox2.Click
         Panel1.Visible = False
 
@@ -210,15 +206,4 @@ Public Class PrincipalContenedor
         AbrirFormenPanel(New Fabricante)
     End Sub
 
-    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
-        'AbrirFormenPanel(New GestionReactivos)
-    End Sub
-
-    Private Sub Lb_Fecha_Click(sender As Object, e As EventArgs) Handles Lb_Fecha.Click
-        FormError.Show()
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
 End Class

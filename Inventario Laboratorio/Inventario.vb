@@ -830,38 +830,47 @@ Public Class Inventario
         cargarfilaestantecombo()
     End Sub
 
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+
+        Pdf.Show()
+
+    End Sub
+
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
 
         Dim file As New OpenFileDialog()
         file.Filter = ("PDF File (*.pdf)|*.pdf")
         If file.ShowDialog() = DialogResult.OK Then
             TextBox9.Text = file.FileName
+            My.Computer.FileSystem.CopyFile(file.FileName, Application.StartupPath & "\FichasTecnicas\" & "FT" & TextBox6.Text & ".pdf", Microsoft.VisualBasic.FileIO.UIOption.AllDialogs, Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+            archivovisualizar = Application.StartupPath & "\FichasTecnicas\" & "FT" & TextBox6.Text & ".pdf"
         End If
-
-
-
 
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Try
             If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
-                MsgBox("Error, por favor seleccione categorias de peligro diferentes")
+
+                mensaje_error = "Por favor seleccione categorias de peligro diferentes"
+                FormError.mensaje(mensaje_error)
+                FormError.Show()
 
             Else
+
+                ' aqui bloque de codigo inserta bd
 
             End If
 
 
         Catch ex As Exception
+            mensaje_error = ex.Message
+            FormError.mensaje(mensaje_error)
             FormError.Show()
 
         End Try
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
         cargarCategoriaPeligro()
@@ -870,6 +879,53 @@ Public Class Inventario
     Private Sub ComboBox8_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox8.SelectedIndexChanged
         cargarClasePeligro()
     End Sub
+
+    Sub insertarReactivo()
+
+
+        If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) Then
+            FormError.mensaje("No se permiten campos vacios")
+            FormError.Show()
+
+        Else
+            SQLiteCon.Close()
+
+            Try
+                SQLiteCon.Open()
+                SQLliteCMD = New SQLiteCommand
+
+                With SQLliteCMD
+                    .CommandText = " INSERT INTO ESTANTE (`ID_ESTANTE`, `DESCRIPCION`) VALUES (NULL, @DESCRIPCION)"
+                    .Connection = SQLiteCon
+                    .Parameters.AddWithValue("@DESCRIPCION", Me.TextBox2.Text)
+                    .ExecuteNonQuery()
+                End With
+
+                SQLiteCon.Close()
+                MsgBox("Datos Registrados Exitosamente")
+                Me.TextBox2.Clear()
+
+                MAXID()
+
+
+            Catch ex As Exception
+                mensaje_error = ex.Message
+                FormError.mensaje(mensaje_error)
+                FormError.Show()
+                SQLiteCon.Close()
+                Return
+            End Try
+            SQLiteCon.Close()
+
+
+        End If
+
+
+    End Sub
+
+
+
+
 
 
 End Class

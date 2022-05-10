@@ -125,6 +125,7 @@ Partial Class Inventario
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -266,6 +267,7 @@ Partial Class Inventario
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TabPage1.Controls.Add(Me.IconButton3)
         Me.TabPage1.Controls.Add(Me.PictureBox9)
         Me.TabPage1.Controls.Add(Me.TextBox9)
         Me.TabPage1.Controls.Add(Me.Panel10)
@@ -1265,9 +1267,9 @@ Partial Class Inventario
         Me.IconButton5.IconColor = System.Drawing.SystemColors.ControlLightLight
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 20
-        Me.IconButton5.Location = New System.Drawing.Point(1101, 217)
+        Me.IconButton5.Location = New System.Drawing.Point(1080, 217)
         Me.IconButton5.Name = "IconButton5"
-        Me.IconButton5.Size = New System.Drawing.Size(197, 28)
+        Me.IconButton5.Size = New System.Drawing.Size(177, 28)
         Me.IconButton5.TabIndex = 91
         Me.IconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -1400,6 +1402,29 @@ Partial Class Inventario
         Me.ToolTip1.ShowAlways = True
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "Información"
+        '
+        'IconButton3
+        '
+        Me.IconButton3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.IconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.IconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Eye
+        Me.IconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.IconSize = 20
+        Me.IconButton3.Location = New System.Drawing.Point(1263, 217)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(35, 28)
+        Me.IconButton3.TabIndex = 183
+        Me.IconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.IconButton3.UseVisualStyleBackColor = True
         '
         'Inventario
         '
@@ -1534,4 +1559,5 @@ Partial Class Inventario
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents IconButton3 As IconButton
 End Class
