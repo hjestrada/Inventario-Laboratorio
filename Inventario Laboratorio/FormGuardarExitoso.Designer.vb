@@ -34,7 +34,7 @@ Partial Class FormGuardarExitoso
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(47, 192)
+        Me.Label1.Location = New System.Drawing.Point(48, 192)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(336, 25)
         Me.Label1.TabIndex = 11
@@ -44,9 +44,9 @@ Partial Class FormGuardarExitoso
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(131, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(151, 44)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(169, 167)
+        Me.PictureBox1.Size = New System.Drawing.Size(130, 134)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
@@ -66,7 +66,7 @@ Partial Class FormGuardarExitoso
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(151, 237)
+        Me.IconButton1.Location = New System.Drawing.Point(153, 237)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(127, 50)
         Me.IconButton1.TabIndex = 9

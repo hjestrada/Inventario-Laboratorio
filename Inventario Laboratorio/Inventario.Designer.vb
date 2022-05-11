@@ -35,6 +35,7 @@ Partial Class Inventario
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -265,8 +266,9 @@ Partial Class Inventario
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
-        Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TabPage1.Controls.Add(Me.Label42)
         Me.TabPage1.Controls.Add(Me.IconButton3)
         Me.TabPage1.Controls.Add(Me.PictureBox9)
         Me.TabPage1.Controls.Add(Me.TextBox9)
@@ -359,6 +361,18 @@ Partial Class Inventario
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entrada"
         '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.Color.Red
+        Me.Label42.Location = New System.Drawing.Point(1308, 315)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(16, 20)
+        Me.Label42.TabIndex = 184
+        Me.Label42.Text = "*"
+        Me.ToolTip1.SetToolTip(Me.Label42, "Es necesario Ingresar los primeros auxilios en caso de algun accidente")
+        '
         'IconButton3
         '
         Me.IconButton3.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -394,13 +408,14 @@ Partial Class Inventario
         '
         'TextBox9
         '
+        Me.TextBox9.BackColor = System.Drawing.SystemColors.HighlightText
         Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(1100, 254)
+        Me.TextBox9.Location = New System.Drawing.Point(1080, 254)
         Me.TextBox9.Multiline = True
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(368, 39)
+        Me.TextBox9.Size = New System.Drawing.Size(388, 39)
         Me.TextBox9.TabIndex = 181
         '
         'Panel10
@@ -437,9 +452,9 @@ Partial Class Inventario
         'PictureBox6
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(1398, 519)
+        Me.PictureBox6.Location = New System.Drawing.Point(1342, 307)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(65, 63)
+        Me.PictureBox6.Size = New System.Drawing.Size(108, 116)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 177
         Me.PictureBox6.TabStop = False
@@ -447,6 +462,7 @@ Partial Class Inventario
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox8.Location = New System.Drawing.Point(45, 390)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
@@ -457,6 +473,7 @@ Partial Class Inventario
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox7.Location = New System.Drawing.Point(45, 341)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
@@ -467,6 +484,7 @@ Partial Class Inventario
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox5.Location = New System.Drawing.Point(45, 292)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
@@ -525,6 +543,7 @@ Partial Class Inventario
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox4.Location = New System.Drawing.Point(45, 243)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
@@ -939,6 +958,7 @@ Partial Class Inventario
         'ComboBox2
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Litros", "miliLitros", "Centimetros cúbicos", "gramos", "miligramos", "Kilogramos", "Libras", "Onzas", "metros cúbicos"})
         Me.ComboBox2.Location = New System.Drawing.Point(193, 483)
@@ -949,6 +969,7 @@ Partial Class Inventario
         'ComboBox1
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Estado solido.", "Estado liquido.", "Estado gaseoso."})
         Me.ComboBox1.Location = New System.Drawing.Point(193, 445)
@@ -958,6 +979,7 @@ Partial Class Inventario
         '
         'TextBox6
         '
+        Me.TextBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox6.Location = New System.Drawing.Point(193, 45)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
@@ -966,7 +988,11 @@ Partial Class Inventario
         '
         'TextBox3
         '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox3.Location = New System.Drawing.Point(159, 82)
+        Me.TextBox3.MaxLength = 20
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(232, 29)
         Me.TextBox3.TabIndex = 115
@@ -984,7 +1010,11 @@ Partial Class Inventario
         '
         'TextBox2
         '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox2.Location = New System.Drawing.Point(156, 116)
+        Me.TextBox2.MaxLength = 20
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(235, 29)
         Me.TextBox2.TabIndex = 114
@@ -992,6 +1022,7 @@ Partial Class Inventario
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TextBox1.Location = New System.Drawing.Point(156, 153)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -1005,7 +1036,7 @@ Partial Class Inventario
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton4, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.IconButton1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1314, 352)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1317, 426)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -1336,7 +1367,10 @@ Partial Class Inventario
         'RichTextBox2
         '
         Me.RichTextBox2.AutoWordSelection = True
+        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Window
         Me.RichTextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.RichTextBox2.Location = New System.Drawing.Point(1080, 352)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(227, 235)
@@ -1434,8 +1468,9 @@ Partial Class Inventario
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Inventario"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Inventario"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -1560,4 +1595,5 @@ Partial Class Inventario
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents IconButton3 As IconButton
+    Friend WithEvents Label42 As Label
 End Class

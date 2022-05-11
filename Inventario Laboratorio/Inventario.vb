@@ -29,7 +29,9 @@ Public Class Inventario
     Dim Id_picto1, Id_picto2, Id_picto3, Id_picto4 As String
 
 
+
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
         Try
             ComboBox1.SelectedIndex = 0
@@ -506,6 +508,7 @@ Public Class Inventario
             Dim lista1 As Byte
 
             CategoriaPeligroaux = ComboBox4.SelectedValue.ToString
+
             Id_picto1 = CategoriaPeligroaux
 
             consulta1 = "SELECT pictogramas.IMAGEN, cat_peligro.ID_CAT_PELIGRO,cat_peligro.PALABRA_ADVERTENCIA,cat_peligro.INDICACION_PELIGRO FROM   cat_peligro INNER JOIN pictogramas ON pictogramas.ID_PICTOGRAMA = cat_peligro.ID_PICTOGRAMA  AND  cat_peligro.ID_CAT_PELIGRO= " & CategoriaPeligroaux & ""
@@ -848,26 +851,39 @@ Public Class Inventario
 
     End Sub
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+
+        ' verificar consulta
+
         Try
-            If (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
+
+            If (Id_picto1 <> 89) And (Id_picto2 <> 89) And (Id_picto3 <> 89) And (Id_picto4 <> 89) Or (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
 
                 mensaje_error = "Por favor seleccione categorias de peligro diferentes"
-                FormError.mensaje(mensaje_error)
-                FormError.Show()
+                    FormError.mensaje(mensaje_error)
+                    FormError.Show()
 
-            Else
+                Else
 
-                ' aqui bloque de codigo inserta bd
-                insertarReactivo()
+                    ' aqui bloque de codigo inserta bd
+                    insertarReactivo()
+
 
             End If
 
 
         Catch ex As Exception
             mensaje_error = ex.Message
-        FormError.mensaje(mensaje_error)
-        FormError.Show()
+            FormError.mensaje(mensaje_error)
+            FormError.Show()
 
         End Try
     End Sub
