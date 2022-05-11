@@ -127,7 +127,6 @@ Partial Class Inventario
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,7 +142,6 @@ Partial Class Inventario
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -270,7 +268,6 @@ Partial Class Inventario
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.TabPage1.Controls.Add(Me.PictureBox10)
         Me.TabPage1.Controls.Add(Me.Label42)
         Me.TabPage1.Controls.Add(Me.IconButton3)
         Me.TabPage1.Controls.Add(Me.PictureBox9)
@@ -1463,16 +1460,6 @@ Partial Class Inventario
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "Información"
         '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
-        Me.PictureBox10.Location = New System.Drawing.Point(690, 271)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(108, 116)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox10.TabIndex = 185
-        Me.PictureBox10.TabStop = False
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1502,7 +1489,6 @@ Partial Class Inventario
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1610,5 +1596,4 @@ Partial Class Inventario
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents IconButton3 As IconButton
     Friend WithEvents Label42 As Label
-    Friend WithEvents PictureBox10 As PictureBox
 End Class
