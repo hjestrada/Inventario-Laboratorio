@@ -46,7 +46,7 @@ Partial Class FormError
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.IconButton1.Location = New System.Drawing.Point(229, 362)
+        Me.IconButton1.Location = New System.Drawing.Point(246, 377)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(127, 50)
         Me.IconButton1.TabIndex = 3
@@ -57,7 +57,7 @@ Partial Class FormError
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(182, 40)
+        Me.PictureBox1.Location = New System.Drawing.Point(199, 40)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(221, 138)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -69,7 +69,7 @@ Partial Class FormError
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(123, 196)
+        Me.Label1.Location = New System.Drawing.Point(140, 196)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(338, 50)
         Me.Label1.TabIndex = 5
@@ -82,7 +82,7 @@ Partial Class FormError
         Me.Label3.BackColor = System.Drawing.Color.Black
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(201, 280)
+        Me.Label3.Location = New System.Drawing.Point(218, 271)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(182, 20)
         Me.Label3.TabIndex = 7
@@ -95,11 +95,11 @@ Partial Class FormError
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(107, 303)
+        Me.TextBox1.Location = New System.Drawing.Point(48, 294)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(370, 45)
+        Me.TextBox1.Size = New System.Drawing.Size(523, 68)
         Me.TextBox1.TabIndex = 8
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

@@ -183,6 +183,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Desicion.Designer.vb">
+      <DependentUpon>Desicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Desicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elementos.Designer.vb">
       <DependentUpon>Elementos.vb</DependentUpon>
     </Compile>
@@ -300,6 +306,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Desicion.resx">
+      <DependentUpon>Desicion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elementos.resx">
       <DependentUpon>Elementos.vb</DependentUpon>
     </EmbeddedResource>

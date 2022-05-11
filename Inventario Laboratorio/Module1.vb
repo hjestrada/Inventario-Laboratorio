@@ -3,7 +3,7 @@
 
     Public USER, PWD, USERBD, ROL, PWDBD, NOMBREUSUARIO, IDUSUARIO, IDUSUARIO2 As String
     Public rolprivilegio As String
-    Public archivovisualizar, mensaje_error As String
+    Public archivovisualizar, mensaje_error, mensajeDesc As String
 
 
 

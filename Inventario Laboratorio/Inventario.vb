@@ -864,17 +864,34 @@ Public Class Inventario
         ' verificar consulta
 
         Try
+            ' bloque1
+            ' verifica campos vacios
 
-            If (Id_picto1 <> 89) And (Id_picto2 <> 89) And (Id_picto3 <> 89) And (Id_picto4 <> 89) Or (Id_picto1 = Id_picto2) Or (Id_picto3 = Id_picto4) Or (Id_picto4 = Id_picto1) Then
+            If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) = "" Or Trim(RichTextBox2.Text) = "" Or Trim(TextBox9.Text) = "" Then
+                mensaje_error = "No se permiten campos vacios, verifique la información suministrada,verifique si cargó la ficha técnica o diligenció la información de primeros auxilios."
+                FormError.mensaje(mensaje_error)
+                FormError.Show()
+            Else
+                ' bloque2
+                ' Todas son iguales en pictograma vacio
 
-                mensaje_error = "Por favor seleccione categorias de peligro diferentes"
+                If (Id_picto1 And Id_picto2 And Id_picto3 And Id_picto4 = 89) Then
+                    insertarReactivo()
+                End If
+
+
+                ' bloque3
+                'Todas son diferentes, se puede guardar
+
+                If (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto4) And (Id_picto2 <> Id_picto3) Then
+                    insertarReactivo()
+                End If
+
+                If (Id_picto1 And Id_picto2 And Id_picto3 And Id_picto4) = (Id_picto1 Or Id_picto2 Or Id_picto3 Or Id_picto4) Then
+                    mensaje_error = "Error al seleccionar las categorias de peligro"
                     FormError.mensaje(mensaje_error)
                     FormError.Show()
-
-                Else
-
-                    ' aqui bloque de codigo inserta bd
-                    insertarReactivo()
+                End If
 
 
             End If
@@ -898,17 +915,13 @@ Public Class Inventario
     End Sub
 
     Sub insertarReactivo()
+        Try
 
 
-        If Trim(TextBox2.Text) = "" Or Trim(TextBox3.Text) = "" Or Trim(RichTextBox2.Text) = "" Or Trim(TextBox9.Text) = "" Then
-            mensaje_error = "No se permiten campos vacios"
-            FormError.mensaje(mensaje_error)
-            FormError.Show()
 
-        Else
             SQLiteCon.Close()
 
-            Try
+
                 SQLiteCon.Open()
                 SQLliteCMD = New SQLiteCommand
 
@@ -933,24 +946,19 @@ Public Class Inventario
 
                 SQLiteCon.Close()
                 FormGuardarExitoso.Show()
-
                 limpiarformReac()
-
                 MAXID()
 
 
-            Catch ex As Exception
-                mensaje_error = ex.Message
-                FormError.mensaje(mensaje_error)
-                FormError.Show()
-                SQLiteCon.Close()
-                Return
+
+        Catch ex As Exception
+            mensaje_error = ex.Message
+            FormError.mensaje(mensaje_error)
+            FormError.Show()
+            SQLiteCon.Close()
+            Return
             End Try
             SQLiteCon.Close()
-
-
-        End If
-
 
     End Sub
 
