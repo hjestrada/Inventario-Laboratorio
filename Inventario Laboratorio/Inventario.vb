@@ -877,21 +877,27 @@ Public Class Inventario
 
                 If (Id_picto1 And Id_picto2 And Id_picto3 And Id_picto4 = 89) Then
                     insertarReactivo()
+                    MsgBox("ENTRO CONDICION TODOS SON VACIOS")
+
                 End If
 
 
                 ' bloque3
                 'Todas son diferentes, se puede guardar
 
-                If (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto4) And (Id_picto2 <> Id_picto3) Then
+                If (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto4) And (Id_picto2 <> Id_picto3) And (Id_picto1 <> Id_picto4) Then
                     insertarReactivo()
+                    MsgBox("ENTRO CONDICION TODOS SON DIFERENTES")
                 End If
 
-                If (Id_picto1 And Id_picto2 And Id_picto3 And Id_picto4) = (Id_picto1 Or Id_picto2 Or Id_picto3 Or Id_picto4) Then
-                    mensaje_error = "Error al seleccionar las categorias de peligro"
+
+                If (Id_picto1 = Id_picto2) And (Id_picto3 = Id_picto4) And (Id_picto2 = Id_picto3) And (Id_picto1 = Id_picto4) Then
+                    mensaje_error = "No se permiten campos iguales, verifique la información suministrada."
                     FormError.mensaje(mensaje_error)
                     FormError.Show()
+                    MsgBox("ENTRO CONDICION TODOS iguales")
                 End If
+
 
 
             End If
@@ -916,7 +922,7 @@ Public Class Inventario
 
     Sub insertarReactivo()
         Try
-
+            Dim x As Integer
 
 
             SQLiteCon.Close()
@@ -931,17 +937,19 @@ Public Class Inventario
                                                             `FECHA_VENC`, `FICHA_TEC`,`ID_FABRICANTE` ) VALUES (NULL, @NOMBRE_REAC,
                                                             @COD_CUS,@ADVERTENCIA,@PRI_AUXILIO,@ESTADO,
                                                             @UNIDAD_MEDIDA,@FECHA_VENC,@FICHA_TEC,@ID_FABRICANTE)"
-                    .Connection = SQLiteCon
-                    .Parameters.AddWithValue("@NOMBRE_REAC", Me.TextBox3.Text)
-                    .Parameters.AddWithValue("@COD_CUS", Me.TextBox2.Text)
-                    .Parameters.AddWithValue("@ADVERTENCIA", Me.TextBox1.Text)
-                    .Parameters.AddWithValue("@PRI_AUXILIO", Me.RichTextBox2.Text)
-                    .Parameters.AddWithValue("@ESTADO", Me.ComboBox1.Text)
-                    .Parameters.AddWithValue("@UNIDAD_MEDIDA", Me.ComboBox2.Text)
-                    .Parameters.AddWithValue("@FECHA_VENC", Me.DateTimePicker1.Value)
-                    .Parameters.AddWithValue("@FICHA_TEC", Application.StartupPath & "\FichasTecnicas\" & "FT" & TextBox6.Text & ".pdf")
-                    .Parameters.AddWithValue("@ID_FABRICANTE", Me.ComboBox3.SelectedValue.ToString)
-                    .ExecuteNonQuery()
+
+                .Connection = SQLiteCon
+
+                .Parameters.AddWithValue("@NOMBRE_REAC", Me.TextBox3.Text)
+                .Parameters.AddWithValue("@COD_CUS", Me.TextBox2.Text)
+                .Parameters.AddWithValue("@ADVERTENCIA", Me.TextBox1.Text)
+                .Parameters.AddWithValue("@PRI_AUXILIO", Me.RichTextBox2.Text)
+                .Parameters.AddWithValue("@ESTADO", Me.ComboBox1.Text)
+                .Parameters.AddWithValue("@UNIDAD_MEDIDA", Me.ComboBox2.Text)
+                .Parameters.AddWithValue("@FECHA_VENC", Me.DateTimePicker1.Value)
+                .Parameters.AddWithValue("@FICHA_TEC", Application.StartupPath & "\FichasTecnicas\" & "FT" & TextBox6.Text & ".pdf")
+                .Parameters.AddWithValue("@ID_FABRICANTE", Me.ComboBox3.SelectedValue.ToString)
+                .ExecuteNonQuery()
                 End With
 
                 SQLiteCon.Close()
