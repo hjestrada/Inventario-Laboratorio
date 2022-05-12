@@ -23,7 +23,7 @@ Public Class Inventario
     Dim lista1 As Byte
     Dim datos1 As DataSet
     Dim MySQLDA1 As New SQLiteDataAdapter
-    Dim GrupoGeneralaux, GrupoClasePeligroaux, CategoriaPeligroaux As String
+    Dim GrupoGeneralaux, GrupoGeneralaux2, GrupoGeneralaux3, GrupoGeneralaux4, GrupoClasePeligroaux, CategoriaPeligroaux As String
     Dim table As New DataTable
 
     Dim Id_picto1, Id_picto2, Id_picto3, Id_picto4 As String
@@ -241,11 +241,7 @@ Public Class Inventario
 
 
     Public Sub cargarClasePeligro()
-
-
         GrupoGeneralaux = ComboBox8.SelectedValue.ToString
-
-
 
         Try
 
@@ -278,7 +274,7 @@ Public Class Inventario
     Public Sub cargarClasePeligro2()
 
 
-        GrupoGeneralaux = ComboBox14.SelectedValue.ToString
+        GrupoGeneralaux2 = ComboBox14.SelectedValue.ToString
 
 
 
@@ -286,7 +282,7 @@ Public Class Inventario
 
             Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO,ID_CLASIFICACION FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
 
-            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux)
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux2)
             Dim ds As New DataSet
             Dim table As New DataTable
 
@@ -311,14 +307,14 @@ Public Class Inventario
     Public Sub cargarClasePeligro3()
 
 
-        GrupoGeneralaux = ComboBox11.SelectedValue.ToString
+        GrupoGeneralaux3 = ComboBox11.SelectedValue.ToString
 
 
         Try
 
             Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO,ID_CLASIFICACION FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
 
-            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux)
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux3)
             Dim ds As New DataSet
             Dim table As New DataTable
 
@@ -343,14 +339,14 @@ Public Class Inventario
     Public Sub cargarClasePeligro4()
 
 
-        GrupoGeneralaux = ComboBox17.SelectedValue.ToString
+        GrupoGeneralaux4 = ComboBox17.SelectedValue.ToString
 
 
         Try
 
             Dim MySQLDA As New SQLiteDataAdapter("SELECT CLASE_PELIGRO,ID_CLASIFICACION FROM clasificacion INNER JOIN sga WHERE SGA.ID_GRUPO_SGA=@Gg and clasificacion.ID_GRUPO_SGA  =@Gg", SQLiteCon)
 
-            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux)
+            MySQLDA.SelectCommand.Parameters.AddWithValue("@Gg", GrupoGeneralaux4)
             Dim ds As New DataSet
             Dim table As New DataTable
 
@@ -872,33 +868,33 @@ Public Class Inventario
                 FormError.mensaje(mensaje_error)
                 FormError.Show()
             Else
-                ' bloque2
-                ' Todas son iguales en pictograma vacio
 
-                If (Id_picto1 And Id_picto2 And Id_picto3 And Id_picto4 = 89) Then
+
+                If (Id_picto1 = 89 And Id_picto2 = 89 And Id_picto3 = 89 And Id_picto4 = 89) Then
                     insertarReactivo()
-                    MsgBox("ENTRO CONDICION TODOS SON VACIOS")
+                    MsgBox("entro bloque 89")
+                Else
+                    If (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto1) And (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto2) And (Id_picto1 <> Id_picto2) And (Id_picto4 <> Id_picto3) Then
+                        insertarReactivo()
+                        MsgBox("condiciones")
+                    Else
+                        If ((Id_picto2 = 89 And Id_picto3 = 89 And Id_picto4 = 89) And Id_picto1 <> 89) Then
+                            insertarReactivo()
+                            MsgBox("entro funcion solo la primera el resto vacios")
 
+                        Else
+                            If ((Id_picto3 = 89 And Id_picto4 = 89) And ((Id_picto1 <> Id_picto2) And (Id_picto1 <> 89 And Id_picto2 <> 89))) Then
+                                insertarReactivo()
+                                MsgBox("entro funcion primera y seguda diferentes 3y 4 vacio")
+                            Else
+
+
+                            End If
+
+                        End If
+
+                    End If
                 End If
-
-
-                ' bloque3
-                'Todas son diferentes, se puede guardar
-
-                If (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto4) And (Id_picto2 <> Id_picto3) And (Id_picto1 <> Id_picto4) Then
-                    insertarReactivo()
-                    MsgBox("ENTRO CONDICION TODOS SON DIFERENTES")
-                End If
-
-
-                If (Id_picto1 = Id_picto2) And (Id_picto3 = Id_picto4) And (Id_picto2 = Id_picto3) And (Id_picto1 = Id_picto4) Then
-                    mensaje_error = "No se permiten campos iguales, verifique la información suministrada."
-                    FormError.mensaje(mensaje_error)
-                    FormError.Show()
-                    MsgBox("ENTRO CONDICION TODOS iguales")
-                End If
-
-
 
             End If
 
