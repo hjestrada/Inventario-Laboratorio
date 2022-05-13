@@ -3,10 +3,7 @@
 
 Option Strict Off
 Option Explicit On
-
-Imports System.Runtime.InteropServices
 Imports System.Data.SQLite
-Imports System.Data.SqlClient
 Imports System.IO
 
 
@@ -781,6 +778,7 @@ Public Class Inventario
 
     Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox14.SelectedIndexChanged
         cargarClasePeligro2()
+        validarsegundovacio()
     End Sub
 
     Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox13.SelectedIndexChanged
@@ -796,6 +794,7 @@ Public Class Inventario
 
     Private Sub ComboBox11_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox11.SelectedIndexChanged
         cargarClasePeligro3()
+        validartercervacio()
     End Sub
 
     Private Sub ComboBox10_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox10.SelectedIndexChanged
@@ -856,7 +855,6 @@ Public Class Inventario
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-
         ' verificar consulta
 
         Try
@@ -869,33 +867,53 @@ Public Class Inventario
                 FormError.Show()
             Else
 
-
                 If (Id_picto1 = 89 And Id_picto2 = 89 And Id_picto3 = 89 And Id_picto4 = 89) Then
                     insertarReactivo()
                     MsgBox("entro bloque 89")
                 Else
-                    If (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto1) And (Id_picto1 <> Id_picto2) And (Id_picto3 <> Id_picto2) And (Id_picto1 <> Id_picto2) And (Id_picto4 <> Id_picto3) Then
+                    If (Id_picto1 <> Id_picto2 And (Id_picto1 <> Id_picto3) And (Id_picto1 <> Id_picto4)) Then
                         insertarReactivo()
-                        MsgBox("condiciones")
+                        ' MsgBox("condiciones")
                     Else
                         If ((Id_picto2 = 89 And Id_picto3 = 89 And Id_picto4 = 89) And Id_picto1 <> 89) Then
                             insertarReactivo()
-                            MsgBox("entro funcion solo la primera el resto vacios")
+                            'MsgBox("entro funcion solo la primera el resto vacios")
 
                         Else
                             If ((Id_picto3 = 89 And Id_picto4 = 89) And ((Id_picto1 <> Id_picto2) And (Id_picto1 <> 89 And Id_picto2 <> 89))) Then
                                 insertarReactivo()
-                                MsgBox("entro funcion primera y seguda diferentes 3y 4 vacio")
+                                'MsgBox("entro funcion primera y seguda diferentes 3y 4 vacio")
                             Else
+
+                                If (Id_picto1 = Id_picto2 = Id_picto3 = Id_picto4) And (Id_picto1 <> 89 And Id_picto2 <> 89 And Id_picto3 <> 89 And Id_picto4 <> 89) Then
+                                    mensaje_error = "Todas son iguales diferentes a vacío"
+                                    FormError.mensaje(mensaje_error)
+                                    FormError.Show()
+                                End If
+                                If (Id_picto1 = Id_picto3 = Id_picto4 ) And (Id_picto2 <> Id_picto1 And Id_picto2 <> Id_picto3 And Id_picto2 <> Id_picto4) Then
+                                    mensaje_error = "No pueden existir categorias de peligro iguales, verifique la informacion suministrada e intente nuevamente"
+                                    FormError.mensaje(mensaje_error)
+                                    FormError.Show()
+                                End If
+                                'MsgBox("por fuera")
+
+                                If (Id_picto1 = Id_picto2) And (Id_picto3 = 89 And Id_picto4 = 89) Then
+                                    mensaje_error = "Las primeras 2 categorias no pueden ser iguales"
+                                    FormError.mensaje(mensaje_error)
+                                    FormError.Show()
+                                End If
+
+                                MsgBox("aqui")
+
+
 
 
                             End If
 
-                        End If
-
                     End If
                 End If
 
+            End If
             End If
 
 
@@ -907,6 +925,111 @@ Public Class Inventario
         End Try
     End Sub
 
+    Sub validarprimerovacio()
+        Dim auxcombo
+        auxcombo = ComboBox8.SelectedValue.ToString
+        If (auxcombo = "4") Then
+
+            Dim cmd As String = "SELECT `ID_GRUPO_SGA`,`GRUPO_GENERAL`FROM sga where ID_GRUPO_SGA=" & auxcombo & ""
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("sga")
+            da.Fill(dt)
+            With ComboBox14
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+
+
+            With ComboBox11
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+            With ComboBox17
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+
+            cargarClasePeligro2()
+            cargarClasePeligro()
+
+
+        Else
+            GrupoGeneral2()
+            GrupoGeneral3()
+            GrupoGeneral4()
+        End If
+
+
+
+
+
+    End Sub
+
+    Sub validarsegundovacio()
+        Dim auxcombo
+        auxcombo = ComboBox14.SelectedValue.ToString
+        If (auxcombo = "4") Then
+
+            Dim cmd As String = "SELECT `ID_GRUPO_SGA`,`GRUPO_GENERAL`FROM sga where ID_GRUPO_SGA=" & auxcombo & ""
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("sga")
+            da.Fill(dt)
+
+
+            With ComboBox11
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+            With ComboBox17
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+
+            cargarClasePeligro2()
+            cargarClasePeligro()
+
+
+        Else
+            '  GrupoGeneral2()
+            GrupoGeneral3()
+            GrupoGeneral4()
+        End If
+
+    End Sub
+    Sub validartercervacio()
+        Dim auxcombo
+        auxcombo = ComboBox11.SelectedValue.ToString
+        If (auxcombo = "4") Then
+
+            Dim cmd As String = "SELECT `ID_GRUPO_SGA`,`GRUPO_GENERAL`FROM sga where ID_GRUPO_SGA=" & auxcombo & ""
+            Dim da As New SQLiteDataAdapter(cmd, SQLiteCon)
+            Dim dt As DataTable = New DataTable("sga")
+            da.Fill(dt)
+
+            With ComboBox17
+                .DataSource = dt
+                .DisplayMember = "GRUPO_GENERAL"
+                .ValueMember = "ID_GRUPO_SGA"
+            End With
+            cargarClasePeligro3()
+            cargarClasePeligro2()
+            cargarClasePeligro()
+
+
+        Else
+            '  GrupoGeneral2()
+            GrupoGeneral3()
+            GrupoGeneral4()
+        End If
+    End Sub
+
+
+
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
         cargarCategoriaPeligro()
@@ -914,6 +1037,7 @@ Public Class Inventario
 
     Private Sub ComboBox8_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox8.SelectedIndexChanged
         cargarClasePeligro()
+        validarprimerovacio()
     End Sub
 
     Sub insertarReactivo()
