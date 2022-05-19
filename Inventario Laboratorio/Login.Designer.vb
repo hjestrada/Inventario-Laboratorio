@@ -192,7 +192,7 @@ Partial Class Login
         Me.Name = "Login"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
+        Me.Text = "ecortes"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()

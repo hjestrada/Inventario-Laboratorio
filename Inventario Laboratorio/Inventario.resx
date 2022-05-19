@@ -2160,7 +2160,7 @@
   <data name="PictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAM
-        NgAADDYBf+DwcQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFMXSURBVHhe7d0H
+        NQAADDUB0lnRHAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFMXSURBVHhe7d0H
         mBXV+T9wt9CrqNjFSsQS7D1Ff4ka698SY6Kxx5JoEkvsBUGxi10RlSKYWKLR2BvL0gRpUm0ovbddFjQo
         zP/9Lnd1GL677L07fb7neT7Poy+7986cOe97zr177tyNHMcRkZiqrKwsNVuazuZIc6a50txlHjG9TF/z
         L/OyecO8Z8rNR2asmWS+NDPMfLPUrDTf5+C/EcO/4Wfws/gd/C4eA4+Fx8Rj4znwXHhOPDeOAceCY8Kx
@@ -3344,9 +3344,6 @@
   </data>
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>106, 17</value>
   </metadata>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>205, 17</value>

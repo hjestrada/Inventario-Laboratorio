@@ -854,6 +854,10 @@ Public Class Inventario
 
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         ' verificar consulta
 
@@ -890,7 +894,7 @@ Public Class Inventario
                                     FormError.mensaje(mensaje_error)
                                     FormError.Show()
                                 End If
-                                If (Id_picto1 = Id_picto3 = Id_picto4 ) And (Id_picto2 <> Id_picto1 And Id_picto2 <> Id_picto3 And Id_picto2 <> Id_picto4) Then
+                                If (Id_picto1 = Id_picto3 = Id_picto4) And (Id_picto2 <> Id_picto1 And Id_picto2 <> Id_picto3 And Id_picto2 <> Id_picto4) Then
                                     mensaje_error = "No pueden existir categorias de peligro iguales, verifique la informacion suministrada e intente nuevamente"
                                     FormError.mensaje(mensaje_error)
                                     FormError.Show()
@@ -910,10 +914,10 @@ Public Class Inventario
 
                             End If
 
+                        End If
                     End If
-                End If
 
-            End If
+                End If
             End If
 
 
@@ -1037,7 +1041,7 @@ Public Class Inventario
 
     Private Sub ComboBox8_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox8.SelectedIndexChanged
         cargarClasePeligro()
-        validarprimerovacio()
+        'validarprimerovacio()
     End Sub
 
     Sub insertarReactivo()

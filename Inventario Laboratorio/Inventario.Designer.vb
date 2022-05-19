@@ -35,6 +35,7 @@ Partial Class Inventario
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label43 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
@@ -268,6 +269,7 @@ Partial Class Inventario
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TabPage1.Controls.Add(Me.Label43)
         Me.TabPage1.Controls.Add(Me.Label42)
         Me.TabPage1.Controls.Add(Me.IconButton3)
         Me.TabPage1.Controls.Add(Me.PictureBox9)
@@ -360,6 +362,18 @@ Partial Class Inventario
         Me.TabPage1.Size = New System.Drawing.Size(1489, 659)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entrada"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label43.Location = New System.Drawing.Point(424, 91)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(112, 20)
+        Me.Label43.TabIndex = 185
+        Me.Label43.Text = "Concentracion"
+        Me.Label43.UseWaitCursor = True
         '
         'Label42
         '
@@ -1596,4 +1610,5 @@ Partial Class Inventario
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents IconButton3 As IconButton
     Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
 End Class

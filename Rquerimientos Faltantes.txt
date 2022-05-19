@@ -1,0 +1,4 @@
+- Agregar concentracion a la tabla reactivos
+- modificar el ingreso de estantes y filas
+-agregar la busqueda por coincidencias
+-
